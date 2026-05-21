@@ -22,11 +22,12 @@ export default function AboutSection() {
             {/* <div className="relative aspect-[4/5] overflow-hidden rounded-xl"> */}
            <div className="relative overflow-hidden rounded-xl h-[620px] lg:h-[770px]">
               <img
-                src={managementPartnerImg}
-                alt="Hawksberg consulting team — your management partner"
-                loading="lazy"
-                width={1024}
-                height={1280}
+  src={managementPartnerImg}
+  alt="Hawksberg consulting team — your management partner"
+  loading="eager"
+  decoding="async"
+  width={1024}
+  height={1280}
                 // className="h-full w-full object-cover transition-transform duration-[1200ms] hover:scale-110"
                 className="h-full w-full object-cover object-center transition-transform duration-[1200ms] hover:scale-105"
               />
