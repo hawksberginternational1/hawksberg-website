@@ -2,14 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes import enquiry, service, training, info_page, auth
-from app.database import Base, engine
-
-# IMPORTANT - import model so SQLAlchemy knows table exists
+from database import Base, engine
 from app.models.enquiry import Enquiry
 
 app = FastAPI(title="Hawksberg API")
 
-# create tables automatically
 Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
