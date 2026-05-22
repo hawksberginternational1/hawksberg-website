@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 // const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
-const API_URL =
-  import.meta.env.VITE_API_URL ??
-  "https://profound-commitment-production-2aae.up.railway.app";
+// const API_URL =
+//   import.meta.env.VITE_API_URL ??
+//   "https://profound-commitment-production-2aae.up.railway.app";
+const API_URL = "https://profound-commitment-production-2aae.up.railway.app";
 export default function EnquiryForm({
   compact = false,
   sourcePage = "contact",
