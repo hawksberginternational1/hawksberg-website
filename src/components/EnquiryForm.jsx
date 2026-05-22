@@ -3,55 +3,56 @@ import { useState } from "react";
 const API_URL =
   import.meta.env.VITE_API_URL ||
   "https://profound-commitment-production-2aae.up.railway.app";
+
 export default function EnquiryForm({
   compact = false,
   sourcePage = "contact",
 }) {
-
-// export default function EnquiryForm({ compact = false }) {
   const [sent, setSent] = useState(false);
-  // const submit = (e) => {
-  //   e.preventDefault();
-  //   setSent(true);
-  //   setTimeout(() => setSent(false), 4000);
-  //   e.target.reset();
-  // };
+  const [loading, setLoading] = useState(false);
 
   const submit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const form = e.target;
+    const form = e.target;
 
-  const payload = {
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    subject: form.subject.value || null,
-    message: form.message.value,
-    source_page: sourcePage,
+    const payload = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      subject: form.subject.value || null,
+      message: form.message.value,
+      source_page: sourcePage,
+    };
+
+    try {
+      setLoading(true);
+
+      const res = await fetch(`${API_URL}/api/enquiries/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error("Server error");
+      }
+
+      setSent(true);
+      form.reset();
+
+      setTimeout(() => {
+        setSent(false);
+      }, 4000);
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  try {
-    const res = await fetch(`${API_URL}/api/enquiries/`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(payload),
-});
-
-    if (!res.ok) {
-      throw new Error("Server error");
-    }
-
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-
-    form.reset();
-  } catch (err) {
-    alert("Something went wrong. Please try again.");
-  }
-};
   return (
     <form
       onSubmit={submit}
@@ -60,13 +61,16 @@ export default function EnquiryForm({
       }`}
     >
       <div className="absolute inset-0 grid-pattern opacity-10" />
+
       <div className="relative">
         <p className="text-xs uppercase tracking-[0.3em] text-gold">
           Get in touch
         </p>
+
         <h3 className="mt-2 font-display text-3xl text-brand-foreground md:text-4xl">
           Are you ready to apply?
         </h3>
+
         <p className="mt-2 text-sm text-brand-foreground/70">
           Fill in the enquiry form below and our specialist will call you back.
         </p>
@@ -77,10 +81,12 @@ export default function EnquiryForm({
           <Field name="phone" label="Mobile Number" type="tel" required />
           <Field name="subject" label="Subject" />
         </div>
+
         <div className="mt-4">
           <label className="block text-xs uppercase tracking-widest text-brand-foreground/60">
             Enquiry Details
           </label>
+
           <textarea
             name="message"
             rows={4}
@@ -91,9 +97,14 @@ export default function EnquiryForm({
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
-          <button type="submit" className="btn-primary">
-            Enquire Now →
+          <button
+            type="submit"
+            disabled={loading}
+            className={`btn-primary ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+          >
+            {loading ? "Sending..." : "Enquire Now →"}
           </button>
+
           {sent && (
             <span className="reveal text-sm text-gold">
               ✓ Thank you! We will get back to you shortly.
@@ -111,6 +122,7 @@ function Field({ name, label, type = "text", required }) {
       <label className="block text-xs uppercase tracking-widest text-brand-foreground/60">
         {label}
       </label>
+
       <input
         name={name}
         type={type}
