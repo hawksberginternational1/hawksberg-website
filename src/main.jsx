@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter } from "react-router-dom"; // ✅ CHANGE THIS
+// import { HashRouter } from "react-router-dom"; // ✅ CHANGE THIS
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./styles.css";
 import mainLogo from "./assets/main-logo.jpg";
@@ -79,10 +80,10 @@ setCircularFaviconFromImage(mainLogo);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
 
-    {/* ✅ USE HASH ROUTER FOR GITHUB PAGES */}
-    <HashRouter>
+    {/* ✅ USE BROWSER ROUTER */}
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
 
   </React.StrictMode>
 );

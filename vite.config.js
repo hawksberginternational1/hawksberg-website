@@ -4,8 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/hawksberg-website/",   // ✅ ADD THIS LINE
-
   plugins: [react(), tailwindcss()],
 
   resolve: {
@@ -18,5 +16,9 @@ export default defineConfig({
     host: "::",
     port: 8080,
     strictPort: true,
+  },
+
+  build: {
+    outDir: "dist",
   },
 });
