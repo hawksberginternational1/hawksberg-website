@@ -1,8 +1,8 @@
+import os
 import smtplib
+import logging
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
-import os
-import logging
 
 load_dotenv()
 
@@ -13,14 +13,12 @@ def send_enquiry_email(name, email, phone, subject, message):
     SMTP_EMAIL = os.getenv("SMTP_EMAIL")
     SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
-    if not SMTP_HOST or not SMTP_PORT or not SMTP_EMAIL or not SMTP_PASSWORD:
-        logging.warning("SMTP configuration missing; skipping enquiry email send")
-        return False
+    logging.info(f"SMTP_HOST: {SMTP_HOST}")
+    logging.info(f"SMTP_PORT: {SMTP_PORT}")
+    logging.info(f"SMTP_EMAIL: {SMTP_EMAIL}")
 
-    try:
-        smtp_port_int = int(SMTP_PORT)
-    except (TypeError, ValueError):
-        logging.exception("Invalid SMTP_PORT value; skipping email send")
+    if not all([SMTP_HOST, SMTP_PORT, SMTP_EMAIL, SMTP_PASSWORD]):
+        logging.error("SMTP env vars missing")
         return False
 
     body = f"""
@@ -39,12 +37,24 @@ Message: {message}
     msg["To"] = SMTP_EMAIL
 
     try:
-        server = smtplib.SMTP(SMTP_HOST, smtp_port_int)
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+        server.ehlo()
         server.starttls()
+        server.ehlo()
+
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
-        server.send_message(msg)
+
+        server.sendmail(
+            SMTP_EMAIL,
+            SMTP_EMAIL,
+            msg.as_string()
+        )
+
         server.quit()
+
+        logging.info("EMAIL SENT SUCCESSFULLY")
         return True
-    except Exception:
-        logging.exception("Failed to send enquiry email")
+
+    except Exception as e:
+        logging.exception(f"EMAIL FAILED: {str(e)}")
         return False
