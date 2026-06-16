@@ -58,7 +58,7 @@ const secondRow = [
 ];
 
 const LogoRow = ({ logos, reverse = false }) => {
-  const duplicated = [...logos, ...logos, ...logos];
+  const duplicated = [...logos, ...logos];
 
   return (
     <div className="overflow-hidden w-full">
