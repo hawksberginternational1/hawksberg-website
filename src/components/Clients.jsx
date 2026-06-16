@@ -83,6 +83,7 @@ const LogoRow = ({ logos, reverse = false }) => {
               alt={`Client ${index}`}
               className="max-h-16 w-auto object-contain transition-transform duration-300 hover:scale-110"
               loading="lazy"
+              decoding="async"
             />
           </div>
         ))}
