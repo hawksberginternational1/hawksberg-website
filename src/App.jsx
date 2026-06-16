@@ -8,6 +8,7 @@ import TrainingDetail from "./pages/TrainingDetail.jsx";
 import IsoTrainingDetail from "./pages/IsoTrainingDetail.jsx";
 import InfoPageDetail from "./pages/InfoPageDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
+// import Consultancy from "./pages/Consultancy";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/training/:slug" element={<TrainingDetail />} />
         <Route path="/iso-training/:slug" element={<IsoTrainingDetail />} />
         <Route path="/info/:slug" element={<InfoPageDetail />} />
+        {/* <Route path="/consultancy" element={<Consultancy />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
