@@ -53,13 +53,20 @@ export default function InfoPage({ page }) {
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* <div className="reveal overflow-hidden rounded-xl shadow-elegant"> */}
           <div className="reveal overflow-hidden rounded-xl shadow-elegant h-[320px] lg:h-[420px]">
-            <img
+            {/* <img
               src={page.lead.image}
               alt={page.lead.title}
               loading="lazy"
-              // className="h-full w-full object-cover"
-              className="h-full w-full object-cover object-center"
-            />
+              className="h-full w-full object-cover"
+            /> */}
+            <img
+  src={page.lead.image}
+  alt={page.lead.title}
+  loading="eager"
+  fetchPriority="high"
+  decoding="async"
+  className="h-full w-full object-cover object-center"
+/>
           </div>
           <div>
             <h2 className="font-display text-3xl text-foreground md:text-4xl">
@@ -81,11 +88,27 @@ export default function InfoPage({ page }) {
       {/* Panels (optional) */}
       {page.panels && page.panels.length > 0 && (
         <section className="bg-muted/40 py-16">
-          <div className="container-x grid gap-8 lg:grid-cols-2">
+          {/* <div className="container-x grid gap-8 lg:grid-cols-2"> */}
+          <div
+  className={
+    page.slug === "mobile-pentest" ||
+    page.slug === "network-pentest" ||
+    page.slug === "web-pentest"
+      ? "container-x"
+      : "container-x grid gap-8 lg:grid-cols-2"
+  }
+>
             {page.panels.map((panel, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-border bg-card p-8 shadow-elegant"
+                // className="rounded-xl border border-border bg-card p-8 shadow-elegant"
+                className={
+  page.slug === "mobile-pentest" ||
+  page.slug === "network-pentest" ||
+  page.slug === "web-pentest"
+    ? "mx-auto w-full max-w-6xl rounded-xl border border-border bg-card p-8 shadow-elegant"
+    : "rounded-xl border border-border bg-card p-8 shadow-elegant"
+}
               >
                 <h3 className="font-display text-2xl text-gold">
                   {panel.title}

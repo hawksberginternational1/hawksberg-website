@@ -4,6 +4,7 @@ import ValuesStrip from "@/components/ValuesStrip";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import aboutUsBg from "@/assets/aboutus.webp";
+import consultant from "@/assets/consultant.webp";
 export default function About() {
   return (
     <Layout>

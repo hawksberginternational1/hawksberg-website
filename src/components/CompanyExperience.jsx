@@ -45,9 +45,9 @@ export default function CompanyExperience() {
           <div className="mt-3 h-[2px] w-16 bg-gold" />
           <div className="mt-6 space-y-5 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Hawksberg International's expert team has years of rich experience
-              in helping our clients by providing an absolute suite of ISO
-              consultancy and training services.
+             Hawksberg International's expert team has almost four decades of
+             rich experience in helping our clients by providing an absolute 
+             suite of ISO consultancy and training services.
             </p>
             <p>
               Our unique way of approaching problems comes from the efforts we

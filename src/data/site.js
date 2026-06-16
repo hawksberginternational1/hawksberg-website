@@ -2,7 +2,7 @@ export const company = {
   name: "Hawksberg International",
   tagline: "Business Management & Cyber Security Solutions",
   phone: "+91 90805 83283",
-  altPhone: "+91 90805 83283",
+  // altPhone: "+91 90805 83283",
   email: "sebastian@hawksberg.onmicrsoft.com",
   address:
     "No 58, Gandhi Street, Rajaji Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",
@@ -31,6 +31,19 @@ import javaImg from "@/assets/trainings/java.jpg";
 import ccnpImg from "@/assets/trainings/ccnp.jpg";
 import pentestImg from "@/assets/trainings/penetration-testing.jpg";
 import dpdpImg from "@/assets/services/dpdp.jpg";
+
+import gdprLeadImg from "@/assets/unsplash/gdpr-lead.jpg";
+import gdprPanelImg from "@/assets/unsplash/gdpr-panel.jpg";
+import socLeadImg from "@/assets/unsplash/soc-network.jpg";
+import socPanelImg from "@/assets/unsplash/soc-panel.jpg";
+import vaptLeadImg from "@/assets/unsplash/vapt-lead.jpg";
+import webPentestLeadImg from "@/assets/unsplash/web-pentest-lead.jpg";
+import mobilePentestLeadImg from "@/assets/unsplash/mobile-pentest-lead.jpg";
+import mobilePentestPanelImg from "@/assets/unsplash/mobile-pentest-panel.jpg";
+import iso9001TrainingImg from "@/assets/unsplash/iso-9001-training.jpg";
+import iso27001TrainingImg from "@/assets/unsplash/iso-27001-training.jpg";
+import iso14001TrainingImg from "@/assets/unsplash/iso-14001-training.jpg";
+import iso45001TrainingImg from "@/assets/unsplash/iso-45001-training.jpg";
 
 import companyExperienceImg from "@/assets/company-experience.jpg";
 export { companyExperienceImg };
@@ -334,8 +347,9 @@ export const infoPages = [
     hero: "GDPR Managed Service Providers in Chennai",
     lead: {
       title: "GDPR Managed Service Providers in India",
-      image:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+      image: gdprLeadImg,
       paragraphs: [
         "GDPR Managed Service Providers in Chennai are many, but the problem faced by organisations who want to be GDPR compliant in India is being informed of all the processes and requirements as per GDPR. We have launched GDPR as a Service to make the compliance procedures much less challenging by reducing complexity, time and cost involved.",
         "We will help you with a variety of best practice solutions, evaluating your GDPR compliance position and developing a remediation roadmap to implement a suitable GDPR compliance framework based on your GDPR Compliance Requirement.",
@@ -354,8 +368,9 @@ export const infoPages = [
         body: [
           "GDPR Managed Service Providers in Chennai have been working on offering complete Data Protection procedures, GDPR reviews and gap assessments to help companies adopt and implement the new GDPR agreement. All content provided is used only for informational purposes — we are the most trusted GDPR Managed Service Providers in Chennai.",
         ],
-        image:
-          "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1200&q=80",
+        // image:
+        //   "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1200&q=80",
+        image: gdprPanelImg,
       },
     ],
   },
@@ -364,8 +379,9 @@ export const infoPages = [
     hero: "Expert SOC Consulting Services",
     lead: {
       title: "Expert SOC Consulting Services",
-      image:
-        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1200&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1200&q=80",
+      image: socLeadImg,
       paragraphs: [
         "Being driven close to at least one customer to have a SOC review performed is frequently the impetus that makes an organisation start investigating their choices concerning the different reports and their information. It is advantageous for associations to use professional SOC consulting services and they can definitely acquire it on account of a thorough report being directed.",
         "Numerous associations before they need to start the SOC cost, yet they don't have the foggiest idea how to kick things off. This is the place where our 'SOC Readiness' or 'SOC Consulting' services come into play.",
@@ -386,8 +402,9 @@ export const infoPages = [
           "A SOC 2 Type 2 report relates to the design and documentation of controls. In SOC 2 Type 2, it also provides additional assurance on how the organisation systems process data in real terms and is managed.",
           "Generally speaking, when a SOC 2 report is requested, the expectation is for a SOC 2 Type II report, covering a minimum observation period.",
         ],
-        image:
-          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
+        // image:
+        //   "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
+        image: socPanelImg,
       },
     ],
     grid: {
@@ -421,8 +438,9 @@ export const infoPages = [
     hero: "VAPT Service in Chennai",
     lead: {
       title: "VAPT Companies in Chennai",
-      image:
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
+      image: vaptLeadImg,
       paragraphs: [
         "VAPT Companies in Chennai is what all enterprises are looking for as the surge in cyber crime is evident. VAPT companies in India have seen a huge rise in demand as the attack on critical infrastructure of enterprises has increased. More than 2000+ companies have seen direct impact on their business revenue generation due to lack of cyber security measures and negligence in conducting a periodic VAPT audit.",
         "We are not just the best VAPT Testing Company. We not only use VAPT but implement it organically into the client's systems to make sure that the process is thoroughly effective and prevents the client with an opportunity to revamp its cyber security ideals for the betterment of the company.",
@@ -458,8 +476,9 @@ export const infoPages = [
     hero: "Web Penetration Testing Service in Chennai",
     lead: {
       title: "Web Security Company in India & Penetration Testing as a Service",
-      image:
-        "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80",
+      image: webPentestLeadImg,
       paragraphs: [
         "Web Security Company in Chennai — Hawksberg International is a global web application penetration testing service provider. With the ever-growing threat of cyber crime and data loss from SMEs to MNCs, Cyber security is not only a concern for the top management of the enterprise but should also be a high priority for the professionals working in the organisation dealing with critical information and intellectual assets of the company.",
         "Hawksberg is proud to be the highest-rated web application penetration testing and audit company in India providing in-depth VAPT (Vulnerability Assessment & Penetration Testing) using both tools-based as well as manual testing which brings out zero false-positive reports for the clients.",
@@ -490,8 +509,9 @@ export const infoPages = [
     hero: "Mobile App Penetration Testing",
     lead: {
       title: "Mobile App Penetration Testing as a Service in Chennai",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+      image: mobilePentestLeadImg,
       paragraphs: [
         "Mobile App Penetration Testing has become the need of the hour as the latest technologies of Android & iOS in mobile smartphones are concerned. As technologies have advanced by leaps and bounds over the past few years, mobile technology to the invention of the Android & iOS app has ushered in a whole new dimension. But, what it has also done is that it has made mobile security vulnerable to potential attacks that were not even in the picture during the classical mode of application.",
         "When enterprises are searching for a mobile app testing company in India, we will help enterprises secure their android applications from being tested. When it comes to mobile app security testing company in Chennai, enterprises in our friendly on our technical competencies.",
@@ -504,8 +524,9 @@ export const infoPages = [
           "Mobile is the new standard platform for Android & iOS application development — from banking applications to healthcare platforms. However, managing risk on these new devices is also a growing challenge with new app vulnerabilities found every day.",
           "Organised cyber-attacks on Android & iOS applications have increased in numbers. These actors are increasingly targeting unsecured android apps which has resulted in huge data leaks. Critical data like consumer personal information, credit/debit card details are sold on the dark web. Hawksberg International aims at finding out the gaps and providing threat mitigation plans to enterprises.",
         ],
-        image:
-          "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
+        // image:
+        //   "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
+        image: mobilePentestPanelImg,
       },
     ],
     grid: {
@@ -528,8 +549,9 @@ export const infoPages = [
     lead: {
       title:
         "Network Security Service Providers in Chennai — We Offer a Wide Range of Network Security Services",
-      image:
-        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1200&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1200&q=80",
+      image: socLeadImg,
       paragraphs: [
         "Network security service providers in Chennai are many in number. But among all, Hawksberg International is one of the best companies which provides the best network security services of all. Our network security consultants perform a vulnerability scan against other organisations' networks. The primary objective for network penetration testing services by Hawksberg is to identify exploitable vulnerabilities in networks, systems, hosts, and network devices.",
         "We provide Network Penetration Testing Services to identify assets, links, and its high-risk security gaps and flaws as they are known as the best Network Security Company in Chennai. Our Network Security Audit Company methodology includes an attack simulation carried out by our experienced reputed security consultants. Enhance your security posture, reduce risk, facilitate compliance, and improve operational efficiency with our expertise.",
@@ -710,8 +732,9 @@ export const isoTrainings = [
     title: "ISO 9001 Training",
     short:
       "In-depth ISO 9001 Quality Management System training delivered by certified lead auditors and seasoned industry practitioners.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    // image:
+    //   "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    image: iso9001TrainingImg,
     intro:
       "At Hawksberg International, we believe that in order for an organization to adapt to the quality management system procedures, there should be an individual within the company who has the full capability to implement the international business protocols, allowing the company to expand without sacrificing the workplace and customer safety.",
     detail:
@@ -741,8 +764,9 @@ export const isoTrainings = [
     title: "ISO 27001 Training",
     short:
       "Information Security Management System (ISMS) training aligned to the latest ISO/IEC 27001 framework.",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    // image:
+    //   "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    image: iso27001TrainingImg,
     intro:
       "Empower your team to design, implement and audit a robust Information Security Management System aligned to ISO/IEC 27001.",
     detail:
@@ -767,8 +791,9 @@ export const isoTrainings = [
     title: "ISO 14001 Training",
     short:
       "Environmental Management System training to meet sustainability commitments and regulatory obligations.",
-    image:
-      "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=1200&q=80",
+    // image:
+    //   "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=1200&q=80",
+    image: iso14001TrainingImg,
     intro:
       "Equip your team with the skills to identify environmental aspects, set objectives and operate an effective EMS aligned to ISO 14001.",
     detail:
@@ -793,8 +818,9 @@ export const isoTrainings = [
     title: "ISO 45001 Training",
     short:
       "Occupational Health & Safety Management System training built around real workplace scenarios.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80",
+    // image:
+    //   "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80",
+    image: iso45001TrainingImg,
     intro:
       "Build a culture of safety with structured ISO 45001 training covering hazard identification, controls and audit readiness.",
     detail:
