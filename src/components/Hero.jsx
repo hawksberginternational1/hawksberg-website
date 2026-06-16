@@ -79,9 +79,9 @@ export default function Hero() {
             <Link to={s.to} className="btn-primary">
               {s.cta} →
             </Link>
-            <Link to="/contact" className="btn-outline">
+            {/* <Link to="/contact" className="btn-outline">
               Enquire Now
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mt-10 flex gap-2">

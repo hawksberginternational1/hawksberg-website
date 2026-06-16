@@ -274,6 +274,9 @@ export default function Header() {
               </div>
             )}
           </div>
+          {/* <NavLink to="/consultancy">
+  Consultants
+</NavLink> */}
 
           <NavLink to="/contact">Contact</NavLink>
           {/* <Link to="/contact" className="btn-primary !px-5 !py-2 text-xs"> */}
@@ -352,13 +355,13 @@ export default function Header() {
               </div>
             </details>
             <NavLink to="/contact">Contact</NavLink>
-            <Link
+            {/* <Link
               to="/contact"
               onClick={() => setOpen(false)}
               className="btn-primary self-start"
             >
               Enquire Now
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
