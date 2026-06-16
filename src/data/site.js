@@ -14,14 +14,14 @@ export const company = {
   },
 };
 
-import iso27001Img from "@/assets/services/iso-27001.jpg";
-import tisaxImg from "@/assets/services/tisax.jpg";
-import iso14001Img from "@/assets/services/iso-14001.jpg";
-import iso9001Img from "@/assets/services/iso-9001.jpg";
-import iso45001Img from "@/assets/services/iso-45001.jpg";
-import iatfImg from "@/assets/services/iatf-16949.jpg";
-import iso50001Img from "@/assets/services/iso-50001.jpg";
-import soc2Img from "@/assets/services/soc-2.jpg";
+import iso27001Img from "@/assets/services/iso-27001.webp";
+import tisaxImg from "@/assets/services/tisax.webp";
+import iso14001Img from "@/assets/services/iso-14001.webp";
+import iso9001Img from "@/assets/services/iso-9001.webp";
+import iso45001Img from "@/assets/services/iso-45001.webp";
+import iatfImg from "@/assets/services/iatf-16949.webp";
+import iso50001Img from "@/assets/services/iso-50001.webp";
+import soc2Img from "@/assets/services/soc-2.webp";
 
 import ethicalHackingImg from "@/assets/trainings/ethical-hacking.jpg";
 import ccnaImg from "@/assets/trainings/ccna.jpg";
@@ -30,22 +30,22 @@ import bugBountyImg from "@/assets/trainings/bug-bounty.jpg";
 import javaImg from "@/assets/trainings/java.jpg";
 import ccnpImg from "@/assets/trainings/ccnp.jpg";
 import pentestImg from "@/assets/trainings/penetration-testing.jpg";
-import dpdpImg from "@/assets/services/dpdp.jpg";
+import dpdpImg from "@/assets/services/dpdp.webp";
 
-import gdprLeadImg from "@/assets/unsplash/gdpr-lead.jpg";
-import gdprPanelImg from "@/assets/unsplash/gdpr-panel.jpg";
-import socLeadImg from "@/assets/unsplash/soc-network.jpg";
-import socPanelImg from "@/assets/unsplash/soc-panel.jpg";
-import vaptLeadImg from "@/assets/unsplash/vapt-lead.jpg";
-import webPentestLeadImg from "@/assets/unsplash/web-pentest-lead.jpg";
-import mobilePentestLeadImg from "@/assets/unsplash/mobile-pentest-lead.jpg";
-import mobilePentestPanelImg from "@/assets/unsplash/mobile-pentest-panel.jpg";
-import iso9001TrainingImg from "@/assets/unsplash/iso-9001-training.jpg";
-import iso27001TrainingImg from "@/assets/unsplash/iso-27001-training.jpg";
-import iso14001TrainingImg from "@/assets/unsplash/iso-14001-training.jpg";
-import iso45001TrainingImg from "@/assets/unsplash/iso-45001-training.jpg";
+import gdprLeadImg from "@/assets/unsplash/gdpr-lead.webp";
+import gdprPanelImg from "@/assets/unsplash/gdpr-panel.webp";
+import socLeadImg from "@/assets/unsplash/soc-network.webp";
+import socPanelImg from "@/assets/unsplash/soc-panel.webp";
+import vaptLeadImg from "@/assets/unsplash/vapt-lead.webp";
+import webPentestLeadImg from "@/assets/unsplash/web-pentest-lead.webp";
+import mobilePentestLeadImg from "@/assets/unsplash/mobile-pentest-lead.webp";
+import mobilePentestPanelImg from "@/assets/unsplash/mobile-pentest-panel.webp";
+import iso9001TrainingImg from "@/assets/unsplash/iso-9001-training.webp";
+import iso27001TrainingImg from "@/assets/unsplash/iso-27001-training.webp";
+import iso14001TrainingImg from "@/assets/unsplash/iso-14001-training.webp";
+import iso45001TrainingImg from "@/assets/unsplash/iso-45001-training.webp";
 
-import companyExperienceImg from "@/assets/company-experience.jpg";
+import companyExperienceImg from "@/assets/company-experience.webp";
 export { companyExperienceImg };
 
 export const serviceImages = {
