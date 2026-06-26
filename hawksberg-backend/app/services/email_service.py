@@ -182,7 +182,7 @@ Experience: {experience}
     msg = MIMEText(body)
     msg["Subject"] = "New Consultant Appointment"
     msg["From"] = SMTP_EMAIL
-    msg["To"] = "gayathrija86@gmail.com"
+    msg["To"] = "Jagayathri722@gmail.com"
 
     try:
         server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
@@ -194,7 +194,7 @@ Experience: {experience}
 
         server.sendmail(
             SMTP_EMAIL,
-            "gayathrija86@gmail.com",
+            "Jagayathri722@gmail.com",
             msg.as_string()
         )
 
