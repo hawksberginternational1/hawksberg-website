@@ -55,7 +55,12 @@ Message: {message}
         logging.info("EMAIL SENT SUCCESSFULLY")
         return True
 
+    # except Exception as e:
+    #     logging.exception(f"EMAIL FAILED: {str(e)}")
+    #     return False
+
     except Exception as e:
+        print("SMTP ERROR =", repr(e))
         logging.exception(f"EMAIL FAILED: {str(e)}")
         return False
     
