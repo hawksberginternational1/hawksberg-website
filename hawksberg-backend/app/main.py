@@ -6,13 +6,21 @@ load_dotenv()
 
 from app.core.database import Base, engine
 # from app.routes import enquiry, service, training, info_page, auth
+# from app.routes import (
+#     enquiry,
+#     service,
+#     training,
+#     info_page,
+#     auth,
+#     consultant
+# )
+
 from app.routes import (
     enquiry,
     service,
     training,
     info_page,
-    auth,
-    consultant
+    auth
 )
 
 Base.metadata.create_all(bind=engine)
@@ -36,7 +44,7 @@ app.include_router(service.router)
 app.include_router(training.router)
 app.include_router(info_page.router)
 app.include_router(auth.router)
-app.include_router(consultant.router)
+# app.include_router(consultant.router)
 
 @app.get("/")
 def root():
