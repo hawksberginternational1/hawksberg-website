@@ -140,9 +140,9 @@ This OTP is valid for 10 minutes.
         logging.exception(f"EMAIL FAILED: {e}")
         return False
 
-    except Exception as e:
-        logging.exception(f"OTP EMAIL FAILED: {str(e)}")
-        return False
+    # except Exception as e:
+    #     logging.exception(f"OTP EMAIL FAILED: {str(e)}")
+    #     return False
     
 def send_appointment_email(
     schedule_type,
@@ -185,7 +185,7 @@ Experience: {experience}
     msg["To"] = "gayathrija86@gmail.com"
 
     try:
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
         server.ehlo()
         server.starttls()
         server.ehlo()
