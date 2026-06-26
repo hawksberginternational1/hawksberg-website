@@ -87,25 +87,58 @@ This OTP is valid for 10 minutes.
     msg["From"] = SMTP_EMAIL
     msg["To"] = email
 
+    # try:
+    #     # server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+    #     server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
+    #     server.ehlo()
+    #     server.starttls()
+    #     server.ehlo()
+
+    #     server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+    #     server.sendmail(
+    #         SMTP_EMAIL,
+    #         email,
+    #         msg.as_string()
+    #     )
+
+    #     server.quit()
+
+    #     logging.info("OTP EMAIL SENT SUCCESSFULLY")
+    #     return True
+
     try:
-        # server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+        logging.info("STEP 1 - Creating SMTP connection")
         server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
-        server.ehlo()
-        server.starttls()
+
+        logging.info("STEP 2 - EHLO")
         server.ehlo()
 
+        logging.info("STEP 3 - STARTTLS")
+        server.starttls()
+
+        logging.info("STEP 4 - EHLO Again")
+        server.ehlo()
+
+        logging.info("STEP 5 - LOGIN")
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
 
+        logging.info("STEP 6 - SENDMAIL")
         server.sendmail(
             SMTP_EMAIL,
-            email,
+            SMTP_EMAIL,
             msg.as_string()
-        )
+       )
 
+        logging.info("STEP 7 - QUIT")
         server.quit()
 
-        logging.info("OTP EMAIL SENT SUCCESSFULLY")
+        logging.info("EMAIL SENT SUCCESSFULLY")
         return True
+
+    except Exception as e:
+        logging.exception(f"EMAIL FAILED: {e}")
+        return False
 
     except Exception as e:
         logging.exception(f"OTP EMAIL FAILED: {str(e)}")
