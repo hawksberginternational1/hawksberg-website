@@ -88,7 +88,8 @@ This OTP is valid for 10 minutes.
     msg["To"] = email
 
     try:
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+        # server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
         server.ehlo()
         server.starttls()
         server.ehlo()
