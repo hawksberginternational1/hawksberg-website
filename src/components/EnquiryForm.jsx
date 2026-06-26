@@ -4,7 +4,7 @@ const API_URL =
   import.meta.env.VITE_API_URL ||
   // "https://profound-commitment-production-2aae.up.railway.app";
   // "http://127.0.0.1:8000";
-  "hawksberg-backend-production.up.railway.app";
+  "https://hawksberg-backend-production.up.railway.app";
 
 export default function EnquiryForm({
   compact = false,
@@ -13,41 +13,91 @@ export default function EnquiryForm({
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
 
-  const submit = (e) => {
-    e.preventDefault();
+  // const submit = (e) => {
+  //   e.preventDefault();
 
-    const form = e.target;
+  //   const form = e.target;
 
-    const payload = {
-      name: form.name.value,
-      email: form.email.value,
-      phone: form.phone.value,
-      subject: form.subject.value || null,
-      message: form.message.value,
-      source_page: sourcePage,
-    };
+  //   const payload = {
+  //     name: form.name.value,
+  //     email: form.email.value,
+  //     phone: form.phone.value,
+  //     subject: form.subject.value || null,
+  //     message: form.message.value,
+  //     source_page: sourcePage,
+  //   };
 
+  //   setSending(true);
+
+  //   fetch(`${API_URL}/api/enquiries/`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(payload),
+  //   })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
+
+  //   form.reset();
+  //   setSending(false);
+  //   setSent(true);
+
+  //   setTimeout(() => {
+  //     window.location.reload();
+  //   }, 2000);
+  // };
+
+  const submit = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const payload = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    subject: form.subject.value || null,
+    message: form.message.value,
+    source_page: sourcePage,
+  };
+
+  try {
     setSending(true);
 
-    fetch(`${API_URL}/api/enquiries/`, {
+    console.log("Submitting payload:", payload);
+
+    const response = await fetch(`${API_URL}/api/enquiries/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
-    })
-      .catch((err) => {
-        console.error(err);
-      });
+    });
+
+    console.log("Status:", response.status);
+
+    const text = await response.text();
+    console.log("Response:", text);
+
+    if (!response.ok) {
+      throw new Error(text);
+    }
 
     form.reset();
-    setSending(false);
     setSent(true);
 
     setTimeout(() => {
       window.location.reload();
     }, 2000);
-  };
+
+  } catch (err) {
+    console.error("Submit Error:", err);
+  } finally {
+    setSending(false);
+  }
+};
 
   return (
     <form
