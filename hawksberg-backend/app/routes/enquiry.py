@@ -61,6 +61,19 @@ def create_enquiry(payload: EnquiryCreate, db: Session = Depends(get_db)):
 
     logging.info("Enquiry saved to database")
 
+    # try:
+    #     success = send_enquiry_email(
+    #         payload.name,
+    #         payload.email,
+    #         payload.phone,
+    #         payload.subject,
+    #         payload.message,
+    #     )
+    #     if not success:
+    #         logging.warning("Enquiry saved but email not sent")
+    # except Exception:
+    #     logging.exception("Unexpected error while sending enquiry email")
+
     try:
         success = send_enquiry_email(
             payload.name,
@@ -69,9 +82,15 @@ def create_enquiry(payload: EnquiryCreate, db: Session = Depends(get_db)):
             payload.subject,
             payload.message,
         )
+
+        print("EMAIL SUCCESS =", success)
+
         if not success:
+            print("EMAIL FUNCTION RETURNED FALSE")
             logging.warning("Enquiry saved but email not sent")
-    except Exception:
+
+    except Exception as e:
+        print("EMAIL EXCEPTION =", str(e))
         logging.exception("Unexpected error while sending enquiry email")
 
     logging.info("Enquiry email sent")
