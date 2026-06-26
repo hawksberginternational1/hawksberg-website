@@ -30,6 +30,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
 # Python / FastAPI
 venv/
 env/
@@ -39,13 +40,16 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Environment files
-.env
-.env.*
-
 # Python tooling
 .pytest_cache/
 .mypy_cache/
 
 # Alembic
 alembic/versions/__pycache__/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.*
