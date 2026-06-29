@@ -36,23 +36,55 @@ Message: {message}
     msg["From"] = SMTP_EMAIL
     msg["To"] = SMTP_EMAIL
 
+    # try:
+    #     server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+    #     server.ehlo()
+    #     server.starttls()
+    #     server.ehlo()
+
+    #     server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+    #     server.sendmail(
+    #         SMTP_EMAIL,
+    #         SMTP_EMAIL,
+    #         msg.as_string()
+    #     )
+
+    #     server.quit()
+
+    #     logging.info("EMAIL SENT SUCCESSFULLY")
+    #     return True
+
     try:
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+        logging.info("STEP 1 - Creating SMTP connection")
+        logging.info(f"Connecting to {SMTP_HOST}:{SMTP_PORT}")
+
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
+
+        logging.info("STEP 2 - Connection Success")
+
         server.ehlo()
+        logging.info("STEP 3 - EHLO Success")
+
         server.starttls()
+        logging.info("STEP 4 - STARTTLS Success")
+
         server.ehlo()
+        logging.info("STEP 5 - EHLO Again Success")
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
+        logging.info("STEP 6 - LOGIN Success")
 
         server.sendmail(
             SMTP_EMAIL,
             SMTP_EMAIL,
             msg.as_string()
         )
+        logging.info("STEP 7 - MAIL SENT")
 
         server.quit()
+        logging.info("STEP 8 - SMTP CLOSED")
 
-        logging.info("EMAIL SENT SUCCESSFULLY")
         return True
 
     # except Exception as e:
