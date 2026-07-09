@@ -112,8 +112,13 @@ Message: {message}
 
         ip = socket.gethostbyname(SMTP_HOST)
         print("Resolved IP =", ip)
-
+        
+        print("Creating raw socket...")
+        sock = socket.create_connection((SMTP_HOST, SMTP_PORT), timeout=10)
+        print("Raw socket created")
+        sock.close()
         server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
+        print("SMTP OBJECT CREATED")
         print("SMTP connection established")
 
         server.set_debuglevel(1)
