@@ -105,42 +105,6 @@ Message: {message}
         return True
 
     except Exception as e:
-        logging.exception(f"SMTP EMAIL FAILED: {e}")
-        return False
-
-# def send_enquiry_email(name, email, phone, subject, message):
-#     try:
-#         params = {
-#             "from": "onboarding@resend.dev",
-#             "to": ["Jagayathri722@gmail.com"],
-#             "subject": "New Hawksberg Enquiry",
-#             "text": f"""
-# New Enquiry Received
-
-# Name: {name}
-# Email: {email}
-# Phone: {phone}
-# Subject: {subject}
-# Message: {message}
-# """
-#         }
-
-#         resend.Emails.send(params)
-
-#         logging.info("EMAIL SENT SUCCESSFULLY USING RESEND")
-#         return True
-
-#     except Exception as e:
-#         logging.exception(f"RESEND EMAIL FAILED: {e}")
-#         return False
-
-   
-
-    # except Exception as e:
-    #     logging.exception(f"EMAIL FAILED: {str(e)}")
-    #     return False
-
-    except Exception as e:
         print("SMTP ERROR =", repr(e))
         logging.exception(f"EMAIL FAILED: {str(e)}")
         return False
@@ -207,7 +171,8 @@ This OTP is valid for 10 minutes.
         logging.info("STEP 6 - SENDMAIL")
         server.sendmail(
             SMTP_EMAIL,
-            SMTP_EMAIL,
+            # SMTP_EMAIL,
+            email,
             msg.as_string()
        )
 
