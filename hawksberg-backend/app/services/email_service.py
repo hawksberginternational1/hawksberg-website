@@ -59,13 +59,9 @@ load_dotenv()
 
 def send_enquiry_email(name, email, phone, subject, message):
     SMTP_HOST = os.getenv("SMTP_HOST")
-    SMTP_PORT = os.getenv("SMTP_PORT")
+    SMTP_PORT = int(os.getenv("SMTP_PORT"))
     SMTP_EMAIL = os.getenv("SMTP_EMAIL")
     SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
-
-    if not all([SMTP_HOST, SMTP_PORT, SMTP_EMAIL, SMTP_PASSWORD]):
-        logging.error("SMTP env vars missing")
-        return False
 
     body = f"""
 New Enquiry Received
@@ -83,11 +79,10 @@ Message: {message}
     msg["To"] = "Jagayathri722@gmail.com"
 
     try:
-        logging.info(f"Connecting to {SMTP_HOST}:{SMTP_PORT}")
+        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
+        server.set_debuglevel(1)
 
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
         server.ehlo()
-
         server.starttls()
         server.ehlo()
 
@@ -95,18 +90,17 @@ Message: {message}
 
         server.sendmail(
             SMTP_EMAIL,
-            "Jagayathri722@gmail.com",
+            ["Jagayathri722@gmail.com"],
             msg.as_string()
         )
 
         server.quit()
 
-        logging.info("EMAIL SENT SUCCESSFULLY")
+        print("EMAIL SENT SUCCESSFULLY")
         return True
 
     except Exception as e:
-        print("SMTP ERROR =", repr(e))
-        logging.exception(f"EMAIL FAILED: {str(e)}")
+        print("SMTP ERROR:", repr(e))
         return False
     
 def send_otp_email(email, otp):
@@ -154,7 +148,7 @@ This OTP is valid for 10 minutes.
 
     try:
         logging.info("STEP 1 - Creating SMTP connection")
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=30)
 
         logging.info("STEP 2 - EHLO")
         server.ehlo()
@@ -231,16 +225,22 @@ Experience: {experience}
     msg["To"] = "Jagayathri722@gmail.com"
 
     try:
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=30)
         server.ehlo()
         server.starttls()
         server.ehlo()
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
 
+        # server.sendmail(
+        #     SMTP_EMAIL,
+        #     "Jagayathri722@gmail.com",
+        #     msg.as_string()
+        # )
+
         server.sendmail(
             SMTP_EMAIL,
-            "Jagayathri722@gmail.com",
+            ["Jagayathri722@gmail.com"],
             msg.as_string()
         )
 
