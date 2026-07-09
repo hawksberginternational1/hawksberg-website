@@ -7,8 +7,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+try:
+    SMTP_PORT = int(os.getenv("SMTP_PORT", "465"))
+except ValueError:
+    logging.error("Invalid SMTP_PORT environment variable; must be an integer.")
+    SMTP_PORT = 465
+
 SMTP_HOST = os.getenv("SMTP_HOST")
-SMTP_PORT = int(os.getenv("SMTP_PORT", "465"))
 SMTP_EMAIL = os.getenv("SMTP_EMAIL")
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
@@ -27,7 +32,7 @@ def send_email(to_email, subject, body):
         logging.info("========== SMTP CONFIG ==========")
         logging.info(f"HOST : {SMTP_HOST}")
         logging.info(f"PORT : {SMTP_PORT}")
-        logging.info(f"EMAIL: {SMTP_EMAIL}")
+        logging.info(f"EMAIL: {SMTP_EMAIL[:3]}***")
         logging.info("=================================")
 
         if SMTP_PORT == 465:
@@ -67,8 +72,7 @@ def send_email(to_email, subject, body):
 
 
 def send_enquiry_email(name, email, phone, subject, message):
-    body = f"""
-New Enquiry Received
+    body = f"""New Enquiry Received
 
 Name: {name}
 Email: {email}
@@ -87,8 +91,7 @@ Message:
 
 
 def send_otp_email(email, otp):
-    body = f"""
-Your Hawksberg Verification Code
+    body = f"""Your Hawksberg Verification Code
 
 OTP : {otp}
 
@@ -114,8 +117,7 @@ def send_appointment_email(
     experience
 ):
 
-    body = f"""
-New Consultant Appointment
+    body = f"""New Consultant Appointment
 
 Schedule Type : {schedule_type}
 
