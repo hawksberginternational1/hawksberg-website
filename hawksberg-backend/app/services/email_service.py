@@ -4,7 +4,7 @@ import logging
 # import resend
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
-import socket
+# import socket
 
 load_dotenv()
 # resend.api_key = os.getenv("RESEND_API_KEY")
@@ -108,35 +108,9 @@ Message: {message}
     #     return False
 
     try:
-        print("Connecting to SMTP server...")
-
-        ip = socket.gethostbyname(SMTP_HOST)
-        print("Resolved IP =", ip)
-        
-        print("Creating raw socket...")
-        # sock = socket.create_connection((SMTP_HOST, SMTP_PORT), timeout=10)
-        sock = socket.create_connection((SMTP_HOST, 465), timeout=10)
-        print("Raw socket created")
-        sock.close()
-        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
-        print("SMTP OBJECT CREATED")
-        print("SMTP connection established")
-
-        server.set_debuglevel(1)
-
-        server.ehlo()
-        print("EHLO OK")
-
-        server.starttls()
-        print("STARTTLS OK")
-
-        server.ehlo()
-        print("EHLO AGAIN OK")
+        server = smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30)
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
-        print("LOGIN OK")
-
-        print("SENDING MAIL...")
 
         server.sendmail(
             SMTP_EMAIL,
@@ -144,11 +118,9 @@ Message: {message}
             msg.as_string()
         )
 
-        print("MAIL SENT")
-
         server.quit()
-        print("EMAIL SENT SUCCESSFULLY")
 
+        print("EMAIL SENT SUCCESSFULLY")
         return True
 
     except Exception as e:
@@ -200,17 +172,18 @@ This OTP is valid for 10 minutes.
 
     try:
         logging.info("STEP 1 - Creating SMTP connection")
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=30)
+        # server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=30)
+        server = smtplib.SMTP_SSL(SMTP_HOST, int(SMTP_PORT), timeout=30)
 
         logging.info("STEP 2 - EHLO")
-        server.ehlo()
-        print("EHLO AGAIN OK")
+        # server.ehlo()
+        # print("EHLO AGAIN OK")
 
         logging.info("STEP 3 - STARTTLS")
-        server.starttls()
+        # server.starttls()
 
         logging.info("STEP 4 - EHLO Again")
-        server.ehlo()
+        # server.ehlo()
 
         logging.info("STEP 5 - LOGIN")
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
@@ -286,10 +259,10 @@ Experience: {experience}
     msg["To"] = "Jagayathri722@gmail.com"
 
     try:
-        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=30)
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
+        server = smtplib.SMTP_SSL(SMTP_HOST, int(SMTP_PORT), timeout=30)
+        # server.ehlo()
+        # server.starttls()
+        # server.ehlo()
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
         print("LOGIN OK")
