@@ -79,7 +79,9 @@ Message: {message}
     msg["To"] = "Jagayathri722@gmail.com"
 
     try:
+        print("Connecting to SMTP server...")
         server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
+        print("SMTP connection established")
         server.set_debuglevel(1)
 
         server.ehlo()
