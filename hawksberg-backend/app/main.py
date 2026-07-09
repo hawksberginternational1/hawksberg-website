@@ -27,12 +27,26 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Hawksberg API")
 
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=[
+#         "https://frontend-production-2ad6f.up.railway.app",
+#         "http://localhost:5173",
+#         "http://localhost:8080"
+#     ],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://www.hawksberginternational.com",
+        "https://hawksberginternational.com",
         "https://frontend-production-2ad6f.up.railway.app",
         "http://localhost:5173",
-        "http://localhost:8080"
+        "http://localhost:8080",
     ],
     allow_credentials=True,
     allow_methods=["*"],
