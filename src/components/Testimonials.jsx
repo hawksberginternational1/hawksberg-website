@@ -4,8 +4,8 @@ const items = [
   {
     quote:
       "Hawksberg's team made our ISO 27001 journey effortless. Their methodology is sharp, structured and deeply professional.",
-    name: "Ravi Kumar",
-    role: "CTO, Apptivo Solutions",
+    name: "Sendil Coumar",
+    role: "Founder, Minuscule",
   },
   {
     quote:

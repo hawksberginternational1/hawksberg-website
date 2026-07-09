@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useAnimationFrame } from "framer-motion";
-import apptivo from "@/assets/clients/apptivo.webp";
+// import apptivo from "@/assets/clients/apptivo.webp";
 import avon from "@/assets/clients/aperta.webp";
 // import marriott from "@/assets/clients/jwmarriott.webp";
 import isid from "@/assets/clients/search.webp";
@@ -36,7 +36,7 @@ import mobility from "@/assets/clients/mobility.webp";
 import mercedes from "@/assets/clients/mercedes.webp";
 
 const firstRow = [
-  apptivo,
+  // apptivo,
   avon,
   // marriott,
   isid,
