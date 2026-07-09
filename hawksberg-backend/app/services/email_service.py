@@ -4,6 +4,7 @@ import logging
 # import resend
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
+import socket
 
 load_dotenv()
 # resend.api_key = os.getenv("RESEND_API_KEY")
@@ -78,28 +79,70 @@ Message: {message}
     msg["From"] = SMTP_EMAIL
     msg["To"] = "Jagayathri722@gmail.com"
 
+    # try:
+    #     print("Connecting to SMTP server...")
+    #     server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
+    #     print("SMTP connection established")
+    #     server.set_debuglevel(1)
+
+    #     server.ehlo()
+    #     server.starttls()
+    #     server.ehlo()
+
+    #     server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+    #     print("SENDING MAIL...")
+    #     server.sendmail(
+    #         SMTP_EMAIL,
+    #         ["Jagayathri722@gmail.com"],
+    #         msg.as_string()
+    #     )
+
+    #     server.quit()
+
+    #     print("EMAIL SENT SUCCESSFULLY")
+    #     return True
+
+    # except Exception as e:
+    #     print("SMTP ERROR:", repr(e))
+    #     return False
+
     try:
         print("Connecting to SMTP server...")
+
+        ip = socket.gethostbyname(SMTP_HOST)
+        print("Resolved IP =", ip)
+
         server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
         print("SMTP connection established")
+
         server.set_debuglevel(1)
 
         server.ehlo()
+        print("EHLO OK")
+
         server.starttls()
+        print("STARTTLS OK")
+
         server.ehlo()
+        print("EHLO AGAIN OK")
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
+        print("LOGIN OK")
 
         print("SENDING MAIL...")
+
         server.sendmail(
             SMTP_EMAIL,
             ["Jagayathri722@gmail.com"],
             msg.as_string()
         )
 
-        server.quit()
+        print("MAIL SENT")
 
+        server.quit()
         print("EMAIL SENT SUCCESSFULLY")
+
         return True
 
     except Exception as e:
