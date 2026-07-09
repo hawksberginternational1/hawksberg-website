@@ -69,6 +69,9 @@ def send_enquiry_email(name, email, phone, subject, message):
         "htmlContent": body
     }
 
+    print("FROM_EMAIL =", FROM_EMAIL)
+    print("PAYLOAD =", payload)
+
     try:
 
         response = requests.post(
