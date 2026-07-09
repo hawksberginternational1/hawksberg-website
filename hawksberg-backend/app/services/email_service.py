@@ -13,7 +13,7 @@ ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
 BREVO_URL = "https://api.brevo.com/v3/smtp/email"
 
 
-def send_brevo_email(to_email, subject, body):
+def send_enquiry_email(name, email, phone, subject, message):
 
     headers = {
         "accept": "application/json",
@@ -21,21 +21,56 @@ def send_brevo_email(to_email, subject, body):
         "content-type": "application/json",
     }
 
+    body = f"""
+    <h2>New Hawksberg Enquiry</h2>
+
+    <table cellpadding="8" cellspacing="0" border="1" style="border-collapse:collapse;">
+        <tr>
+            <td><b>Name</b></td>
+            <td>{name}</td>
+        </tr>
+
+        <tr>
+            <td><b>Email</b></td>
+            <td>{email}</td>
+        </tr>
+
+        <tr>
+            <td><b>Phone</b></td>
+            <td>{phone}</td>
+        </tr>
+
+        <tr>
+            <td><b>Subject</b></td>
+            <td>{subject}</td>
+        </tr>
+
+        <tr>
+            <td><b>Message</b></td>
+            <td>{message}</td>
+        </tr>
+    </table>
+    """
+
     payload = {
         "sender": {
             "name": FROM_NAME,
-            "email": FROM_EMAIL,
+            "email": FROM_EMAIL
         },
+
         "to": [
             {
-                "email": to_email
+                "email": ADMIN_EMAIL
             }
         ],
-        "subject": subject,
-        "htmlContent": f"<pre>{body}</pre>"
+
+        "subject": "New Hawksberg Enquiry",
+
+        "htmlContent": body
     }
 
     try:
+
         response = requests.post(
             BREVO_URL,
             headers=headers,
@@ -44,38 +79,14 @@ def send_brevo_email(to_email, subject, body):
         )
 
         print("=" * 60)
-        print("BREVO STATUS =", response.status_code)
-        print("BREVO RESPONSE =", response.text)
+        print("BREVO STATUS :", response.status_code)
+        print("BREVO RESPONSE :", response.text)
         print("=" * 60)
 
         response.raise_for_status()
+
         return True
 
     except Exception as e:
         logging.exception(e)
         return False
-
-
-def send_enquiry_email(name, email, phone, subject, message):
-
-    body = f"""
-NEW HAWKSBERG ENQUIRY
-
-Name : {name}
-
-Email : {email}
-
-Phone : {phone}
-
-Subject : {subject}
-
-Message :
-
-{message}
-"""
-
-    return send_brevo_email(
-        to_email=ADMIN_EMAIL,
-        subject="New Hawksberg Enquiry",
-        body=body,
-    )
