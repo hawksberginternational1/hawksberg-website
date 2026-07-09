@@ -200,6 +200,13 @@ def send_appointment_email(
     SMTP_EMAIL = os.getenv("SMTP_EMAIL")
     SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
+    print("=" * 50)
+    print("SMTP_HOST =", SMTP_HOST)
+    print("SMTP_PORT =", SMTP_PORT)
+    print("SMTP_EMAIL =", SMTP_EMAIL)
+    print("SMTP_PASSWORD LENGTH =", len(SMTP_PASSWORD) if SMTP_PASSWORD else 0)
+    print("=" * 50)
+
     body = f"""
 New Consultant Appointment Request
 
