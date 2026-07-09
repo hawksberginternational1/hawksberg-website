@@ -1,110 +1,216 @@
 import os
 import smtplib
-import ssl
 import logging
+# import resend
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
+# import socket
 
 load_dotenv()
-
-try:
-    SMTP_PORT = int(os.getenv("SMTP_PORT", "465"))
-except ValueError:
-    logging.error("Invalid SMTP_PORT environment variable; must be an integer.")
-    SMTP_PORT = 465
-
-SMTP_HOST = os.getenv("SMTP_HOST")
-SMTP_EMAIL = os.getenv("SMTP_EMAIL")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+# resend.api_key = os.getenv("RESEND_API_KEY")
 
 
-def send_email(to_email, subject, body):
-    if not all([SMTP_HOST, SMTP_PORT, SMTP_EMAIL, SMTP_PASSWORD]):
-        logging.error("SMTP Environment Variables Missing")
-        return False
+# def send_enquiry_email(name, email, phone, subject, message):
+#     SMTP_HOST = os.getenv("SMTP_HOST")
+#     SMTP_PORT = os.getenv("SMTP_PORT")
+#     SMTP_EMAIL = os.getenv("SMTP_EMAIL")
+#     SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
+#     logging.info(f"SMTP_HOST: {SMTP_HOST}")
+#     logging.info(f"SMTP_PORT: {SMTP_PORT}")
+#     logging.info(f"SMTP_EMAIL: {SMTP_EMAIL}")
+
+#     if not all([SMTP_HOST, SMTP_PORT, SMTP_EMAIL, SMTP_PASSWORD]):
+#         logging.error("SMTP env vars missing")
+#         return False
+
+#     body = f"""
+# New Enquiry Received
+
+# Name: {name}
+# Email: {email}
+# Phone: {phone}
+# Subject: {subject}
+# Message: {message}
+# """
+
+#     msg = MIMEText(body)
+#     msg["Subject"] = "New Hawksberg Enquiry"
+#     msg["From"] = SMTP_EMAIL
+#     msg["To"] = SMTP_EMAIL
+
+#     try:
+#         server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+#         server.ehlo()
+#         server.starttls()
+#         server.ehlo()
+
+#         server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+#         server.sendmail(
+#             SMTP_EMAIL,
+#             SMTP_EMAIL,
+#             msg.as_string()
+#         )
+
+#         server.quit()
+
+#         logging.info("EMAIL SENT SUCCESSFULLY")
+#         return True
+
+def send_enquiry_email(name, email, phone, subject, message):
+    SMTP_HOST = os.getenv("SMTP_HOST")
+    SMTP_PORT = int(os.getenv("SMTP_PORT"))
+    SMTP_EMAIL = os.getenv("SMTP_EMAIL")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
+    body = f"""
+New Enquiry Received
+
+Name: {name}
+Email: {email}
+Phone: {phone}
+Subject: {subject}
+Message: {message}
+"""
 
     msg = MIMEText(body)
-    msg["Subject"] = subject
+    msg["Subject"] = "New Hawksberg Enquiry"
     msg["From"] = SMTP_EMAIL
-    msg["To"] = to_email
+    msg["To"] = "Jagayathri722@gmail.com"
+
+    # try:
+    #     print("Connecting to SMTP server...")
+    #     server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
+    #     print("SMTP connection established")
+    #     server.set_debuglevel(1)
+
+    #     server.ehlo()
+    #     server.starttls()
+    #     server.ehlo()
+
+    #     server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+    #     print("SENDING MAIL...")
+    #     server.sendmail(
+    #         SMTP_EMAIL,
+    #         ["Jagayathri722@gmail.com"],
+    #         msg.as_string()
+    #     )
+
+    #     server.quit()
+
+    #     print("EMAIL SENT SUCCESSFULLY")
+    #     return True
+
+    # except Exception as e:
+    #     print("SMTP ERROR:", repr(e))
+    #     return False
 
     try:
-        logging.info("========== SMTP CONFIG ==========")
-        logging.info(f"HOST : {SMTP_HOST}")
-        logging.info(f"PORT : {SMTP_PORT}")
-        logging.info(f"EMAIL: {SMTP_EMAIL[:3]}***")
-        logging.info("=================================")
-
-        if SMTP_PORT == 465:
-            context = ssl.create_default_context()
-            server = smtplib.SMTP_SSL(
-                SMTP_HOST,
-                SMTP_PORT,
-                context=context,
-                timeout=30
-            )
-        else:
-            server = smtplib.SMTP(
-                SMTP_HOST,
-                SMTP_PORT,
-                timeout=30
-            )
-            server.ehlo()
-            server.starttls()
-            server.ehlo()
+        server = smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30)
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
 
         server.sendmail(
             SMTP_EMAIL,
-            [to_email],
+            ["Jagayathri722@gmail.com"],
             msg.as_string()
         )
 
+        server.quit()
+
+        print("EMAIL SENT SUCCESSFULLY")
+        return True
+
+    except Exception as e:
+        print("SMTP ERROR:", repr(e))
+        return False
+    
+def send_otp_email(email, otp):
+    SMTP_HOST = os.getenv("SMTP_HOST")
+    SMTP_PORT = os.getenv("SMTP_PORT")
+    SMTP_EMAIL = os.getenv("SMTP_EMAIL")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
+    if not all([SMTP_HOST, SMTP_PORT, SMTP_EMAIL, SMTP_PASSWORD]):
+        logging.error("SMTP env vars missing")
+        return False
+
+    body = f"""
+Your Hawksberg Verification Code
+
+OTP: {otp}
+
+This OTP is valid for 10 minutes.
+"""
+
+    msg = MIMEText(body)
+    msg["Subject"] = "Hawksberg OTP Verification"
+    msg["From"] = SMTP_EMAIL
+    msg["To"] = email
+
+    # try:
+    #     # server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT))
+    #     server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
+    #     server.ehlo()
+    #     server.starttls()
+    #     server.ehlo()
+
+    #     server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+    #     server.sendmail(
+    #         SMTP_EMAIL,
+    #         email,
+    #         msg.as_string()
+    #     )
+
+    #     server.quit()
+
+    #     logging.info("OTP EMAIL SENT SUCCESSFULLY")
+    #     return True
+
+    try:
+        logging.info("STEP 1 - Creating SMTP connection")
+        # server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=30)
+        server = smtplib.SMTP_SSL(SMTP_HOST, int(SMTP_PORT), timeout=30)
+
+        logging.info("STEP 2 - EHLO")
+        # server.ehlo()
+        # print("EHLO AGAIN OK")
+
+        logging.info("STEP 3 - STARTTLS")
+        # server.starttls()
+
+        logging.info("STEP 4 - EHLO Again")
+        # server.ehlo()
+
+        logging.info("STEP 5 - LOGIN")
+        server.login(SMTP_EMAIL, SMTP_PASSWORD)
+        print("LOGIN OK")
+
+        logging.info("STEP 6 - SENDMAIL")
+        server.sendmail(
+            SMTP_EMAIL,
+            # SMTP_EMAIL,
+            email,
+            msg.as_string()
+       )
+
+        logging.info("STEP 7 - QUIT")
         server.quit()
 
         logging.info("EMAIL SENT SUCCESSFULLY")
         return True
 
     except Exception as e:
-        logging.exception(f"EMAIL FAILED : {e}")
+        logging.exception(f"EMAIL FAILED: {e}")
         return False
 
-
-def send_enquiry_email(name, email, phone, subject, message):
-    body = f"""New Enquiry Received
-
-Name: {name}
-Email: {email}
-Phone: {phone}
-Subject: {subject}
-
-Message:
-{message}
-"""
-
-    return send_email(
-        "Jagayathri722@gmail.com",
-        "New Hawksberg Enquiry",
-        body
-    )
-
-
-def send_otp_email(email, otp):
-    body = f"""Your Hawksberg Verification Code
-
-OTP : {otp}
-
-This OTP is valid for 10 minutes.
-"""
-
-    return send_email(
-        email,
-        "Hawksberg OTP Verification",
-        body
-    )
-
-
+    # except Exception as e:
+    #     logging.exception(f"OTP EMAIL FAILED: {str(e)}")
+    #     return False
+    
 def send_appointment_email(
     schedule_type,
     company_name,
@@ -116,30 +222,66 @@ def send_appointment_email(
     consultant_name,
     experience
 ):
+    SMTP_HOST = os.getenv("SMTP_HOST")
+    SMTP_PORT = os.getenv("SMTP_PORT")
+    SMTP_EMAIL = os.getenv("SMTP_EMAIL")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
-    body = f"""New Consultant Appointment
+    print("=" * 50)
+    print("SMTP_HOST =", SMTP_HOST)
+    print("SMTP_PORT =", SMTP_PORT)
+    print("SMTP_EMAIL =", SMTP_EMAIL)
+    print("SMTP_PASSWORD LENGTH =", len(SMTP_PASSWORD) if SMTP_PASSWORD else 0)
+    print("=" * 50)
 
-Schedule Type : {schedule_type}
+    body = f"""
+New Consultant Appointment Request
 
-Consultant Login ID : {consultant_login_id}
+Schedule Type: {schedule_type}
 
-Company Name : {company_name}
+Consultant Login ID: {consultant_login_id}
 
-Mobile Number : {mobile_number}
+Company Name: {company_name}
+Mobile Number: {mobile_number}
 
-Customer Email : {customer_email}
+Customer Email: {customer_email}
 
-Sector : {sector}
+Sector: {sector}
+Standard: {standard}
 
-Standard : {standard}
-
-Consultant : {consultant_name}
-
-Experience : {experience}
+Consultant: {consultant_name}
+Experience: {experience}
 """
 
-    return send_email(
-        "Jagayathri722@gmail.com",
-        "New Consultant Appointment",
-        body
-    )
+    msg = MIMEText(body)
+    msg["Subject"] = "New Consultant Appointment"
+    msg["From"] = SMTP_EMAIL
+    msg["To"] = "Jagayathri722@gmail.com"
+
+    try:
+        server = smtplib.SMTP_SSL(SMTP_HOST, int(SMTP_PORT), timeout=30)
+        # server.ehlo()
+        # server.starttls()
+        # server.ehlo()
+
+        server.login(SMTP_EMAIL, SMTP_PASSWORD)
+        print("LOGIN OK")
+
+        # server.sendmail(
+        #     SMTP_EMAIL,
+        #     "Jagayathri722@gmail.com",
+        #     msg.as_string()
+        # )
+
+        server.sendmail(
+            SMTP_EMAIL,
+            ["Jagayathri722@gmail.com"],
+            msg.as_string()
+        )
+
+        server.quit()
+        return True
+
+    except Exception as e:
+        logging.exception(f"APPOINTMENT EMAIL FAILED: {str(e)}")
+        return False
