@@ -9,19 +9,19 @@ BREVO_API_KEY = os.getenv("BREVO_API_KEY")
 
 BREVO_URL = "https://api.brevo.com/v3/smtp/email"
 
-# SENDER_EMAIL = "Jagayathri722@gmail.com"
-# SENDER_NAME = "Hawksberg International"
-
-# ADMIN_EMAIL = "Jagayathri722@gmail.com"
-
 SENDER_EMAIL = os.getenv("FROM_EMAIL")
 SENDER_NAME = "Hawksberg International"
 
 ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
 
 
-def send_brevo_email(to_email, subject, body):
-
+def send_brevo_email(
+    to_email,
+    subject,
+    body,
+    reply_to_email=None,
+    reply_to_name=None,
+):
     headers = {
         "accept": "application/json",
         "api-key": BREVO_API_KEY,
@@ -31,19 +31,25 @@ def send_brevo_email(to_email, subject, body):
     payload = {
         "sender": {
             "name": SENDER_NAME,
-            "email": SENDER_EMAIL
+            "email": SENDER_EMAIL,
         },
         "to": [
             {
-                "email": to_email
+                "email": to_email,
             }
         ],
         "subject": subject,
-        "htmlContent": f"<pre>{body}</pre>"
+        "htmlContent": f"<pre>{body}</pre>",
     }
 
-    try:
+    # Reply-To (optional)
+    if reply_to_email:
+        payload["replyTo"] = {
+            "email": reply_to_email,
+            "name": reply_to_name or "",
+        }
 
+    try:
         response = requests.post(
             BREVO_URL,
             headers=headers,
@@ -65,10 +71,13 @@ def send_brevo_email(to_email, subject, body):
         return False
 
 
+# -------------------------------
+# ENQUIRY EMAIL
+# -------------------------------
 def send_enquiry_email(name, email, phone, subject, message):
 
     body = f"""
-New Enquiry Received
+New Hawksberg Enquiry
 
 Name : {name}
 
@@ -84,12 +93,17 @@ Message :
 """
 
     return send_brevo_email(
-        ADMIN_EMAIL,
-        "New Hawksberg Enquiry",
-        body,
+        to_email=ADMIN_EMAIL,
+        subject="New Hawksberg Enquiry",
+        body=body,
+        reply_to_email=email,
+        reply_to_name=name,
     )
 
 
+# -------------------------------
+# OTP EMAIL
+# -------------------------------
 def send_otp_email(email, otp):
 
     body = f"""
@@ -101,12 +115,15 @@ This OTP is valid for 10 minutes.
 """
 
     return send_brevo_email(
-        email,
-        "Hawksberg OTP Verification",
-        body,
+        to_email=email,
+        subject="Hawksberg OTP Verification",
+        body=body,
     )
 
 
+# -------------------------------
+# CONSULTANT APPOINTMENT EMAIL
+# -------------------------------
 def send_appointment_email(
     schedule_type,
     company_name,
@@ -142,7 +159,9 @@ Experience : {experience}
 """
 
     return send_brevo_email(
-        ADMIN_EMAIL,
-        "New Consultant Appointment",
-        body,
+        to_email=ADMIN_EMAIL,
+        subject="New Consultant Appointment",
+        body=body,
+        reply_to_email=customer_email,
+        reply_to_name=company_name,
     )
