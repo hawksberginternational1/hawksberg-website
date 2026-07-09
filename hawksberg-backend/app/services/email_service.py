@@ -90,6 +90,7 @@ Message: {message}
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
 
+        print("SENDING MAIL...")
         server.sendmail(
             SMTP_EMAIL,
             ["Jagayathri722@gmail.com"],
@@ -154,6 +155,7 @@ This OTP is valid for 10 minutes.
 
         logging.info("STEP 2 - EHLO")
         server.ehlo()
+        print("EHLO AGAIN OK")
 
         logging.info("STEP 3 - STARTTLS")
         server.starttls()
@@ -163,6 +165,7 @@ This OTP is valid for 10 minutes.
 
         logging.info("STEP 5 - LOGIN")
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
+        print("LOGIN OK")
 
         logging.info("STEP 6 - SENDMAIL")
         server.sendmail(
@@ -240,6 +243,7 @@ Experience: {experience}
         server.ehlo()
 
         server.login(SMTP_EMAIL, SMTP_PASSWORD)
+        print("LOGIN OK")
 
         # server.sendmail(
         #     SMTP_EMAIL,
