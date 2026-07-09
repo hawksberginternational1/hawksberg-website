@@ -1,12 +1,12 @@
 import os
 import smtplib
 import logging
-import resend
+# import resend
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
 load_dotenv()
-resend.api_key = os.getenv("RESEND_API_KEY")
+# resend.api_key = os.getenv("RESEND_API_KEY")
 
 
 # def send_enquiry_email(name, email, phone, subject, message):
@@ -58,12 +58,16 @@ resend.api_key = os.getenv("RESEND_API_KEY")
 #         return True
 
 def send_enquiry_email(name, email, phone, subject, message):
-    try:
-        params = {
-            "from": "onboarding@resend.dev",
-            "to": ["Jagayathri722@gmail.com"],
-            "subject": "New Hawksberg Enquiry",
-            "text": f"""
+    SMTP_HOST = os.getenv("SMTP_HOST")
+    SMTP_PORT = os.getenv("SMTP_PORT")
+    SMTP_EMAIL = os.getenv("SMTP_EMAIL")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
+    if not all([SMTP_HOST, SMTP_PORT, SMTP_EMAIL, SMTP_PASSWORD]):
+        logging.error("SMTP env vars missing")
+        return False
+
+    body = f"""
 New Enquiry Received
 
 Name: {name}
@@ -72,16 +76,63 @@ Phone: {phone}
 Subject: {subject}
 Message: {message}
 """
-        }
 
-        resend.Emails.send(params)
+    msg = MIMEText(body)
+    msg["Subject"] = "New Hawksberg Enquiry"
+    msg["From"] = SMTP_EMAIL
+    msg["To"] = "Jagayathri722@gmail.com"
 
-        logging.info("EMAIL SENT SUCCESSFULLY USING RESEND")
+    try:
+        logging.info(f"Connecting to {SMTP_HOST}:{SMTP_PORT}")
+
+        server = smtplib.SMTP(SMTP_HOST, int(SMTP_PORT), timeout=15)
+        server.ehlo()
+
+        server.starttls()
+        server.ehlo()
+
+        server.login(SMTP_EMAIL, SMTP_PASSWORD)
+
+        server.sendmail(
+            SMTP_EMAIL,
+            "Jagayathri722@gmail.com",
+            msg.as_string()
+        )
+
+        server.quit()
+
+        logging.info("EMAIL SENT SUCCESSFULLY")
         return True
 
     except Exception as e:
-        logging.exception(f"RESEND EMAIL FAILED: {e}")
+        logging.exception(f"SMTP EMAIL FAILED: {e}")
         return False
+
+# def send_enquiry_email(name, email, phone, subject, message):
+#     try:
+#         params = {
+#             "from": "onboarding@resend.dev",
+#             "to": ["Jagayathri722@gmail.com"],
+#             "subject": "New Hawksberg Enquiry",
+#             "text": f"""
+# New Enquiry Received
+
+# Name: {name}
+# Email: {email}
+# Phone: {phone}
+# Subject: {subject}
+# Message: {message}
+# """
+#         }
+
+#         resend.Emails.send(params)
+
+#         logging.info("EMAIL SENT SUCCESSFULLY USING RESEND")
+#         return True
+
+#     except Exception as e:
+#         logging.exception(f"RESEND EMAIL FAILED: {e}")
+#         return False
 
    
 
