@@ -114,7 +114,8 @@ Message: {message}
         print("Resolved IP =", ip)
         
         print("Creating raw socket...")
-        sock = socket.create_connection((SMTP_HOST, SMTP_PORT), timeout=10)
+        # sock = socket.create_connection((SMTP_HOST, SMTP_PORT), timeout=10)
+        sock = socket.create_connection((SMTP_HOST, 465), timeout=10)
         print("Raw socket created")
         sock.close()
         server = smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30)
