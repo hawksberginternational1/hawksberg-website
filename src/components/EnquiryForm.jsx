@@ -3,7 +3,7 @@ import { useState } from "react";
 const API_URL =
   import.meta.env.VITE_API_URL ||
   // "https://profound-commitment-production-2aae.up.railway.app";
-  // "http://127.0.0.1:8000";
+  "http://127.0.0.1:8000";
   "https://hawksberg-backend-production.up.railway.app";
 
 export default function EnquiryForm({
@@ -29,20 +29,48 @@ export default function EnquiryForm({
 
     setSending(true);
 
-    fetch(`${API_URL}/api/enquiries/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .catch((err) => {
-        console.error(err);
-      });
+    // fetch(`${API_URL}/api/enquiries/`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(payload),
+    // })
+    //   .catch((err) => {
+    //     console.error(err);
+    //   });
 
-    form.reset();
-    setSending(false);
-    setSent(true);
+    // form.reset();
+    // setSending(false);
+    // setSent(true);
+
+    fetch(`${API_URL}/api/enquiries/`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+})
+.then(async (res) => {
+  const data = await res.json();
+
+  console.log("STATUS =", res.status);
+  console.log(data);
+
+  if (!res.ok) {
+    throw new Error(data.detail || "Request failed");
+  }
+
+  form.reset();
+  setSent(true);
+})
+.catch((err) => {
+  console.error("ERROR =", err);
+  alert(err.message);
+})
+.finally(() => {
+  setSending(false);
+});
 
     setTimeout(() => {
       window.location.reload();
@@ -75,7 +103,7 @@ export default function EnquiryForm({
           <Field name="name" label="Your Name" required />
           <Field name="email" label="Email Address" type="email" required />
           <Field name="phone" label="Mobile Number" type="tel" required />
-          <Field name="subject" label="Subject" />
+          <Field name="subject" label="Standard" />
         </div>
 
         <div className="mt-4">
