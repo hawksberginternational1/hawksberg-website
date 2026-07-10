@@ -162,10 +162,12 @@ def send_enquiry_email(name, email, phone, subject, message):
 
         "to": [
             {
-                "email": ADMIN_EMAIL
+                # "email": ADMIN_EMAIL
+                "email": "jagayathri722@gmail.com"
             },
             {
-                "email": ADMIN_EMAIL_2
+                # "email": ADMIN_EMAIL_2
+                "email": "aadhinij632@gmail.com"
             }
         ],
 
@@ -173,7 +175,7 @@ def send_enquiry_email(name, email, phone, subject, message):
 
         "htmlContent": body
     }
-
+    
     print("=" * 60)
     print("FROM_EMAIL =", FROM_EMAIL)
     print("ADMIN_EMAIL =", ADMIN_EMAIL)
