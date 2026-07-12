@@ -303,7 +303,7 @@ export default function Header() {
           <div className="container-x flex flex-col gap-3 py-4">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
-            <details className="group">
+            {/* <details className="group">
               <summary className="cursor-pointer text-sm font-medium text-foreground/80">
                 Services
               </summary>
@@ -319,7 +319,41 @@ export default function Header() {
                   </Link>
                 ))}
               </div>
-            </details>
+            </details> */}
+            <details className="group">
+  <summary className="cursor-pointer text-sm font-medium text-foreground/80">
+    Services
+  </summary>
+
+  <div className="mt-2 space-y-2 pl-3">
+
+    {serviceMenu.map((category) => (
+      <details key={category.key} className="group">
+
+        <summary className="cursor-pointer text-sm font-semibold text-foreground">
+          {category.label}
+        </summary>
+
+        <div className="mt-2 ml-4 flex flex-col gap-2">
+
+          {category.items.map((item) => (
+            <Link
+              key={item.label}
+              to={item.to}
+              onClick={() => setOpen(false)}
+              className="text-sm text-muted-foreground hover:text-gold"
+            >
+              {item.label}
+            </Link>
+          ))}
+
+        </div>
+
+      </details>
+    ))}
+
+  </div>
+</details>
             <details className="group">
               <summary className="cursor-pointer text-sm font-medium text-foreground/80">
                 ISO Trainings
