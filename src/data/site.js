@@ -13,7 +13,7 @@ export const company = {
     whatsapp: "https://wa.me/919080583283",
   },
 };
-import iso9001Img1 from "@/assets/training.webp";
+import iso9001Img1 from "@/assets/Training.webp";
 import iso27001Img1 from "@/assets/services/iso-27001.webp";
 import iso45001Img1 from "@/assets/45001.webp";
 import iso22301Img from "@/assets/isotraining/iso22301.webp";
