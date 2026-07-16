@@ -1,11 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import IsoTrainingPage from "@/components/IsoTrainingPage";
-import { isoTrainings } from "@/data/site";
+// import { isoTrainings } from "@/data/site";
+import { isoTrainingItems } from "@/data/site";
 
 export default function IsoTrainingDetail() {
   const { slug } = useParams();
-  const training = isoTrainings.find((t) => t.slug === slug);
+  // const training = isoTrainings.find((t) => t.slug === slug);
+  const training = isoTrainingItems.find((t) => t.slug === slug);
   if (!training) {
     return (
       <Layout>

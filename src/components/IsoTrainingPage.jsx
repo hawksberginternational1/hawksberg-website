@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import EnquiryForm from "./EnquiryForm";
-import trainingBg from "@/assets/Training.webp";
+// import trainingBg from "@/assets/Training.webp";
 
 export default function IsoTrainingPage({ training }) {
   return (
@@ -9,9 +9,12 @@ export default function IsoTrainingPage({ training }) {
       {/* <section className="relative overflow-hidden gradient-hero py-24 text-brand-foreground"> */}
       <section
   className="relative overflow-hidden bg-cover bg-center py-24 text-brand-foreground"
+  // style={{
+  //   backgroundImage: `url(${trainingBg})`,
+  // }}
   style={{
-    backgroundImage: `url(${trainingBg})`,
-  }}
+  backgroundImage: `url(${training.heroImage})`,
+}}
 >
    {/* Dark Overlay */}
   <div className="absolute inset-0 bg-black/70" />
@@ -30,7 +33,8 @@ export default function IsoTrainingPage({ training }) {
           </p>
           <h1 className="mt-4 font-display text-5xl uppercase tracking-wide md:text-6xl"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            {training.code} Training
+            {/* {training.code} Training */}
+            {training.title}
           </h1>
           <div className="mx-auto mt-5 gold-divider" />
         </div>
@@ -38,22 +42,26 @@ export default function IsoTrainingPage({ training }) {
 
       {/* Intro section with image + copy */}
       <section className="bg-background py-20">
-        <div className="container-x grid items-center gap-12 lg:grid-cols-2">
-          <div className="reveal overflow-hidden rounded-xl shadow-elegant">
+        {/* <div className="container-x grid items-center gap-12 lg:grid-cols-2"> */}
+        <div className="container-x">
+          {/* <div className="reveal overflow-hidden rounded-xl shadow-elegant">
             <img
+              // src={training.image}
               src={training.image}
+              // alt={`${training.code} training`}
               alt={`${training.code} training`}
               loading="lazy"
               className="h-full w-full object-cover"
             />
-          </div>
-          <div>
+          </div> */}
+          <div className="max-w-5xl mx-auto">
             <h2 className="font-display text-3xl uppercase tracking-wide text-foreground md:text-4xl">
               Training Courses
             </h2>
             <div className="mt-4 gold-divider" />
-            <p className="mt-6 text-muted-foreground">{training.intro}</p>
-            <p className="mt-4 text-muted-foreground">
+            {/* <p className="mt-6 text-muted-foreground">{training.intro}</p> */}
+            <p className="mt-6 text-muted-foreground">{training.short}</p>
+            {/* <p className="mt-4 text-muted-foreground">
               {training.detail.split("ISO training").map((part, i, arr) =>
                 i < arr.length - 1 ? (
                   <span key={i}>
@@ -64,7 +72,17 @@ export default function IsoTrainingPage({ training }) {
                   <span key={i}>{part}</span>
                 )
               )}
-            </p>
+            </p> */}
+            <div className="mt-6 space-y-4">
+  {training.description?.map((item, index) => (
+    <p
+      key={index}
+      className="text-muted-foreground leading-8"
+    >
+      {item}
+    </p>
+  ))}
+</div>
             {/* <Link to="/contact" className="btn-primary mt-8 inline-block">
               Get Free Evaluation & Get Started Today!
             </Link> */}
@@ -76,6 +94,38 @@ export default function IsoTrainingPage({ training }) {
       <section className="bg-muted/40 py-20">
         <div className="container-x grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2 space-y-10">
+            {training.programOverview && (
+  <div>
+    <h2 className="font-display text-3xl">
+      Program Overview
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-8 grid gap-10 lg:grid-cols-2 items-center">
+      {/* Left Content */}
+      <div>
+        {training.programOverview.map((p, i) => (
+          <p
+            key={i}
+            className="mt-5 text-[15px] leading-8 text-muted-foreground"
+          >
+            {p}
+          </p>
+        ))}
+      </div>
+
+      {/* Right Image */}
+      <div>
+        <img
+          src={training.toolsImage}
+          alt="Tools Covered"
+          className="w-full rounded-xl"
+        />
+      </div>
+    </div>
+  </div>
+)}
             <div>
               <h2 className="font-display text-3xl">Modules covered</h2>
               <div className="mt-3 gold-divider" />
@@ -94,7 +144,7 @@ export default function IsoTrainingPage({ training }) {
               </ol>
             </div>
 
-            <div>
+            {/* <div>
               <h2 className="font-display text-3xl">Who should attend</h2>
               <div className="mt-3 gold-divider" />
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -108,7 +158,24 @@ export default function IsoTrainingPage({ training }) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
+            <div>
+  <h2 className="font-display text-3xl">
+    Course Details
+  </h2>
+
+  <div className="mt-3 gold-divider" />
+
+  <div className="mt-6 space-y-3">
+    <p>
+      <strong>Duration :</strong> {training.duration}
+    </p>
+
+    <p>
+      <strong>Level :</strong> {training.level}
+    </p>
+  </div>
+</div>
           </div>
 
           <aside className="lg:sticky lg:top-28 self-start">

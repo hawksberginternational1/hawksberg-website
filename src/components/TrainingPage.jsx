@@ -1,31 +1,33 @@
-import { Link, useLocation } from "react-router-dom";
+// import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import EnquiryForm from "./EnquiryForm";
 
 // Background Images
-import cisoBg from "@/assets/ciso.webp";
-import pythonBg from "@/assets/python.webp";
-import javaBg from "@/assets/java.webp";
-import penetrationBg from "@/assets/penetration.webp";
-import ccnpBg from "@/assets/cnnp.webp";
-import ethicalBg from "@/assets/ethicalhacking.webp";
-import bugBg from "@/assets/bug.webp";
+// import cisoBg from "@/assets/ciso.webp";
+// import pythonBg from "@/assets/python.webp";
+// import javaBg from "@/assets/java.webp";
+// import penetrationBg from "@/assets/penetration.webp";
+// import ccnpBg from "@/assets/cnnp.webp";
+// import ethicalBg from "@/assets/ethicalhacking.webp";
+// import bugBg from "@/assets/bug.webp";
 
 export default function TrainingPage({ training }) {
-  const location = useLocation();
+  // const location = useLocation();
 
   // Route-based background images
-  const bgImages = {
-    "/training/ccna": cisoBg,
-    "/training/python": pythonBg,
-    "/training/java": javaBg,
-    "/penetration-testing": penetrationBg,
-    "/training/ccnp": ccnpBg,
-    "/training/ethical-hacking": ethicalBg,
-    "/training/bug-bounty": bugBg,
-  };
+  // const bgImages = {
+  //   "/training/ccna": cisoBg,
+  //   "/training/python": pythonBg,
+  //   "/training/java": javaBg,
+  //   "/penetration-testing": penetrationBg,
+  //   "/training/ccnp": ccnpBg,
+  //   "/training/ethical-hacking": ethicalBg,
+  //   "/training/bug-bounty": bugBg,
+  // };
 
-  // Current page background
-  const currentBg = bgImages[location.pathname] || cisoBg;
+  // // Current page background
+  // const currentBg = bgImages[location.pathname] || cisoBg;
+  const currentBg = training.heroImage;
 
   return (
     <>

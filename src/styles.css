@@ -227,3 +227,31 @@
     .float-soft, .sheen { animation: none; }
   }
 }
+
+@keyframes heroZoomDesktop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+.animate-zoom {
+  animation: heroZoomDesktop 5s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  @keyframes heroZoomMobile {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-zoom {
+    animation: heroZoomMobile 5s linear forwards;
+  }
+}
