@@ -1,4 +1,6 @@
 import useReveal from "@/hooks/useReveal";
+import PointerNetworkCanvas from "@/components/PointerNetworkCanvas";
+
 
 const items = [
   ["Vision", "To become the world's premier ISO consultancy and training services provider."],
@@ -24,8 +26,11 @@ function ValueCard({ t, d, i }) {
 
 export default function ValuesStrip() {
   return (
-    <section className="bg-brand text-brand-foreground">
-      <div className="container-x grid gap-10 py-16 md:grid-cols-3">
+    // <section className="bg-brand text-brand-foreground">
+    <section className="relative overflow-hidden bg-brand text-brand-foreground">
+      <PointerNetworkCanvas />
+      {/* <div className="container-x grid gap-10 py-16 md:grid-cols-3"> */}
+      <div className="relative z-10 container-x grid gap-10 py-16 md:grid-cols-3">
         {items.map(([t, d], i) => (
           <ValueCard key={t} t={t} d={d} i={i} />
         ))}
