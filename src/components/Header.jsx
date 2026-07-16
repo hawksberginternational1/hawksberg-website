@@ -1,111 +1,34 @@
-// import { Link, NavLink as RRNavLink } from "react-router-dom";
-import { Link, NavLink as RRNavLink, useLocation } from "react-router-dom";
-// import { useState } from "react";
-import { useEffect, useState } from "react";
-// import { company, isoServices, trainings, isoTrainings, serviceMenu } from "@/data/site";
-import {
-  company,
-  isoServices,
-  trainings,
-  isoTrainings,
-  serviceMenu,
-  courseMenu,
-  isoTrainingMenu,
-} from "@/data/site";
+import { Link, NavLink as RRNavLink } from "react-router-dom";
+import { useState } from "react";
+import { company, isoServices, trainings, isoTrainings, serviceMenu } from "@/data/site";
 // import mainLogo from "../assets/main-logo.jpg";
 import mainLogo from "../assets/shieldlogo.jpg";
-import CourseDropdown from "./CourseDropdown";
-import IsoTrainingDropdown from "@/components/IsoTrainingDropdown";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [services, setServices] = useState(false);
   const [activeCat, setActiveCat] = useState("iso");
   const [training, setTraining] = useState(false);
-  const [activeCourse, setActiveCourse] = useState(0);
-  const [activeSubCourse, setActiveSubCourse] = useState(null);
   const [isoTr, setIsoTr] = useState(false);
-  const { pathname } = useLocation();
-const isHome = pathname === "/";
 
-const [scrolled, setScrolled] = useState(false);
-
-useEffect(() => {
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 50);
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  handleScroll();
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
-  // const NavLink = ({ to, children }) => (
-  //   <RRNavLink
-  //     to={to}
-  //     end
-  //     className={({ isActive }) =>
-  //       `text-sm font-medium tracking-wide transition-colors hover:text-gold ${
-  //         isActive ? "text-gold" : "text-foreground/80"
-  //       }`
-  //     }
-  //     onClick={() => setOpen(false)}
-  //   >
-  //     {children}
-  //   </RRNavLink>
-  // );
   const NavLink = ({ to, children }) => (
-  <RRNavLink
-    to={to}
-    end
-    className={({ isActive }) =>
-      `text-sm font-medium tracking-wide transition-colors hover:text-gold ${
-        isActive
-          ? "text-gold"
-          // : isHome && !scrolled
-          // ? "text-white"
-          // : "text-foreground/80"
-          : open
-? "text-foreground"
-: isHome && !scrolled
-? "text-white"
-: "text-foreground/80"
-      }`
-    }
-    onClick={() => setOpen(false)}
-  >
-    {children}
-  </RRNavLink>
-);
+    <RRNavLink
+      to={to}
+      end
+      className={({ isActive }) =>
+        `text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+          isActive ? "text-gold" : "text-foreground/80"
+        }`
+      }
+      onClick={() => setOpen(false)}
+    >
+      {children}
+    </RRNavLink>
+  );
 
   return (
-    // <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
-//    <header
-//   className={`fixed top-0 left-0 right-0 z-[9999] w-full transition-all duration-300
-//   ${
-//     isHome && !scrolled
-//       ? "bg-transparent"
-//       : "bg-white border-b border-border shadow-sm"
-//   }`}
-// >
-<header
-  className={`fixed top-0 left-0 right-0 z-[9999] w-full transition-all duration-300 ${
-    open
-      ? "bg-white border-b border-border shadow-sm"
-      : isHome && !scrolled
-      ? "bg-transparent"
-      : "bg-white border-b border-border shadow-sm"
-  }`}
->
-      {/* <div className="hidden bg-brand text-brand-foreground/90 md:block"> */}
-      <div
-  className={`hidden md:block transition-all duration-300 ${
-    isHome && !scrolled
-      ? "bg-transparent text-white"
-      : "bg-brand text-brand-foreground/90"
-  }`}
->
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
+      <div className="hidden bg-brand text-brand-foreground/90 md:block">
         <div className="container-x flex items-center justify-between py-2 text-xs">
           <div className="flex items-center gap-6">
             <a href={`tel:${company.phone}`} className="hover:text-gold">
@@ -177,7 +100,7 @@ useEffect(() => {
   </Link> */}
 
   {/* <div className="container-x flex h-20 items-center justify-between"> */}
-  <div className="container-x flex h-15 lg:h-20 items-center justify-between px-4">
+  <div className="container-x flex h-15 lg:h-20 items-center justify-between">
   <Link to="/" className="flex items-center gap-3">
     {/* <span className="logo-circle h-11 w-11 flex items-center justify-center">
       <img
@@ -203,9 +126,7 @@ useEffect(() => {
       {/* COMPANY NAME */}
       <span
         // className="block text-[17px] tracking-wide text-foreground"
-       className={`block text-[14px] lg:text-[17px] tracking-wide ${
-  isHome && !scrolled ? "text-white" : "text-foreground"
-}`}
+        className="block text-[14px] lg:text-[17px] tracking-wide text-foreground"
         style={{
           fontFamily: '"Copperplate", "Copperplate Gothic Bold", serif',
           letterSpacing: "0.06em",
@@ -213,15 +134,10 @@ useEffect(() => {
         }}
       >
         <span
-          // style={{
-          //   color: "#111111",
-          //   fontFamily: '"Copperplate", "Copperplate Gothic Light", serif',
-          // }}
           style={{
-  fontFamily: '"Copperplate", "Copperplate Gothic Light", serif',
-}}
-// className={isHome && !scrolled ? "text-white" : "text-[#111111]"}
-className={open || !isHome || scrolled ? "text-[#111111]" : "text-white"}
+            color: "#111111",
+            fontFamily: '"Copperplate", "Copperplate Gothic Light", serif',
+          }}
         >
           Hawksberg
         </span>
@@ -239,17 +155,7 @@ className={open || !isHome || scrolled ? "text-[#111111]" : "text-white"}
 
       {/* SUB TEXT */}
       <span
-        // className="block text-[8px] uppercase tracking-[0.22em] text-muted-foreground"
-//         className={`block text-[8px] uppercase tracking-[0.22em] ${
-//   isHome && !scrolled
-//     ? "text-white/80"
-//     : "text-muted-foreground"
-// }`}
-className={`block text-[8px] uppercase tracking-[0.22em] ${
-  open || !isHome || scrolled
-    ? "text-muted-foreground"
-    : "text-white/80"
-}`}
+        className="block text-[8px] uppercase tracking-[0.22em] text-muted-foreground"
         style={{
           fontFamily: '"Copperplate", "Copperplate Gothic Light", serif',
         }}
@@ -271,18 +177,9 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
             onMouseEnter={() => setServices(true)}
             onMouseLeave={() => setServices(false)}
           >
-            {/* <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
+            <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
               Services ▾
-            </button> */}
-            <button
-  className={`text-sm font-medium tracking-wide transition-colors hover:text-gold ${
-    isHome && !scrolled
-      ? "text-white"
-      : "text-foreground/80"
-  }`}
->
-  Services ▾
-</button>
+            </button>
             {services && (
               <div className="absolute left-1/2 top-full -translate-x-1/2 pt-3">
                 <div className="reveal flex overflow-hidden rounded-lg border border-border bg-white text-black shadow-elegant">
@@ -325,35 +222,41 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
             )}
           </div>
 
+          <div
+            className="relative"
+            onMouseEnter={() => setIsoTr(true)}
+            onMouseLeave={() => setIsoTr(false)}
+          >
+            <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
+              ISO Trainings ▾
+            </button>
+            {isoTr && (
+              <div className="absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3">
+                <div className="reveal rounded-lg border border-border bg-card p-2 shadow-elegant">
+                  {isoTrainings.filter((t) => t.slug === "iso-9001").map((t) => (
+                    <Link
+                      key={t.slug}
+                      to={`/iso-training/${t.slug}`}
+                      className="block rounded-md px-3 py-2 text-sm hover:bg-muted hover:text-gold"
+                    >
+                      <span className="font-medium">{t.code}</span>
+                      <span className="ml-1 text-muted-foreground">
+                        — Training
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
           <div
-  className="relative z-50"
-  onMouseEnter={() => setIsoTr(true)}
-  onMouseLeave={() => setIsoTr(false)}
->
-  {/* <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
-    ISO Trainings ▾
-  </button> */}
-  <button
-  className={`text-sm font-medium tracking-wide transition-colors hover:text-gold ${
-    isHome && !scrolled
-      ? "text-white"
-      : "text-foreground/80"
-  }`}
->
-  ISO Trainings ▾
-</button>
-
-  {isoTr && <IsoTrainingDropdown />}
-</div>
-
-          {/* <div
             className="relative"
             onMouseEnter={() => setTraining(true)}
             onMouseLeave={() => setTraining(false)}
           >
             <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
-              Courses ▾
+              Cyber Security Courses ▾
             </button>
             {training && (
               <div className="absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3">
@@ -370,32 +273,7 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
                 </div>
               </div>
             )}
-          </div> */}
-          <div
-  className="relative z-50"
-  onMouseEnter={() => setTraining(true)}
-  onMouseLeave={() => {
-  setTraining(false);
-  setActiveCourse(null);
-  setActiveSubCourse(null);
-}}
->
-  {/* <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
-    Courses ▾
-  </button> */}
-  <button
-  className={`text-sm font-medium tracking-wide transition-colors hover:text-gold ${
-    isHome && !scrolled
-      ? "text-white"
-      : "text-foreground/80"
-  }`}
->
-  Courses ▾
-</button>
-
-  {/* {training && ( */}
-  {training && <CourseDropdown />}
-</div>
+          </div>
           {/* <NavLink to="/consultancy">
   Consultants
 </NavLink> */}
@@ -409,58 +287,23 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
 
         <button
           onClick={() => setOpen((v) => !v)}
-          // className="lg:hidden"
-          className="lg:hidden flex-shrink-0 ml-6 z-50 p-6"
+          className="lg:hidden"
           aria-label="Toggle menu"
         >
           <div className="space-y-1.5">
-            {/* <span className="block h-0.5 w-6 bg-foreground" />
             <span className="block h-0.5 w-6 bg-foreground" />
-            <span className="block h-0.5 w-4 bg-foreground" /> */}
-            <span
-  // className={`block h-0.5 w-6 ${
-  //   isHome && !scrolled ? "bg-white" : "bg-foreground"
-  // }`}
-  className={`block h-0.5 w-6 ${
-  isHome && !scrolled && !open
-    ? "bg-white"
-    : "bg-foreground"
-}`}
-/>
-
-<span
-  // className={`block h-0.5 w-6 ${
-  //   isHome && !scrolled ? "bg-white" : "bg-foreground"
-  // }`}
-  className={`block h-0.5 w-6 ${
-  isHome && !scrolled && !open
-    ? "bg-white"
-    : "bg-foreground"
-}`}
-/>
-
-<span
-  // className={`block h-0.5 w-4 ${
-  //   isHome && !scrolled ? "bg-white" : "bg-foreground"
-  // }`}
-  className={`block h-0.5 w-4 ${
-  isHome && !scrolled && !open
-    ? "bg-white"
-    : "bg-foreground"
-}`}
-/>
+            <span className="block h-0.5 w-6 bg-foreground" />
+            <span className="block h-0.5 w-4 bg-foreground" />
           </div>
         </button>
       </div>
 
-      {/* {open && (
-        <div className="border-t border-border bg-background lg:hidden"> */}
-        {open && (
-  <div className="border-t border-border bg-white lg:hidden">
+      {open && (
+        <div className="border-t border-border bg-background lg:hidden">
           <div className="container-x flex flex-col gap-3 py-4">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
-            {/* <details className="group">
+            <details className="group">
               <summary className="cursor-pointer text-sm font-medium text-foreground/80">
                 Services
               </summary>
@@ -476,46 +319,12 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
                   </Link>
                 ))}
               </div>
-            </details> */}
-            <details className="group">
-  <summary className="cursor-pointer text-sm font-medium text-foreground/80">
-    Services
-  </summary>
-
-  <div className="mt-2 space-y-2 pl-3">
-
-    {serviceMenu.map((category) => (
-      <details key={category.key} className="group">
-
-        <summary className="cursor-pointer text-sm font-semibold text-foreground">
-          {category.label}
-        </summary>
-
-        <div className="mt-2 ml-4 flex flex-col gap-2">
-
-          {category.items.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              className="text-sm text-muted-foreground hover:text-gold"
-            >
-              {item.label}
-            </Link>
-          ))}
-
-        </div>
-
-      </details>
-    ))}
-
-  </div>
-</details>
+            </details>
             <details className="group">
               <summary className="cursor-pointer text-sm font-medium text-foreground/80">
                 ISO Trainings
               </summary>
-              {/* <div className="mt-2 grid gap-1 pl-3">
+              <div className="mt-2 grid gap-1 pl-3">
                 {isoTrainings.filter((t) => t.slug === "iso-9001").map((t) => (
                   <Link
                     key={t.slug}
@@ -526,20 +335,7 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
                     {t.code} — Training
                   </Link>
                 ))}
-              </div> */}
-              <div
-  className="relative z-50"
-  onMouseEnter={() => setIsoTr(true)}
-  onMouseLeave={() => setIsoTr(false)}
->
-  <button className="text-sm font-medium tracking-wide text-foreground/80 hover:text-gold">
-    ISO Trainings ▾
-  </button>
-
-  {isoTr && (
-    <IsoTrainingDropdown />
-  )}
-</div>
+              </div>
             </details>
             <details className="group">
               <summary className="cursor-pointer text-sm font-medium text-foreground/80">

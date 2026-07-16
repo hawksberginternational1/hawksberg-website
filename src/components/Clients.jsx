@@ -34,8 +34,14 @@ import barani from "@/assets/clients/barani.webp";
 import ppts from "@/assets/clients/ppts.webp";
 import mobility from "@/assets/clients/mobility.webp";
 import mercedes from "@/assets/clients/mercedes.webp";
+import iit from "@/assets/clients/iit.webp";
+import vit from "@/assets/clients/vit.webp";
+import amritha from "@/assets/clients/amritha.webp";
 
 const firstRow = [
+  iit,
+  vit,
+  amritha,
   // apptivo,
   avon,
   // marriott,
