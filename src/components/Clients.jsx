@@ -60,7 +60,7 @@ const firstRow = [
 ];
 
 const secondRow = [
-  shakara,
+  // shakara,
   jmi,
   gighz,
   logicvalley,
@@ -79,59 +79,13 @@ const secondRow = [
   ppts,
 ];
 
-// const LogoRow = ({ logos, reverse = false }) => {
-//   const duplicated = [...logos, ...logos];
-
-//   return (
-//     <div className="overflow-hidden w-full">
-//       <motion.div
-//         className="flex gap-6 w-max"
-//         animate={{
-//           x: reverse ? ["-33.33%", "0%"] : ["0%", "-33.33%"],
-//         }}
-//         transition={{
-//           duration: 27,
-//           repeat: Infinity,
-//           ease: "linear",
-//         }}
-//       >
-//         {duplicated.map((logo, index) => (
-//           <div
-//             key={index}
-//             className="flex h-28 min-w-[220px] items-center justify-center rounded-xl border border-border bg-white px-6 shadow-sm"
-//           >
-//             <img
-//               src={logo}
-//               alt={`Client ${index}`}
-//               // className="max-h-16 w-auto object-contain transition-transform duration-300 hover:scale-110"
-//               className={`object-contain transition-transform duration-300 hover:scale-110 ${
-//   [
-//     aloft,
-//     epc,
-//     asiaeo,
-//     mobility,
-//     janatics,
-//   ].includes(logo)
-//     // ? "max-h-20 w-auto"
-//     ? "max-h-24 w-auto"
-//     : "max-h-16 w-auto"
-// }`}
-//               loading="lazy"
-//               decoding="async"
-//             />
-//           </div>
-//         ))}
-//       </motion.div>
-//     </div>
-//   );
-// };
-
 const LogoRow = ({ logos, reverse = false }) => {
   const duplicated = [...logos, ...logos];
   const containerRef = useRef(null);
   const x = useRef(reverse ? -3400 : 0);
 
-  const CARD_WIDTH = 220;
+  // const CARD_WIDTH = 220;
+  const CARD_WIDTH = 100;
   const GAP = 24;
   const totalWidth = logos.length * (CARD_WIDTH + GAP);
 
@@ -159,15 +113,18 @@ const LogoRow = ({ logos, reverse = false }) => {
         {duplicated.map((logo, index) => (
           <div
             key={index}
-            className="flex h-28 min-w-[220px] items-center justify-center rounded-xl border border-border bg-white px-6 shadow-sm"
+            // className="flex h-28 min-w-[220px] items-center justify-center rounded-xl border border-border bg-white px-6 shadow-sm"
+            className="flex h-24 min-w-[190px] items-center justify-center rounded-xl border border-border bg-white px-4 shadow-sm"
           >
             <img
               src={logo}
               alt={`Client ${index}`}
               className={`object-contain transition-transform duration-300 hover:scale-110 ${
                 [aloft, epc, asiaeo, mobility, janatics].includes(logo)
-                  ? "max-h-24 w-auto"
-                  : "max-h-16 w-auto"
+                  // ? "max-h-24 w-auto"
+                  // : "max-h-16 w-auto"
+                  ? "max-h-20 w-auto"
+: "max-h-14 w-auto"
               }`}
               loading="lazy"
               decoding="async"
