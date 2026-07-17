@@ -13,7 +13,8 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { lazy, Suspense } from "react";
 
 const ValuesStrip = lazy(() => import("@/components/ValuesStrip"));
-const Clients = lazy(() => import("@/components/Clients"));
+// const Clients = lazy(() => import("@/components/Clients"));
+const HomeClients = lazy(() => import("@/components/HomeClients"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const CompanyExperience = lazy(() => import("@/components/CompanyExperience"));
 
@@ -29,7 +30,7 @@ export default function Home() {
       <Clients />
       <Testimonials />
       <CompanyExperience /> */}
-      <Suspense fallback={<div className="h-32" />}>
+      {/* <Suspense fallback={<div className="h-32" />}>
   <ValuesStrip />
 </Suspense>
 
@@ -37,6 +38,23 @@ export default function Home() {
 
 <Suspense fallback={<div className="h-32" />}>
   <Clients />
+</Suspense>
+
+<Suspense fallback={<div className="h-32" />}>
+  <Testimonials />
+</Suspense>
+
+<Suspense fallback={<div className="h-32" />}>
+  <CompanyExperience />
+</Suspense> */}
+<Suspense fallback={<div className="h-32" />}>
+  <ValuesStrip />
+</Suspense>
+
+<TrainingGrid />
+
+<Suspense fallback={<div className="h-32" />}>
+  <HomeClients />
 </Suspense>
 
 <Suspense fallback={<div className="h-32" />}>
