@@ -60,7 +60,8 @@ useEffect(() => {
     to={to}
     end
     className={({ isActive }) =>
-      `text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+      // `text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+    `text-[15px] font-bold tracking-wide transition-colors hover:text-gold ${
         isActive
           ? "text-gold"
           // : isHome && !scrolled
@@ -192,7 +193,14 @@ useEffect(() => {
     alt="Hawksberg"
     // className="h-14 lg:h-16 w-auto object-contain"
     //  className="h-20 lg:h-24 w-auto object-contain"
-     className="h-16 lg:h-18 w-auto object-contain"
+    //  className="h-16 lg:h-18 w-auto object-contain"
+    className={`w-auto object-contain transition-all duration-300 ${
+  isHome && !scrolled
+    // ? "h-20 lg:h-24"
+    // : "h-16 lg:h-18"
+     ? "h-16 lg:h-24"
+    : "h-16 lg:h-18"
+}`}
     style={{
       background: "transparent",
     }}
@@ -203,8 +211,13 @@ useEffect(() => {
       {/* COMPANY NAME */}
       <span
         // className="block text-[17px] tracking-wide text-foreground"
-       className={`block text-[14px] lg:text-[17px] tracking-wide ${
-  isHome && !scrolled ? "text-white" : "text-foreground"
+//        className={`block text-[14px] lg:text-[17px] tracking-wide ${
+//   isHome && !scrolled ? "text-white" : "text-foreground"
+// }`}
+className={`block tracking-wide transition-all duration-300 ${
+  isHome && !scrolled
+    ? "text-[14px] lg:text-[22px] text-white"
+    : "text-[14px] lg:text-[17px] text-foreground"
 }`}
         style={{
           fontFamily: '"Copperplate", "Copperplate Gothic Bold", serif',
@@ -245,10 +258,15 @@ className={open || !isHome || scrolled ? "text-[#111111]" : "text-white"}
 //     ? "text-white/80"
 //     : "text-muted-foreground"
 // }`}
-className={`block text-[8px] uppercase tracking-[0.22em] ${
-  open || !isHome || scrolled
-    ? "text-muted-foreground"
-    : "text-white/80"
+// className={`block text-[8px] uppercase tracking-[0.22em] ${
+//   open || !isHome || scrolled
+//     ? "text-muted-foreground"
+//     : "text-white/80"
+// }`}
+className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
+  isHome && !scrolled
+    ? "text-[8px] lg:text-[10px] text-white/80"
+    : "text-[8px] text-muted-foreground"
 }`}
         style={{
           fontFamily: '"Copperplate", "Copperplate Gothic Light", serif',
@@ -274,8 +292,8 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
             {/* <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
               Services ▾
             </button> */}
-            <button
-  className={`text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+          <button
+  className={`text-[15px] font-bold tracking-wide transition-colors hover:text-gold ${
     isHome && !scrolled
       ? "text-white"
       : "text-foreground/80"
@@ -325,17 +343,14 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
             )}
           </div>
 
-
+{/* desktop */}
           <div
   className="relative z-50"
   onMouseEnter={() => setIsoTr(true)}
   onMouseLeave={() => setIsoTr(false)}
 >
-  {/* <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
-    ISO Trainings ▾
-  </button> */}
-  <button
-  className={`text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+ <button
+  className={`text-[15px] font-bold tracking-wide transition-colors hover:text-gold ${
     isHome && !scrolled
       ? "text-white"
       : "text-foreground/80"
@@ -383,8 +398,8 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
   {/* <button className="text-sm font-medium tracking-wide text-foreground/80 transition-colors hover:text-gold">
     Courses ▾
   </button> */}
-  <button
-  className={`text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+ <button
+  className={`text-[15px] font-bold tracking-wide transition-colors hover:text-gold ${
     isHome && !scrolled
       ? "text-white"
       : "text-foreground/80"
@@ -527,7 +542,7 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
                   </Link>
                 ))}
               </div> */}
-              <div
+              {/* <div
   className="relative z-50"
   onMouseEnter={() => setIsoTr(true)}
   onMouseLeave={() => setIsoTr(false)}
@@ -539,14 +554,71 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
   {isoTr && (
     <IsoTrainingDropdown />
   )}
+</div> */}
+{/* <div className="mt-2 grid gap-1 pl-3">
+  {isoTrainingMenu.map((item) => (
+    <Link
+      key={item.label}
+      to={item.to}
+      onClick={() => setOpen(false)}
+      className="text-sm text-muted-foreground hover:text-gold"
+    >
+      {item.label}
+    </Link>
+  ))}
+</div> */}
+<div className="mt-2 space-y-2 pl-3">
+
+  {isoTrainingMenu.map((category, index) => (
+
+    index < 2 ? (
+
+      <details key={category.title} className="group">
+
+        <summary className="cursor-pointer text-sm font-semibold text-foreground">
+          {category.title}
+        </summary>
+
+        <div className="mt-2 ml-4 flex flex-col gap-2">
+
+          {category.items.map((item) => (
+            <Link
+              key={item.slug}
+              to={`/iso-training/${item.slug}`}
+              onClick={() => setOpen(false)}
+              className="text-sm text-muted-foreground hover:text-gold"
+            >
+              {item.label}
+            </Link>
+          ))}
+
+        </div>
+
+      </details>
+
+    ) : (
+
+      <Link
+        key={category.title}
+        to={`/iso-training/${category.items[0].slug}`}
+        onClick={() => setOpen(false)}
+        className="block text-sm text-muted-foreground hover:text-gold"
+      >
+        {category.title}
+      </Link>
+
+    )
+
+  ))}
+
 </div>
             </details>
             <details className="group">
               <summary className="cursor-pointer text-sm font-medium text-foreground/80">
-                Cyber Security Courses
+               Courses
               </summary>
               <div className="mt-2 grid gap-1 pl-3">
-                {trainings.map((t) => (
+                {/* {trainings.map((t) => (
                   <Link
                     key={t.slug}
                     to={`/training/${t.slug}`}
@@ -555,7 +627,31 @@ className={`block text-[8px] uppercase tracking-[0.22em] ${
                   >
                     {t.title}
                   </Link>
-                ))}
+                ))} */}
+                {courseMenu.map((category) => (
+  <details key={category.title} className="group">
+
+    <summary className="cursor-pointer text-sm font-semibold text-foreground">
+      {category.title}
+    </summary>
+
+    <div className="mt-2 ml-4 flex flex-col gap-2">
+
+      {category.items.map((item) => (
+        <Link
+          key={item.slug}
+          to={`/course/${item.slug}`}
+          onClick={() => setOpen(false)}
+          className="text-sm text-muted-foreground hover:text-gold"
+        >
+          {item.label}
+        </Link>
+      ))}
+
+    </div>
+
+  </details>
+))}
               </div>
             </details>
             <NavLink to="/contact">Contact</NavLink>
