@@ -1,5 +1,6 @@
 import useReveal from "@/hooks/useReveal";
 import PointerNetworkCanvas from "@/components/PointerNetworkCanvas";
+import { useEffect, useState } from "react";
 
 
 const items = [
@@ -24,11 +25,20 @@ function ValueCard({ t, d, i }) {
   );
 }
 
+// export default function ValuesStrip() {
+//   return (
 export default function ValuesStrip() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   return (
     // <section className="bg-brand text-brand-foreground">
     <section className="relative overflow-hidden bg-brand text-brand-foreground">
-      <PointerNetworkCanvas />
+      {/* <PointerNetworkCanvas /> */}
+      {!isMobile && <PointerNetworkCanvas />}
       {/* <div className="container-x grid gap-10 py-16 md:grid-cols-3"> */}
       <div className="relative z-10 container-x grid gap-10 py-16 md:grid-cols-3">
         {items.map(([t, d], i) => (
