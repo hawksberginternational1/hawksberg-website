@@ -285,17 +285,21 @@ export default function HomeClients() {
           {/* LEFT */}
           <motion.div
             // className="w-full max-w-[420px] shrink-0 -mt-20"
-            className="w-full max-w-[420px] shrink-0 -mt-20 lg:ml-10"
+            // className="w-full max-w-[420px] shrink-0 -mt-50 lg:-mt-30 lg:ml-10"
+            className="w-full max-w-[420px] shrink-0 -mt-20 lg:-mt-30 lg:ml-10"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="mb-4 uppercase tracking-[0.3em] text-[11px] text-slate-500">
+            {/* <p className="mb-4 uppercase tracking-[0.3em] text-[11px] text-slate-500"> */}
+            <p className="mb-4 uppercase tracking-[0.3em] text-[11px] lg:text-[14px] text-slate-500">
               Trusted Worldwide
             </p>
 
-            <h2 className="text-4xl font-bold leading-[1.1] text-slate-900 xl:text-5xl">
+            {/* <h2 className="text-4xl font-bold leading-[1.1] text-slate-900 xl:text-5xl"> */}
+            {/* <h2 className="text-5xl lg:text-6xl font-bold leading-[1.02] text-slate-900"> */}
+            <h2 className="text-4xl lg:text-6xl xl:text-6xl font-bold leading-[1.08] text-slate-900">
               Trusted by
               <br />
               Leading
