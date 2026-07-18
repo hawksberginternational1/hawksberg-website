@@ -143,6 +143,34 @@ export default function TrainingPage({ training }) {
             </ol>
           </div>
 
+          {/* Why Join */}
+{training.whyJoin?.length > 0 && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.whyJoinTitle || "Why Join This Course?"}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-8 grid gap-6 md:grid-cols-2">
+      {training.whyJoin.map((item, index) => (
+        <div
+          key={index}
+          className="rounded-xl border border-border bg-card p-6"
+        >
+          <h3 className="font-display text-xl text-gold">
+            {item.title}
+          </h3>
+
+          <p className="mt-3 text-muted-foreground">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
           {/* Features */}
           <div className="grid gap-6 sm:grid-cols-3">
             {[
