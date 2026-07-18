@@ -808,6 +808,10 @@ export const isoTrainingItems = [
   title: "ISO 9001 Lead Auditor Training",
   image: iso9001Img1,
   heroImage: iso9001Img1,
+  template: "iso9001LeadAuditor",
+  whyTakeTitle: "Why Take the ISO 9001 Lead Auditor Course?",
+
+courseCoversTitle: "What the ISO 9001 Lead Auditor Course Covers",
 
   intro:
     "Become a certified ISO 9001 Lead Auditor and gain the expertise to perform first-, second-, and third-party Quality Management System (QMS) audits based on ISO 9001:2015 and ISO 19011 guidelines.",
@@ -848,16 +852,79 @@ export const isoTrainingItems = [
     "Professionals involved in Quality Management Systems"
   ],
 
-  description: [
-    "Understand the complete ISO 9001:2015 Quality Management System requirements.",
-    "Learn to conduct first-, second-, and third-party audits.",
-    "Plan, execute, report, and follow up QMS audits effectively.",
-    "Understand ISO 19011 auditing principles and best practices.",
-    "Develop skills to identify nonconformities and recommend corrective actions.",
-    "Lead audit teams with confidence using internationally accepted auditing techniques.",
-    "Gain practical auditing experience through case studies and exercises.",
-    "Earn an internationally recognized qualification to advance your auditing career."
-  ]
+  // description REMOVE
+
+  overview: `
+The ISO 9001 Lead Auditor course intends to provide participants with the necessary expertise to perform first-, second- and third-party audits of a Quality Management System and report on the compliance and effectiveness of the system. The course covers ISO 9001 Quality Management Systems requirements and provides guidance on how to plan and conduct an audit in accordance with ISO 19011 Guidelines for Auditing Management Systems.
+
+EAS is a sister organization of IAS, which provides the IRCA Certified ISO 9001 Lead Auditor Course online. The course is led by experienced tutors who are experts in the field of quality management and includes a mix of classroom lectures, case studies, and group exercises.
+`,
+whyTake:
+  "The most important reason is that it will allow you to effectively audit an organization's Quality Management System (QMS). This is beneficial for businesses, as it helps ensure their QMS meets all of the requirements necessary for ISO 9001 certification. In addition, the course helps you develop a better understanding of how to effectively manage and monitor a QMS, and how to assess an organization's compliance with ISO 9001 requirements.",
+
+courseCovers: [
+  "The structure of ISO 9001:2015 (the Annex SL high-level structure) and the seven quality management principles.",
+  "Context of the organization and the needs of interested parties (Clause 4).",
+  "Leadership, the quality policy, and organizational roles and responsibilities (Clause 5).",
+  "Planning — quality objectives and risk-based thinking (Clause 6).",
+  "Support — resources, competence, awareness, and documented information (Clause 7).",
+  "Operation — operational planning and control of products and services (Clause 8).",
+  "Performance evaluation — monitoring, measurement, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement (Clause 10).",
+  "Audit principles, audit types (first-, second-, third-party), and the full audit lifecycle: planning, preparing checklists, conducting the audit, gathering objective evidence, grading nonconformities, reporting, and follow-up."
+],
+
+benefits: [
+  "Helps you develop an in-depth understanding of the ISO 9001 Quality Management Standard and its requirements.",
+  "Enables you to conduct effective audits of Quality Management Systems (QMS) against the ISO 9001 standard.",
+  "Provides you with the skills and knowledge required to lead a team of auditors.",
+  "Teaches you how to plan and prepare for an audit, as well as how to report on the findings.",
+  "Helps you understand the principles of auditing and how to apply them in a variety of situations.",
+  "Gives you the confidence to communicate effectively with senior management and other stakeholders.",
+  "Provides you with an internationally recognized qualification that can boost your career prospects."
+],
+
+  benefits: [
+    "Understand ISO 9001:2015 requirements in detail.",
+    "Develop professional auditing skills.",
+    "Plan and lead Quality Management System audits.",
+    "Identify nonconformities effectively.",
+    "Improve organisational compliance.",
+    "Gain an internationally recognised qualification."
+  ],
+
+  prerequisites: [
+    "Basic knowledge of Quality Management Systems.",
+    "Understanding of ISO 9001 fundamentals is recommended."
+  ],
+
+  faq: [
+    {
+      question: "Who should attend this course?",
+      answer:
+        "Quality Managers, Internal Auditors, Lead Auditors, Consultants and professionals responsible for Quality Management Systems."
+    },
+    {
+      question: "Is this course suitable for beginners?",
+      answer:
+        "Basic knowledge of ISO 9001 is recommended before attending the Lead Auditor course."
+    },
+    {
+      question: "Will I receive a certificate?",
+      answer:
+        "Yes. Participants who successfully complete the course and assessment will receive a recognised certificate."
+    }
+  ],
+
+  assessment: {
+    duration: "",
+    questions: "",
+    marks: "",
+    passing: "",
+    certificate: ""
+  },
+
+  enrollment: []
 },
 {
   slug: "iso-27001-lead-auditor",
@@ -865,6 +932,10 @@ export const isoTrainingItems = [
   title: "ISO 27001 Lead Auditor Training",
   image: iso27001Img1,
   heroImage: iso27001Img1,
+  template: "iso27001LeadAuditor",
+  whyTakeTitle: "Why Take the ISO 27001 Lead Auditor Course?",
+
+courseCoversTitle: "What the ISO 27001 Lead Auditor Course Covers",
 
   intro:
     "Become a certified ISO 27001 Lead Auditor and master Information Security Management System (ISMS) auditing based on ISO/IEC 27001:2022 and ISO 19011 guidelines.",
@@ -906,16 +977,42 @@ export const isoTrainingItems = [
     "Professionals responsible for Information Security Management Systems"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO/IEC 27001:2022 Information Security Management System requirements.",
-    "Learn to conduct first-, second-, and third-party ISMS audits.",
-    "Understand ISO 19011 auditing principles and internationally accepted audit practices.",
-    "Gain expertise in information security risk assessment, risk treatment, and the Statement of Applicability (SoA).",
-    "Learn to audit Annex A controls across Organizational, People, Physical, and Technological domains.",
-    "Develop skills to gather objective evidence, identify nonconformities, and prepare professional audit reports.",
-    "Build the confidence to lead audit teams and communicate audit findings effectively.",
-    "Enhance your career with an internationally recognized ISO 27001 Lead Auditor qualification."
-  ]
+  overview: `
+The ISO 27001 Lead Auditor Course is designed to provide a robust foundation in the knowledge and skills required for conducting first-, second-, and third-party audits of Information Security Management Systems (ISMS) as per ISO/IEC 27001:2022 requirements. This course develops the competencies necessary to effectively lead an audit team and provides an in-depth understanding of ISO/IEC 27001 standards, auditing principles, and best practices.
+
+As a sister organization of IAS, Empowering Assurance Systems (EAS) offers this IRCA-certified ISO 27001 Lead Auditor Course through tutor-led online training. Combining theoretical knowledge with practical exercises, the course enables participants to confidently apply auditing skills in real-world Information Security Management System audits.
+`,
+
+whyTake:
+  "Taking the ISO 27001 Lead Auditor Course equips participants with the knowledge and practical skills required to assess the effectiveness of an Information Security Management System (ISMS) and evaluate compliance with ISO/IEC 27001:2022 requirements. Achieving ISO 27001 Lead Auditor certification enhances professional credibility, enables participants to lead first-, second-, and third-party ISMS audits, and adds an internationally recognised qualification that supports career growth in information security, compliance, risk management, and auditing.",
+
+courseCovers: [
+  "The structure of ISO/IEC 27001:2022 (Annex SL High-Level Structure) and the Information Security Management System (ISMS) framework.",
+  "Context of the organization, interested parties, and defining the ISMS scope (Clause 4).",
+  "Leadership, information security policy, organizational roles, responsibilities, and authorities (Clause 5).",
+  "Planning — information security risk assessment, risk treatment, Statement of Applicability (SoA), and information security objectives (Clause 6).",
+  "Support — resources, competence, awareness, communication, and documented information (Clause 7).",
+  "Operation — operational planning and control, implementation of risk treatment, and ISMS operation (Clause 8).",
+  "Performance Evaluation — monitoring, measurement, analysis, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement (Clause 10).",
+  "Annex A Controls (2022) across Organizational, People, Physical, and Technological themes, and auditing their implementation and effectiveness.",
+  "Audit principles, audit types (first-, second-, and third-party), audit planning, evidence collection, nonconformity classification, reporting, and follow-up activities based on ISO 19011."
+],
+
+benefits: [
+  "Develop an in-depth understanding of ISO/IEC 27001:2022 Information Security Management System requirements.",
+  "Gain the practical skills required to conduct first-, second-, and third-party ISMS audits.",
+  "Understand information security risk assessment, risk treatment, and the Statement of Applicability (SoA).",
+  "Learn how to audit Annex A controls effectively across Organizational, People, Physical, and Technological domains.",
+  "Develop confidence to collect objective evidence, identify nonconformities, and prepare professional audit reports.",
+  "Build leadership skills to successfully lead Information Security Management System audit teams.",
+  "Earn an internationally recognised ISO 27001 Lead Auditor qualification to advance your information security and compliance career."
+],
+
+prerequisites: [
+  "Basic knowledge of Information Security Management Systems (ISMS).",
+  "Understanding of ISO/IEC 27001 fundamentals is recommended."
+]
 },
 {
   slug: "iso-45001-lead-auditor",
@@ -923,6 +1020,7 @@ export const isoTrainingItems = [
   title: "ISO 45001 Lead Auditor Training",
   image: iso45001Img1,
   heroImage: iso45001Img1,
+  template: "iso45001LeadAuditor",
 
   intro:
     "Become a certified ISO 45001 Lead Auditor and develop the expertise to conduct first-, second-, and third-party Occupational Health & Safety Management System (OHSMS) audits based on ISO 45001.",
@@ -952,17 +1050,77 @@ export const isoTrainingItems = [
     "Health & Safety Professionals",
     "ISO Consultants"
   ],
+whyTakeTitle: "Why Enroll in ISO 45001 Lead Auditor Training?",
 
-  description: [
-    "Understand the ISO 45001 Occupational Health & Safety Management System standard.",
-    "Learn the principles and requirements of Occupational Health & Safety Management Systems (OHSMS).",
-    "Develop the skills required to perform first-, second-, and third-party audits.",
-    "Understand the roles and responsibilities of lead auditors.",
-    "Learn how to effectively plan, conduct, report, and follow up audits.",
-    "Gain practical auditing experience through workshops, case studies, and group exercises.",
-    "Improve workplace health and safety performance through effective auditing.",
-    "Earn an internationally recognized ISO 45001 Lead Auditor qualification."
-  ]
+courseCoversTitle: "What the ISO 45001 Lead Auditor Course Covers",
+
+overview: `
+The ISO 45001 Lead Auditor Course is designed to equip participants with the essential skills and knowledge needed to conduct first-, second-, and third-party audits of Occupational Health and Safety Management Systems (OHSMS) against ISO 45001. This comprehensive program covers the intricacies of ISO 45001 requirements, principles, and auditing practices, encompassing the role of auditors, audit planning, and effective audit execution.
+
+Empowering Assurance Systems (EAS), an esteemed sister organization of IAS, proudly offers IRCA Certified ISO 45001 Lead Auditor Training. Led by experienced trainers, the course blends lectures, workshops, and group exercises for a well-rounded learning experience.
+`,
+
+whyTake:
+  "ISO 45001, the pioneering international standard for Occupational Health and Safety, provides a framework for improving employee safety, reducing workplace risks, and establishing effective Occupational Health and Safety Management Systems (OHSMS). This course equips participants with the expertise to audit an organization's OH&S Management System against ISO 45001 requirements while enhancing career opportunities in auditing, occupational health and safety, and management system consulting.",
+
+courseCovers: [
+  "The structure of ISO 45001:2018 (Annex SL High-Level Structure) and the Occupational Health & Safety Management System (OHSMS).",
+  "Context of the organization, workers, interested parties, and defining the scope of the OHSMS (Clause 4).",
+  "Leadership, OH&S policy, worker consultation, participation, and organizational responsibilities (Clause 5).",
+  "Planning — hazard identification, assessment of OH&S risks and opportunities, legal requirements, and OH&S objectives (Clause 6).",
+  "Support — resources, competence, awareness, communication, and documented information (Clause 7).",
+  "Operation — operational planning and control, elimination of hazards, risk reduction, management of change, procurement, contractors, and emergency preparedness & response (Clause 8).",
+  "Performance Evaluation — monitoring, measurement, evaluation of compliance, internal audit, and management review (Clause 9).",
+  "Improvement — incident investigation, nonconformity, corrective action, and continual improvement (Clause 10).",
+  "Audit principles, audit planning, evidence collection, nonconformity grading, reporting, and audit follow-up based on ISO 19011."
+],
+
+benefitsTitle: "Benefits of the Course",
+
+benefits: [
+  "Develop a comprehensive understanding of ISO 45001 requirements and Occupational Health & Safety Management Systems.",
+  "Acquire the skills required to lead first-, second-, and third-party OH&S Management System audits.",
+  "Understand auditing principles, auditor responsibilities, audit planning, execution, reporting, and follow-up.",
+  "Learn to evaluate an organization's compliance with ISO 45001 requirements.",
+  "Develop the ability to prepare professional audit reports with objective findings.",
+  "Build confidence to communicate audit findings effectively with management and stakeholders.",
+  "Enhance career opportunities and professional credibility with an internationally recognised IRCA ISO 45001 Lead Auditor qualification."
+],
+
+prerequisites: [
+  "A basic understanding of ISO 45001:2018 Occupational Health & Safety Management System requirements.",
+  "Knowledge of management system auditing principles is recommended.",
+  "Previous experience participating in internal audits is beneficial.",
+  "An ISO 45001 Internal Auditor certification is recommended but not mandatory."
+],
+
+faq: [
+  {
+    question: "Who should attend this course?",
+    answer:
+      "Safety Officers, HSE Managers, Internal Auditors, Lead Auditors, ISO Consultants, Compliance Professionals, and anyone responsible for Occupational Health & Safety Management Systems."
+  },
+  {
+    question: "Do I need prior knowledge of ISO 45001?",
+    answer:
+      "A basic understanding of ISO 45001 requirements is recommended before attending the Lead Auditor course."
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes. Participants who successfully complete the course and assessment will receive an internationally recognised ISO 45001 Lead Auditor certificate."
+  }
+],
+
+assessment: {
+  duration: "",
+  questions: "",
+  marks: "",
+  passing: "",
+  certificate: ""
+},
+
+enrollment: []
 },
 {
   slug: "iso-22301-lead-auditor",
@@ -970,6 +1128,7 @@ export const isoTrainingItems = [
   title: "ISO 22301 Lead Auditor Training",
   image: iso22301Img,
   heroImage: iso22301Img,
+  template: "iso22301LeadAuditor",
 
   intro: "Business Continuity Management System auditing.",
 
@@ -994,14 +1153,76 @@ export const isoTrainingItems = [
     "Consultants"
   ],
 
-  description: [
-    "The ISO 22301 Lead Auditor Training provides participants with the knowledge and practical skills required to perform first-, second-, and third-party audits of a Business Continuity Management System (BCMS) based on ISO 22301.",
-    "Learn how to assess the suitability of a BCMS for certification and registration against ISO 22301 requirements.",
-    "Understand the requirements of the ISO 22301 standard and internationally accepted auditing principles.",
-    "Develop the skills to effectively plan, conduct, report, and follow up Business Continuity Management System audits.",
-    "Gain practical knowledge of the complete BCMS audit lifecycle, from audit planning through reporting.",
-    "Build the confidence to lead Business Continuity Management System audits with guidance from experienced industry experts."
-  ]
+whyTakeTitle: "Why Take ISO 22301 Lead Auditor Training?",
+
+courseCoversTitle: "What the ISO 22301 Lead Auditor Course Covers",
+
+overview: `
+ISO 22301 Lead Auditor Training is aimed at providing delegates with the necessary expertise to perform first-, second-, and third-party audits of a Business Continuity Management System (BCMS) based on ISO 22301, to determine whether it is suitable for certification and/or registration purposes. The course covers the requirements of ISO 22301 and provides guidance on how to conduct audits to assess compliance with the standard.
+
+Empowering Assurance Systems (EAS), a sister organization of IAS, offers this IRCA Certified ISO 22301 Lead Auditor Course through experienced tutors. The course enables participants to understand the complete Business Continuity Management System audit lifecycle, from planning and execution to reporting and continual improvement.
+`,
+
+whyTake:
+  "Whether you are looking to improve your auditing skills or lead Business Continuity Management System audits within your organization, this course provides the knowledge and practical techniques required to effectively audit ISO 22301 management systems. Participants learn how to evaluate compliance with ISO 22301 requirements, identify opportunities for improvement, and confidently lead first-, second-, and third-party BCMS audits.",
+
+courseCovers: [
+  "The structure of ISO 22301:2019 (Annex SL High-Level Structure) and the Business Continuity Management System (BCMS) framework.",
+  "Context of the organization, interested parties, and defining the BCMS scope (Clause 4).",
+  "Leadership, business continuity policy, organizational roles, responsibilities, and authorities (Clause 5).",
+  "Planning — actions to address risks and opportunities, business continuity objectives, and planning to achieve them (Clause 6).",
+  "Support — resources, competence, awareness, communication, and documented information (Clause 7).",
+  "Operation — Business Impact Analysis (BIA), risk assessment, business continuity strategies, business continuity plans, procedures, exercising, and testing (Clause 8).",
+  "Performance Evaluation — monitoring, measurement, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement (Clause 10).",
+  "Audit principles, audit planning, evidence collection, nonconformity grading, reporting, and audit follow-up based on ISO 19011."
+],
+
+benefitsTitle: "Benefits of the Course",
+
+benefits: [
+  "Develop an in-depth understanding of ISO 22301 Business Continuity Management System requirements.",
+  "Learn how to effectively plan, conduct, report, and follow up ISO 22301 audits.",
+  "Acquire the skills and knowledge required to successfully lead Business Continuity Management System audit teams.",
+  "Develop a deeper understanding of business continuity and risk management principles.",
+  "Learn how to identify opportunities for improving an organization's Business Continuity Management System.",
+  "Build confidence in communicating audit findings and recommendations with management and stakeholders.",
+  "Earn an internationally recognised IRCA ISO 22301 Lead Auditor qualification to strengthen your career."
+],
+
+prerequisites: [
+  "A general understanding of Business Continuity Management principles and practices.",
+  "Basic knowledge of ISO 22301 requirements is recommended.",
+  "Previous experience in BCMS auditing or an ISO 22301 Internal Auditor certification is beneficial but not mandatory."
+],
+
+faq: [
+  {
+    question: "Who should attend this course?",
+    answer:
+      "Business Continuity Managers, Risk Managers, Internal Auditors, Lead Auditors, ISO Consultants, Compliance Professionals, and anyone responsible for implementing or auditing Business Continuity Management Systems."
+  },
+  {
+    question: "Is prior ISO 22301 knowledge required?",
+    answer:
+      "A basic understanding of ISO 22301 and Business Continuity Management concepts is recommended before attending the Lead Auditor course."
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes. Participants who successfully complete the course and assessment will receive an internationally recognised ISO 22301 Lead Auditor certificate."
+  }
+],
+
+assessment: {
+  duration: "",
+  questions: "",
+  marks: "",
+  passing: "",
+  certificate: ""
+},
+
+enrollment: []
 },
 
 {
@@ -1049,24 +1270,79 @@ export const isoTrainingItems = [
     "Quality Assurance Managers",
     "Food Industry Professionals"
   ],
+whyTakeTitle: "Why Take the ISO 22000 Lead Auditor Course?",
 
-  description: [
-    "Develop a comprehensive understanding of ISO 22000:2018 Food Safety Management System requirements.",
-    "Learn to conduct first-, second-, and third-party Food Safety Management System (FSMS) audits.",
-    "Understand ISO 19011 auditing principles, process approach, sampling techniques, and statistical methods used during audits.",
-    "Gain expertise in HACCP principles, prerequisite programmes (PRPs), hazard analysis, critical control points (CCPs), traceability, and emergency preparedness.",
-    "Develop the skills to effectively plan, conduct, report, and follow up FSMS audits.",
-    "Lead audit teams with confidence using internationally recognized auditing practices.",
-    "Strengthen food safety culture and improve organizational food safety performance.",
-    "Earn an internationally recognized ISO 22000 Lead Auditor qualification to advance your career."
-  ],
+courseCoversTitle: "What the ISO 22000 Lead Auditor Course Covers",
 
-  prerequisites: [
-    "Basic knowledge of food safety and quality management systems.",
-    "Previous auditing experience is recommended.",
-    "An ISO 22000 Internal Auditor certification is beneficial but not mandatory."
-  ]
+overview: `
+The ISO 22000 Lead Auditor Training is designed to provide participants with the expertise required to conduct first-, second-, and third-party Food Safety Management System (FSMS) audits in accordance with ISO 22000:2018 requirements. The course establishes a strong foundation for planning, conducting, reporting, and managing FSMS audit programmes while assessing compliance with international food safety standards.
+
+Empowering Assurance Systems (EAS), a sister organization of IAS, offers this IRCA Certified ISO 22000 Lead Auditor Course through experienced auditors. The programme combines theoretical learning with practical auditing exercises, enabling participants to confidently lead Food Safety Management System audits from planning through reporting.
+`,
+
+whyTake:
+  "The ISO 22000 Lead Auditor Course provides participants with comprehensive knowledge of auditing Food Safety Management Systems against ISO 22000:2018 requirements. It covers auditing principles, the process approach, sampling techniques, statistical methods, HACCP implementation, and Food Safety Management best practices. On successful completion, participants will be able to confidently plan, conduct, report, and lead FSMS audits while guiding audit teams within their organizations.",
+
+courseCovers: [
+  "The structure of ISO 22000:2018 (Annex SL High-Level Structure) and the Food Safety Management System (FSMS) framework.",
+  "Context of the organization, interested parties, and defining the scope of the FSMS (Clause 4).",
+  "Leadership, food safety policy, organizational roles, responsibilities, and authorities (Clause 5).",
+  "Planning — actions to address risks and opportunities, food safety objectives, and planning to achieve them (Clause 6).",
+  "Support — resources, competence, awareness, internal and external communication, and documented information (Clause 7).",
+  "Operation — Prerequisite Programmes (PRPs), hazard analysis, HACCP plans, traceability, emergency preparedness, monitoring, and measuring processes (Clause 8).",
+  "HACCP principles including hazard analysis, Critical Control Points (CCPs), Operational PRPs (OPRPs), critical limits, validation, and verification.",
+  "Performance Evaluation — monitoring, measurement, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, continual improvement, and updating the FSMS (Clause 10).",
+  "Audit principles, audit planning, evidence collection, sampling techniques, nonconformity classification, reporting, and audit follow-up based on ISO 19011."
+],
+
+benefitsTitle: "Benefits of the Course",
+
+benefits: [
+  "Develop a comprehensive understanding of ISO 22000:2018 Food Safety Management System requirements.",
+  "Learn to conduct effective first-, second-, and third-party Food Safety Management System audits.",
+  "Gain expertise in HACCP principles, hazard analysis, Prerequisite Programmes (PRPs), Operational PRPs (OPRPs), and Critical Control Points (CCPs).",
+  "Understand internationally accepted auditing principles, sampling techniques, and evidence-based auditing practices.",
+  "Strengthen your organization's food safety culture and improve overall Food Safety Management System performance.",
+  "Develop the leadership skills required to successfully manage and lead FSMS audit teams.",
+  "Earn an internationally recognised IRCA ISO 22000 Lead Auditor qualification to enhance your professional career."
+],
+
+prerequisites: [
+  "Basic knowledge of Food Safety Management Systems (FSMS) and ISO 22000 requirements.",
+  "Understanding of HACCP principles is recommended.",
+  "Previous auditing experience or an ISO 22000 Internal Auditor qualification is beneficial but not mandatory."
+],
+
+faq: [
+  {
+    question: "Who should attend this course?",
+    answer:
+      "Food Safety Managers, Quality Assurance Managers, Internal Auditors, Lead Auditors, Food Technologists, Production Managers, ISO Consultants, and professionals responsible for Food Safety Management Systems."
+  },
+  {
+    question: "Do I need prior knowledge of ISO 22000?",
+    answer:
+      "A basic understanding of ISO 22000 requirements and HACCP principles is recommended before attending the Lead Auditor course."
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes. Participants who successfully complete the course and assessment will receive an internationally recognised ISO 22000 Lead Auditor certificate."
+  }
+],
+
+assessment: {
+  duration: "",
+  questions: "",
+  marks: "",
+  passing: "",
+  certificate: ""
 },
+
+enrollment: []
+},
+
 {
   slug: "iso-14001-lead-auditor",
   code: "ISO 14001",
@@ -1100,16 +1376,93 @@ export const isoTrainingItems = [
     "Compliance Professionals"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of Environmental Management System (EMS) principles and ISO 14001:2026 requirements.",
-    "Learn to perform first-, second-, and third-party Environmental Management System audits.",
-    "Understand internationally recognized auditing principles and best practices.",
-    "Develop the skills required to effectively plan, conduct, report, and follow up EMS audits.",
-    "Gain practical experience through real-world audit scenarios and case studies.",
-    "Evaluate Environmental Management Systems for effectiveness and identify opportunities for continual improvement.",
-    "Build the confidence to lead environmental audit teams and communicate audit findings professionally.",
-    "Earn an internationally recognized ISO 14001 Lead Auditor qualification to advance your career."
-  ]
+ whyTakeTitle: "Why Take the ISO 14001 Lead Auditor Course?",
+
+courseCoversTitle: "What the ISO 14001 Lead Auditor Course Covers",
+
+overview: `
+The ISO 14001:2026 Lead Auditor Training is designed to equip participants with the knowledge and skills required to perform first-, second-, and third-party audits of Environmental Management Systems (EMS). The course provides a structured understanding of EMS principles and the updated ISO 14001:2026 requirements while focusing on auditing techniques that ensure effective planning, execution, and reporting of audits.
+
+Participants gain practical exposure to real-world audit scenarios, enabling them to assess system effectiveness and identify opportunities for continual improvement.
+
+Empowering Assurance Systems (EAS), a sister organization of IAS, delivers this IRCA Certified ISO 14001 Lead Auditor Training through experienced instructors who guide participants through the complete Environmental Management System audit lifecycle.
+`,
+
+whyTake:
+  "The ISO 14001 Lead Auditor Course equips participants with the expertise required to evaluate Environmental Management Systems against the latest ISO 14001 requirements. It develops practical auditing skills, strengthens environmental compliance knowledge, and prepares professionals to confidently lead first-, second-, and third-party EMS audits while supporting continual improvement and sustainable business practices.",
+
+courseCovers: [
+  "The structure of ISO 14001:2026 (Annex SL High-Level Structure) and the Environmental Management System (EMS) framework based on the Plan-Do-Check-Act (PDCA) cycle.",
+  "Context of the organization, interested parties, and defining the EMS scope (Clause 4).",
+  "Leadership, environmental policy, organizational roles, responsibilities, and authorities (Clause 5).",
+  "Planning — environmental aspects and impacts, compliance obligations, risks and opportunities, and environmental objectives (Clause 6).",
+  "Support — resources, competence, awareness, communication, and documented information (Clause 7).",
+  "Operation — operational planning and control with a lifecycle perspective, operational controls, and emergency preparedness and response (Clause 8).",
+  "Performance Evaluation — monitoring, measurement, evaluation of compliance, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement (Clause 10).",
+  "ISO 14001:2026 updates including stronger risk-based thinking, climate change considerations, and measurable environmental performance.",
+  "Audit principles, audit planning, evidence collection, nonconformity classification, reporting, and audit follow-up based on ISO 19011."
+],
+
+benefitsTitle: "Benefits of the Course",
+
+benefits: [
+  "Develop a comprehensive understanding of Environmental Management System principles and ISO 14001:2026 requirements.",
+  "Learn to conduct first-, second-, and third-party Environmental Management System audits using internationally accepted auditing practices.",
+  "Gain practical experience through real-world audit scenarios, workshops, and case studies.",
+  "Develop the skills required to effectively plan, conduct, report, and follow up Environmental Management System audits.",
+  "Improve environmental compliance, sustainability performance, and continual improvement within organizations.",
+  "Build confidence to lead Environmental Management System audit teams and communicate audit findings professionally.",
+  "Earn an internationally recognised IRCA ISO 14001 Lead Auditor qualification to advance your environmental management career."
+],
+
+prerequisites: [
+  "A basic understanding of Environmental Management Systems (EMS) and ISO 14001 concepts.",
+  "Knowledge of auditing principles and the Plan-Do-Check-Act (PDCA) cycle is recommended.",
+  "Previous exposure to environmental management practices is beneficial but not mandatory."
+],
+
+faq: [
+  {
+    question: "Who should attend this course?",
+    answer:
+      "Environmental Managers, Compliance Managers, Internal Auditors, Lead Auditors, ISO Consultants, Sustainability Professionals, and individuals responsible for Environmental Management Systems."
+  },
+  {
+    question: "Do I need prior knowledge of ISO 14001?",
+    answer:
+      "A basic understanding of ISO 14001 requirements and Environmental Management System concepts is recommended before attending the Lead Auditor course."
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes. Participants who successfully complete the course and assessment will receive an internationally recognised ISO 14001 Lead Auditor certificate."
+  }
+],
+
+aboutUpdateTitle: "About the ISO 14001:2026 Update",
+
+aboutUpdate: `
+The release of ISO 14001:2026 marks a significant advancement in Environmental Management Systems. Organizations are evaluated not only on regulatory compliance but also on their ability to demonstrate measurable environmental performance and continual improvement. The revised standard introduces stronger risk-based thinking, climate change considerations, enhanced monitoring, and deeper integration of sustainability into business strategy.
+`,
+
+updateBenefits: [
+  "Ensures compliance with updated environmental regulations and reduces regulatory risks.",
+  "Strengthens risk-based thinking and environmental decision-making.",
+  "Improves monitoring and performance evaluation through measurable environmental objectives.",
+  "Enhances organizational reputation and stakeholder confidence.",
+  "Supports continual improvement and sustainable business operations."
+],
+
+assessment: {
+  duration: "",
+  questions: "",
+  marks: "",
+ passing: "",
+  certificate: ""
+},
+
+enrollment: []
 },
 {
   slug: "iso-13485-lead-auditor",
@@ -1152,16 +1505,75 @@ export const isoTrainingItems = [
     "Quality Management Professionals"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 13485:2016 Medical Device Quality Management System requirements.",
-    "Learn how ISO 13485 aligns with global medical device regulatory requirements.",
-    "Understand documentation requirements, including the Medical Device File.",
-    "Gain expertise in management responsibility, quality policy, objectives, and regulatory compliance.",
-    "Learn product realization processes including design controls, purchasing, production, validation, traceability, and sterile-device requirements.",
-    "Understand the application of risk management throughout the quality management system in accordance with ISO 14971.",
-    "Develop the skills to effectively plan, conduct, report, and follow up Medical Device Quality Management System audits.",
-    "Build the confidence to lead audit teams and earn an internationally recognized ISO 13485 Lead Auditor qualification."
-  ]
+ whyTakeTitle: "Why Take the ISO 13485 Lead Auditor Course?",
+
+courseCoversTitle: "What the ISO 13485 Lead Auditor Course Covers",
+
+overview: `
+ISO 13485 Lead Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up Medical Device Quality Management System (MDQMS) audits in accordance with ISO 13485:2016 requirements. The course prepares participants to confidently perform first-, second-, and third-party audits while understanding regulatory expectations for the medical device industry.
+
+Empowering Assurance Systems (EAS), a sister organization of IAS, delivers this CQI-IRCA Certified ISO 13485 Lead Auditor Training through experienced instructors. The programme combines theoretical knowledge with practical audit exercises to prepare participants for real-world Medical Device Quality Management System audits.
+`,
+
+whyTake:
+  "The ISO 13485 Lead Auditor Course enables professionals to acquire the expertise required to audit Medical Device Quality Management Systems in accordance with ISO 13485:2016 and ISO 19011 guidelines. Participants gain a clear understanding of regulatory requirements, risk management, documentation, and auditing techniques, preparing them to confidently lead audit teams and ensure compliance within the medical device industry.",
+
+courseCovers: [
+  "The structure of ISO 13485:2016 and its alignment with global regulatory requirements for medical devices.",
+  "Quality Management System requirements, documentation, and the Medical Device File (Clause 4).",
+  "Management responsibility, customer focus, regulatory compliance, quality policy, and quality objectives (Clause 5).",
+  "Resource Management including competence, training, infrastructure, work environment, and contamination control (Clause 6).",
+  "Product realization including planning, design and development controls, purchasing, production, service provision, validation, traceability, cleanliness, and sterile-device requirements (Clause 7).",
+  "Risk Management throughout the Medical Device Quality Management System in accordance with ISO 14971.",
+  "Measurement, analysis, and improvement including customer feedback, complaint handling, reporting to regulatory authorities, internal audit, CAPA, and control of nonconforming products (Clause 8).",
+  "Audit principles, audit planning, evidence collection, nonconformity grading, reporting, and follow-up activities based on ISO 19011."
+],
+
+benefitsTitle: "Benefits of the Course",
+
+benefits: [
+  "Develop a comprehensive understanding of ISO 13485:2016 Medical Device Quality Management System requirements.",
+  "Understand how ISO 13485 aligns with international medical device regulatory requirements.",
+  "Gain expertise in risk management, regulatory compliance, and Medical Device File documentation.",
+  "Develop practical skills to plan, conduct, report, and follow up Medical Device Quality Management System audits.",
+  "Understand product realization, design controls, validation, traceability, sterile-device requirements, and supplier controls.",
+  "Build confidence to successfully lead first-, second-, and third-party Medical Device Quality Management System audit teams.",
+  "Earn an internationally recognised CQI-IRCA ISO 13485 Lead Auditor qualification to strengthen your professional career."
+],
+
+prerequisites: [
+  "Basic knowledge of Quality Management Systems and ISO 13485 concepts.",
+  "Understanding of medical device regulatory requirements is recommended.",
+  "Previous auditing experience is beneficial but not mandatory."
+],
+
+faq: [
+  {
+    question: "Who should attend this course?",
+    answer:
+      "Medical Device Manufacturers, Quality Assurance Managers, Regulatory Affairs Professionals, Internal Auditors, Lead Auditors, ISO Consultants, and professionals responsible for Medical Device Quality Management Systems."
+  },
+  {
+    question: "Do I need prior knowledge of ISO 13485?",
+    answer:
+      "A basic understanding of ISO 13485 and Quality Management System concepts is recommended before attending the Lead Auditor course."
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer:
+      "Yes. Participants who successfully complete the course and assessment will receive an internationally recognised CQI-IRCA ISO 13485 Lead Auditor certificate."
+  }
+],
+
+assessment: {
+  duration: "",
+  questions: "",
+  marks: "",
+  passing: "",
+  certificate: ""
+},
+
+enrollment: []
 },
 {
   slug: "iso-50001-lead-auditor",
@@ -1209,17 +1621,40 @@ export const isoTrainingItems = [
     "Professionals from Energy-Intensive Industries"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 50001:2018 Energy Management System requirements.",
-    "Learn the Plan-Do-Check-Act (PDCA) approach for effective Energy Management Systems.",
-    "Understand energy reviews, Energy Baselines (EnB), Energy Performance Indicators (EnPIs), and Significant Energy Uses (SEUs).",
-    "Learn to perform first-, second-, and third-party Energy Management System audits.",
-    "Develop the skills to effectively plan, conduct, report, and follow up ISO 50001 audits.",
-    "Gain practical auditing experience through case studies, simulations, and role-playing exercises.",
-    "Improve organizational energy performance and support continual improvement initiatives.",
-    "Earn an internationally recognized ISO 50001 Lead Auditor qualification."
-  ],
+ whyTakeTitle: "About the Course",
 
+courseCoversTitle: "What the ISO 50001 Lead Auditor Course Covers",
+
+overview: `
+ISO 50001 Lead Auditor Training empowers individuals with the skills and knowledge necessary to lead and conduct successful audits aligned with the international standard for Energy Management Systems. In collaboration with our sister organization, Empowering Assurance Systems (EAS), IAS provides this ISO 50001 Lead Auditor Training for professionals keen on auditing Energy Management Systems.
+`,
+
+courseCovers: [
+  "The structure of ISO 50001:2018 (the Annex SL high-level structure) and the Energy Management System (EnMS) framework, based on the Plan-Do-Check-Act (PDCA) cycle.",
+  "Context of the organization, interested parties, and the scope of the EnMS (Clause 4).",
+  "Leadership, the energy policy, and roles and responsibilities (Clause 5).",
+  "Planning — the energy review, Energy Baseline (EnB), Energy Performance Indicators (EnPIs), Significant Energy Uses (SEUs), legal requirements, and energy objectives and targets (Clause 6).",
+  "Support — resources, competence, awareness, communication, and documented information (Clause 7).",
+  "Operation — operational controls, and design and procurement of energy-using equipment, systems, processes, and energy itself (Clause 8).",
+  "Performance evaluation — monitoring, measurement, analysis and evaluation of energy performance and the EnMS, evaluation of compliance, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement of energy performance (Clause 10).",
+  "Audit principles and the full audit lifecycle: planning, conducting, gathering evidence, grading nonconformities, reporting, and follow-up."
+],
+
+assessmentTitle: "Assessment & Certification",
+
+assessmentContent: {
+  continuousAssessment:
+    "Candidates are evaluated throughout the course on attendance, active participation, completion of individual and group exercises, and professional engagement during class discussions.",
+
+  finalExamination:
+    "At the end of the course, participants complete a comprehensive examination. Passing the examination demonstrates auditing competence.",
+
+  certification:
+    "Participants who successfully complete the training and pass the examination receive a globally recognised certificate of successful course completion. Candidates who do not meet the threshold will be issued a certificate of attendance."
+},
+
+enrollment: [],
   benefits: [
     "Learn from experienced and certified Lead Auditors with real-world industry expertise.",
     "Participate in interactive discussions, workshops, and hands-on audit activities.",
@@ -1281,16 +1716,40 @@ export const isoTrainingItems = [
     "Research Institution Professionals"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO/IEC 17025:2017 requirements for testing and calibration laboratories.",
-    "Learn laboratory quality management principles, including impartiality, confidentiality, and competence requirements.",
-    "Understand resource management, metrological traceability, sampling, method validation, and measurement uncertainty.",
-    "Learn to perform first-, second-, and third-party laboratory audits using ISO 19011 auditing guidelines.",
-    "Develop the skills to effectively plan, conduct, report, and follow up ISO/IEC 17025 audits.",
-    "Gain practical auditing experience through case studies, simulations, and real-world laboratory audit scenarios.",
-    "Build the confidence to lead audit teams and improve laboratory quality management systems.",
-    "Earn an internationally recognized ISO/IEC 17025 Lead Auditor qualification."
-  ],
+whyTakeTitle: "About the Course",
+
+overview: `
+ISO 17025 Lead Auditor Training is designed to equip individuals with the skills and knowledge necessary to lead and conduct successful audits in accordance with the international standard for testing and calibration laboratories. In association with our sister organization, Empowering Assurance Systems (EAS), IAS provides this CQI-IRCA Certified ISO 17025 Lead Auditor Training for candidates interested in auditing laboratory quality management systems.
+`,
+
+courseCoversTitle: "What the ISO 17025 Lead Auditor Course Covers",
+
+courseCovers: [
+  "The structure of ISO/IEC 17025:2017 — competence, impartiality, and consistent operation of laboratories.",
+  "General requirements — impartiality and confidentiality.",
+  "Structural requirements — the organization and management structure of the laboratory.",
+  "Resource requirements — personnel, facilities and environmental conditions, equipment, metrological traceability, and externally provided products and services.",
+  "Process requirements — review of requests, tenders and contracts; selection, verification and validation of methods; sampling; handling of test and calibration items; technical records; evaluation of measurement uncertainty; ensuring the validity of results; reporting results; complaints; nonconforming work; and control of data and information management.",
+  "Management system requirements — Options A and B, documentation and control of records, actions to address risks and opportunities, improvement, corrective action, and internal audits and management reviews.",
+  "Audit principles and the full audit lifecycle: planning, conducting, gathering evidence, grading nonconformities, reporting, and follow-up."
+],
+
+benefitsTitle: "Benefits of the Course",
+
+benefits: [
+  "Learn from experienced and certified Lead Auditors with practical laboratory auditing expertise.",
+  "Participate in interactive workshops, discussions, and hands-on audit activities.",
+  "Apply auditing techniques through realistic laboratory case studies and simulations.",
+  "Earn a globally recognized ISO/IEC 17025 Lead Auditor credential to enhance your professional career."
+],
+
+trainingMethodsTitle: "Training Methods",
+
+trainingMethods: [
+  "In-House Training – Customized training delivered at your organization based on laboratory operations and industry requirements.",
+  "Open Classroom Training – Instructor-led classroom sessions with professionals from testing, calibration, and research laboratories.",
+  "Tutor-Led Virtual Training – Live online sessions featuring interactive discussions, breakout activities, and practical audit exercises."
+],
 
   benefits: [
     "Learn from experienced and certified Lead Auditors with practical laboratory auditing expertise.",
@@ -1353,16 +1812,53 @@ export const isoTrainingItems = [
     "Healthcare Quality Professionals"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 15189:2022 requirements for quality and competence in medical laboratories.",
-    "Learn laboratory quality management principles including impartiality, confidentiality, patient-focused requirements, and governance.",
-    "Understand personnel competency, facilities, equipment calibration, metrological traceability, and laboratory resource management.",
-    "Gain expertise in pre-examination, examination, post-examination processes, and Point-of-Care Testing (POCT).",
-    "Develop the skills to effectively plan, conduct, report, and follow up Medical Laboratory Quality Management System audits.",
-    "Learn internationally accepted ISO 19011 auditing principles and best practices.",
-    "Build the confidence to lead medical laboratory audit teams and drive continual improvement.",
-    "Earn an internationally recognized ISO 15189 Lead Auditor qualification."
-  ]
+whyTakeTitle: "About the Course",
+
+overview: `
+ISO 15189 Lead Auditor Training is designed to empower individuals with the skills and knowledge necessary to lead and conduct successful audits in accordance with the ISO 15189 international standard for medical laboratories. In association with our sister organization, Empowering Assurance Systems (EAS), IAS provides this ISO 15189 Lead Auditor Training for candidates interested in auditing Medical Laboratory Quality Management Systems.
+`,
+
+courseCoversTitle: "What the ISO 15189 Lead Auditor Course Covers",
+
+courseCovers: [
+  "The structure of ISO 15189:2022 — requirements for quality and competence in medical laboratories, aligned with ISO/IEC 17025.",
+  "General requirements — impartiality, confidentiality, and requirements regarding patients.",
+  "Structural and governance requirements — legal entity, the laboratory director, and organizational structure.",
+  "Resource requirements — personnel, facilities and environmental conditions, equipment, equipment calibration and metrological traceability, reagents and consumables, and externally provided products and services.",
+  "Process requirements across the total testing process — pre-examination (request, primary sample collection and handling), examination (selection, verification and validation of methods, measurement uncertainty, ensuring the validity of results), and post-examination (reporting, release and storage of results), plus Point-of-Care Testing (POCT).",
+  "Management system requirements — documentation and records, risk management, improvement, corrective action, internal audit, and management review.",
+  "Audit principles and the full audit lifecycle: planning, conducting, gathering evidence, grading nonconformities, reporting, and follow-up."
+],
+
+faqTitle: "ISO 15189 Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 15189 Lead Auditor course?",
+    answer:
+      "A Lead Auditor course, delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, that qualifies participants to lead audits of medical (clinical) laboratories against ISO 15189:2022 in line with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers the ISO 15189:2022 structure, requirements for quality and competence in medical laboratories aligned with ISO/IEC 17025, the pre-examination, examination, and post-examination processes, risk management, and the complete audit lifecycle."
+  },
+  {
+    question: "What's the difference between auditing ISO 15189 and ISO/IEC 17025?",
+    answer:
+      "Both standards address laboratory competence, but ISO 15189 is specifically designed for medical and clinical laboratories with a focus on patient testing, while ISO/IEC 17025 applies to general testing and calibration laboratories."
+  },
+  {
+    question: "What are the prerequisites?",
+    answer:
+      "A basic understanding of Quality Management Systems and some experience in the medical laboratory sector is helpful. Previous auditing knowledge is beneficial but not mandatory."
+  },
+  {
+    question: "How is the course assessed, and how long is it?",
+    answer:
+      "Participants are evaluated through continuous assessment and a final examination. Successful candidates receive a certificate of successful course completion. The course duration is 5 days (40 hours) and is available as Open Classroom, In-House, or Virtual Training."
+  }
+],
 },
 // ======================
 // FSSC & INTERNAL AUDITOR TRAININGS
@@ -1412,16 +1908,55 @@ export const isoTrainingItems = [
     "FSMS Professionals"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of the FSSC 22000 certification scheme and Food Safety Management Systems.",
-    "Learn the ISO 22000 requirements, HACCP principles, hazard analysis, Critical Control Points (CCPs), and operational prerequisite programmes (PRPs).",
-    "Understand sector-specific prerequisite programmes based on ISO/TS 22002-x for different food industry sectors.",
-    "Gain expertise in additional FSSC 22000 requirements, including food fraud mitigation, food defense, allergen management, environmental monitoring, and supplier management.",
-    "Develop the skills to effectively plan, conduct, report, and follow up Food Safety Management System audits.",
-    "Learn internationally recognized auditing principles and best practices for food safety certification.",
-    "Build the confidence to lead FSSC 22000 audit teams and improve organizational food safety performance.",
-    "Earn an internationally recognized FSSC 22000 Lead Auditor qualification to advance your career."
-  ]
+  whyTakeTitle: "About the Course",
+
+overview: `
+FSSC 22000 Lead Auditor Training equips professionals with the skills and knowledge necessary to lead and conduct successful audits in accordance with the FSSC 22000 scheme for Food Safety Management Systems. Integrated Assessment Services (IAS), in collaboration with our sister organization Empowering Assurance Systems (EAS), provides this CQI-IRCA Certified FSSC 22000 Lead Auditor Training for individuals aspiring to audit Food Safety Management Systems.
+`,
+
+courseCoversTitle: "What the FSSC 22000 Lead Auditor Course Covers",
+
+courseCovers: [
+  "FSSC 22000 is a GFSI-recognized certification scheme built on three components, all of which the course addresses:",
+  "ISO 22000 — the Food Safety Management System (FSMS) requirements, including HACCP principles, hazard analysis, Critical Control Points (CCPs), and Operational Prerequisite Programmes (OPRPs).",
+  "Sector-specific Prerequisite Programmes (PRPs) — the relevant ISO/TS 22002-x technical specification for your food sector.",
+  "Additional FSSC 22000 requirements — including food fraud mitigation, food defense, allergen management, environmental monitoring, and management of services and purchased materials."
+],
+
+faqTitle: "FSSC 22000 Lead Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the FSSC 22000 Lead Auditor course?",
+    answer:
+      "An IRCA-certified course that qualifies participants to lead audits against the FSSC 22000 Food Safety System Certification Scheme in line with ISO 19011 and ISO/IEC 17021."
+  },
+  {
+    question: "What's the difference between FSSC 22000 and ISO 22000?",
+    answer:
+      "FSSC 22000 is a GFSI-recognised certification scheme built on three components — ISO 22000, sector-specific Prerequisite Programmes (PRPs, such as the ISO/TS 22002 series), and additional FSSC requirements. ISO 22000 is the underlying Food Safety Management System standard."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers the three components of FSSC 22000, HACCP principles, prerequisite programmes, hazard analysis, food safety culture, additional FSSC requirements, and auditing the certification scheme across the complete audit lifecycle."
+  },
+  {
+    question: "Is the course IRCA certified?",
+    answer:
+      "Yes. It is an IRCA-certified Lead Auditor course delivered through Empowering Assurance Systems (EAS), the sister organisation of IAS."
+  },
+  {
+    question: "What are the prerequisites?",
+    answer:
+      "A working knowledge of ISO 22000, Food Safety Management Systems, and HACCP concepts is recommended."
+  },
+  {
+    question: "How is the course assessed, and how long is it?",
+    answer:
+      "Participants are evaluated through continuous assessment and a written examination. Both must be successfully completed to receive the certificate. The course typically runs for 5 days (approximately 40 hours) and is available through virtual classroom or in-house delivery."
+  }
+],
 },
 {
   slug: "iso-13485-internal-auditor",
@@ -1463,16 +1998,58 @@ export const isoTrainingItems = [
     "Medical Device Manufacturers"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 13485 requirements and their application within Medical Device Quality Management Systems.",
-    "Learn how ISO 13485 aligns with medical device regulatory and accreditation requirements.",
-    "Understand quality management documentation, including the Medical Device File.",
-    "Gain expertise in product realization, design controls, purchasing, production, traceability, sterile-device requirements, and process validation.",
-    "Learn how to apply ISO 14971 risk management principles throughout the quality management system.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal audits in accordance with ISO 19011.",
-    "Build confidence in identifying nonconformities, communicating audit findings, and recommending corrective actions (CAPA).",
-    "Strengthen leadership skills to manage and lead internal audit teams while enhancing career opportunities in medical device quality management."
-  ]
+whyTakeTitle: "Introduction to the ISO 13485 Internal Auditor Course",
+
+overview: `
+The ISO 13485 Internal Auditor Course equips participants with the skills and knowledge to conduct internal (first-party) audits of a Medical Device Quality Management System in accordance with ISO 13485 within their own organisation, and to help prepare it for external certification. Delivered by seasoned experts in quality management and auditing through Empowering Assurance Systems (EAS), IAS's sister organisation, the course integrates interactive activities, case studies, and practical examples, and leads to a course-completion certificate.
+`,
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "The structure of ISO 13485 and its alignment with medical-device regulatory requirements.",
+  "Quality Management System and documentation, including the Medical Device File (Clause 4).",
+  "Management responsibility and resource management (Clauses 5–6).",
+  "Product realization — design and development controls, purchasing, production and service provision, cleanliness and sterile-device requirements, identification and traceability, and validation of processes (Clause 7).",
+  "Risk management applied across the Quality Management System, aligned with ISO 14971.",
+  "Measurement, analysis and improvement — complaint handling, reporting to regulatory authorities, internal audit, control of nonconforming product, and corrective and preventive action (CAPA) (Clause 8).",
+  "The internal audit process based on ISO 19011 — planning, conducting, evidence collection, nonconformity reporting, audit reporting, and follow-up."
+],
+
+faqTitle: "ISO 13485 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 13485 Internal Auditor course?",
+    answer:
+      "A training course that provides the skills to plan and conduct internal (first-party) audits of an ISO 13485 Medical Device Quality Management System within your own organisation in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 13485 requirements, regulatory and customer requirements for medical devices, risk management, design and development controls, and how to plan, conduct, report, and follow up an internal Medical Device Quality Management System audit."
+  },
+  {
+    question: "How is this different from the Lead Auditor course?",
+    answer:
+      "The Internal Auditor course focuses on auditing your own organisation's Medical Device Quality Management System (first-party audits), while the Lead Auditor course prepares participants to lead external, third-party certification audits."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Employees responsible for conducting internal Quality Management System audits within medical-device organisations, quality professionals, regulatory staff, and teams preparing for or maintaining ISO 13485 certification."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. A basic understanding of ISO 13485 or Medical Device Quality Management Systems is helpful but not mandatory."
+  },
+  {
+    question: "How is the course assessed, and what certificate do I get?",
+    answer:
+      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, Empowering Assurance Systems (EAS), IAS's sister organisation, issues a course-completion certificate."
+  }
+]
 },
 {
   slug: "iso-14001-internal-auditor",
@@ -1520,16 +2097,53 @@ export const isoTrainingItems = [
     "ISO 14001 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of Environmental Management Systems (EMS) and ISO 14001 requirements.",
-    "Learn the Plan-Do-Check-Act (PDCA) approach for continual environmental improvement.",
-    "Understand environmental aspects, impacts, compliance obligations, and operational controls.",
-    "Gain practical knowledge of monitoring, measurement, and evaluating EMS performance.",
-    "Learn to effectively plan, conduct, report, and follow up internal EMS audits using ISO 19011 guidelines.",
-    "Develop the skills to identify, document, and manage audit nonconformities and corrective actions.",
-    "Build confidence in preparing your organization for external ISO 14001 certification audits.",
-    "Enhance your auditing and environmental management skills through practical audit techniques and real-world examples."
-  ]
+ whyTakeTitle: "About ISO 14001 Internal Auditor Training",
+
+overview: `
+Auditing is a key component of any Environmental Management System (EMS), ensuring processes are implemented effectively and aligned with ISO requirements. ISO 14001 Internal Auditor Training is designed to help professionals plan, conduct, and manage internal (first-party) audits with confidence — assessing EMS performance, identifying non-conformities, and helping prepare the organisation for external certification.
+
+Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course provides a structured approach to evaluating EMS effectiveness and supporting continual improvement. It also introduces participants to the latest ISO 14001:2026 updates so auditing techniques remain current.
+`,
+
+courseCoversTitle: "Course Structure and Topics Covered",
+
+courseCovers: [
+  "The Environmental Management System (EMS) framework and the Plan-Do-Check-Act (PDCA) cycle.",
+  "Interpreting ISO 14001:2026 requirements for auditing (Clauses 4–10).",
+  "Environmental aspects and impacts, and compliance obligations (Clause 6).",
+  "Operational planning and control with a lifecycle perspective, and emergency preparedness and response (Clause 8).",
+  "Performance evaluation — monitoring, measurement, and evaluation of compliance (Clause 9).",
+  "Audit methodologies, identification and recording of non-conformities, and follow-up actions for effective closure."
+],
+
+benefitsTitle: "Why Internal Auditing is Important in ISO 14001",
+
+benefits: [
+  "Internal auditing plays a critical role in ensuring an Environmental Management System remains effective and compliant.",
+  "Helps organizations build internal capability to assess environmental performance and identify opportunities for improvement.",
+  "Regular audits detect issues early, reduce environmental risks, and maintain compliance with ISO requirements.",
+  "Supports performance evaluation and strategic decision-making, not just compliance verification."
+],
+
+faqTitle: "ISO 14001 Internal Auditor Training in India — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 14001 Internal Auditor course?",
+    answer:
+      "A training course that equips participants to plan and conduct internal (first-party) audits of an ISO 14001 Environmental Management System (EMS) within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 14001:2026 requirements, identifying and evaluating environmental aspects and impacts, the lifecycle perspective, compliance obligations, and how to plan, conduct, report, and follow up an internal EMS audit."
+  },
+  {
+    question: "Does this course cover the ISO 14001:2026 version?",
+    answer:
+      "Yes. The course is aligned with ISO 14001:2026, the current edition of the standard."
+  }
+]
 },
 {
   slug: "iso-27001-internal-auditor",
@@ -1577,16 +2191,61 @@ export const isoTrainingItems = [
     "ISO 27001 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO/IEC 27001 Information Security Management System requirements.",
-    "Learn how to effectively plan, conduct, report, and follow up internal ISMS audits in accordance with ISO 19011 guidelines.",
-    "Understand information security risk assessment, risk treatment, the Statement of Applicability (SoA), and ISMS objectives.",
-    "Gain expertise in auditing Annex A controls across Organizational, People, Physical, and Technological domains.",
-    "Develop practical skills to evaluate ISMS effectiveness and identify opportunities for continual improvement.",
-    "Learn internationally recognized auditing principles, evidence collection techniques, and nonconformity reporting.",
-    "Build confidence in preparing your organization for successful external ISO 27001 certification audits.",
-    "Strengthen your career in information security and internal auditing with internationally recognized auditing knowledge."
-  ]
+ whyTakeTitle: "ISO 27001 Internal Auditor Training – Aim",
+
+overview: `
+ISO 27001 Internal Auditor Training gives delegates the skills and knowledge to carry out internal (first-party) audits of an ISO/IEC 27001-compliant Information Security Management System (ISMS) to assess its effectiveness and help prepare the organisation for external certification. The course covers the requirements of ISO/IEC 27001 and the process approach to auditing, including how to plan and conduct an audit, report findings, and recommend improvements.
+
+Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the training is interactive and led by experienced auditors, combining lectures, discussions, and practical exercises.
+`,
+
+whyTake:
+  "Organizations certified to ISO/IEC 27001 require competent internal auditors to regularly assess the effectiveness of their Information Security Management System (ISMS). Internal auditors play a vital role in identifying nonconformities, evaluating risks, and driving continual improvement. This training equips participants with the practical knowledge and auditing techniques needed to effectively plan, conduct, report, and follow up internal ISMS audits.",
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "The structure of ISO/IEC 27001 and the Information Security Management System (ISMS) framework.",
+  "Context of the organization, ISMS scope, and interested parties (Clause 4).",
+  "Leadership and the Information Security Policy (Clause 5).",
+  "Planning — information security risk assessment and treatment, the Statement of Applicability (SoA), and ISMS objectives (Clause 6).",
+  "Support and Operation — resources, competence, documented information, and operational controls (Clauses 7–8).",
+  "Performance Evaluation and Improvement — monitoring, internal audit, management review, nonconformity, and corrective action (Clauses 9–10).",
+  "Annex A Information Security Controls — Organizational, People, Physical, and Technological controls, and auditing their implementation.",
+  "The internal audit process in accordance with ISO 19011 — audit planning, conducting audits, evidence collection, nonconformity reporting, audit reporting, and follow-up."
+],
+
+benefitsTitle: "Benefits of ISO 27001 Internal Auditor Training",
+
+benefits: [
+  "Improve your understanding of the ISO/IEC 27001 standard.",
+  "Develop the skills required to effectively perform internal Information Security Management System audits.",
+  "Assess the effectiveness of an organization's ISO/IEC 27001-compliant Information Security Management System.",
+  "Enhance your credibility and professional value as an Internal Auditor.",
+  "Help your organization strengthen its overall information security posture.",
+  "Identify opportunities for continual improvement within the Information Security Management System.",
+  "Gain a better understanding of the requirements for ISO/IEC 27001 certification."
+],
+
+faqTitle: "ISO 27001 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 27001 Internal Auditor course?",
+    answer:
+      "A training course that equips participants with the skills to plan and conduct internal (first-party) audits of an ISO/IEC 27001 Information Security Management System (ISMS) within their own organisation in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO/IEC 27001 requirements, information security risk assessment and treatment, the Statement of Applicability (SoA), Annex A information security controls, and how to plan, conduct, report, and follow up an internal ISMS audit."
+  },
+  {
+    question: "How is this different from the Lead Auditor course?",
+    answer:
+      "The Internal Auditor course focuses on auditing your own organisation's Information Security Management System (first-party audits), whereas the Lead Auditor course prepares participants to perform external, third-party certification audits."
+  }
+]
 },
 {
   slug: "iso-50001-internal-auditor",
@@ -1636,16 +2295,54 @@ export const isoTrainingItems = [
     "ISO 50001 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 50001 Energy Management System requirements and their practical application.",
-    "Learn the Plan-Do-Check-Act (PDCA) approach for effective Energy Management Systems.",
-    "Understand energy reviews, Energy Baselines (EnB), Energy Performance Indicators (EnPIs), Significant Energy Uses (SEUs), and energy objectives.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal Energy Management System audits using ISO 19011 guidelines.",
-    "Gain practical knowledge of monitoring, measuring, and evaluating energy performance for continual improvement.",
-    "Build confidence in identifying nonconformities, recommending corrective actions, and improving organizational energy performance.",
-    "Strengthen leadership skills to manage and coordinate internal audit teams effectively.",
-    "Enhance your professional career with internationally recognized ISO 50001 internal auditing knowledge and practical expertise."
-  ]
+ whyTakeTitle: "About the ISO 50001 Internal Auditor Course",
+
+overview: `
+The ISO 50001 Internal Auditor Course equips participants with the skills and knowledge to conduct internal (first-party) audits of an Energy Management System (EnMS) aligned with ISO 50001 within their own organisation, and to help prepare it for external certification. Delivered by seasoned experts in energy management and auditing through Empowering Assurance Systems (EAS), IAS's sister organisation, the course uses interactive activities, case studies, and practical examples, and leads to a course-completion certificate.
+`,
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "The structure of ISO 50001 and the Energy Management System (EnMS) framework, based on the Plan-Do-Check-Act (PDCA) cycle.",
+  "Context, interested parties, and the EnMS scope (Clause 4).",
+  "Leadership and the energy policy (Clause 5).",
+  "Energy planning — the energy review, Energy Baseline (EnB), Energy Performance Indicators (EnPIs), Significant Energy Uses (SEUs), and energy objectives and targets (Clause 6).",
+  "Support and Operation — competence, operational controls, and design and procurement affecting energy performance (Clauses 7–8).",
+  "Performance evaluation — monitoring and measurement of energy performance, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement of energy performance (Clause 10).",
+  "The internal audit process per ISO 19011 — planning, conducting, evidence collection, nonconformity reporting, audit reporting, and follow-up."
+],
+
+faqTitle: "ISO 50001 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 50001 Internal Auditor course?",
+    answer:
+      "A training course that equips participants to plan and conduct internal (first-party) audits of an ISO 50001 Energy Management System (EnMS) within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 50001 requirements, energy review and Energy Baseline (EnB), Energy Performance Indicators (EnPIs), Significant Energy Uses (SEUs), and how to plan, conduct, report, and follow up an internal energy audit."
+  },
+  {
+    question: "How does internal auditing help reduce energy costs?",
+    answer:
+      "Regular internal audits verify that the Energy Management System is functioning effectively, identify areas where energy is being wasted, and drive corrective actions that support continual improvement in energy performance and lower energy costs."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Employees responsible for performing internal Energy Management System audits, Energy Managers, Facility Managers, Sustainability Professionals, and teams preparing for or maintaining ISO 50001 certification."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "A basic understanding of Energy Management Systems and ISO 50001 concepts is recommended. Previous auditing knowledge is beneficial but not mandatory."
+  }
+]
 },
 {
   slug: "iso-45001-internal-auditor",
@@ -1695,16 +2392,44 @@ export const isoTrainingItems = [
     "ISO 45001 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 45001:2018 Occupational Health & Safety Management System requirements.",
-    "Learn how to effectively plan, conduct, report, and follow up internal OH&SMS audits using ISO 19011 auditing guidelines.",
-    "Understand worker consultation, participation, and organizational context within an Occupational Health & Safety Management System.",
-    "Gain expertise in hazard identification, OH&S risk assessment, legal compliance, and emergency preparedness.",
-    "Develop practical auditing skills to evaluate system performance, investigate incidents, and identify nonconformities.",
-    "Build confidence in recommending corrective actions and supporting continual improvement of workplace health and safety.",
-    "Prepare your organization for successful external ISO 45001 certification audits through effective internal auditing.",
-    "Strengthen your career in Occupational Health & Safety Management with internationally recognized internal auditing knowledge."
-  ]
+  whyTakeTitle: "About ISO 45001 Internal Auditor Training",
+
+overview: `
+ISO 45001 Internal Auditor Training provides the knowledge and skills to perform an internal (first-party) audit against the ISO 45001 Occupational Health & Safety (OH&S) Management System standard. The course gives delegates the confidence to report on the effective implementation and maintenance of the management system and helps prepare the organisation for an external OH&S audit, with auditing methodologies in accordance with ISO 19011.
+
+Integrated Assessment Services (IAS) delivers this course in association with its sister organisation, Empowering Assurance Systems (EAS). Tutors are practising auditors who guide participants with practical examples for a better understanding of the standard's requirements and the auditing process.
+`,
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "Overview of ISO 45001:2018 and the Occupational Health & Safety (OH&S) Management System (Clauses 4–10).",
+  "Worker consultation and participation, and the context of the organization (Clauses 4–5).",
+  "Hazard identification, assessment of OH&S risks and opportunities, and legal and other requirements (Clause 6).",
+  "Operational planning and control, management of change, and emergency preparedness and response (Clause 8).",
+  "Performance evaluation, incident investigation, nonconformity, and corrective action (Clauses 9–10).",
+  "Audit methodologies, and identifying and reporting nonconformities."
+],
+
+faqTitle: "ISO 45001 Internal Auditor Training in India — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 45001 Internal Auditor course?",
+    answer:
+      "A training course that equips participants to plan and conduct internal (first-party) audits of an ISO 45001 Occupational Health & Safety (OH&S) Management System within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 45001:2018 requirements, hazard identification and risk assessment, worker participation and consultation, legal and other requirements, and how to plan, conduct, report, and follow up an internal OH&S audit."
+  },
+  {
+    question: "How is this different from the Lead Auditor course?",
+    answer:
+      "The Internal Auditor course focuses on auditing your own organisation's Occupational Health & Safety Management System (first-party audits), whereas the Lead Auditor course prepares participants to lead external, third-party certification audits."
+  }
+]
 },
 {
   slug: "iso-9001-internal-auditor",
@@ -1752,16 +2477,60 @@ export const isoTrainingItems = [
     "ISO 9001 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 9001:2015 Quality Management System requirements and quality management principles.",
-    "Learn the process approach and risk-based thinking for effective Quality Management Systems.",
-    "Understand how to interpret ISO 9001 requirements for internal auditing in accordance with ISO 19011.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal QMS audits.",
-    "Gain practical knowledge of objective evidence collection, identifying nonconformities, and recommending corrective actions.",
-    "Evaluate Quality Management System performance and support continual improvement initiatives.",
-    "Build confidence in preparing your organization for successful external ISO 9001 certification audits.",
-    "Strengthen your career in quality management with internationally recognized internal auditing knowledge and practical expertise."
-  ]
+  whyTakeTitle: "Ensuring Quality Management Excellence",
+
+overview: `
+The ISO 9001 Internal Auditor Training is a comprehensive program designed to equip delegates with the skills and knowledge required to perform internal (first-party) audits of a Quality Management System (QMS) based on ISO 9001, verifying that the Quality Management System aligns with the standard and helping prepare the organisation for external certification. By focusing on the principles and process approach to quality management, participants gain valuable insights into ensuring organizational excellence.
+
+Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the ISO 9001 Internal Auditor Training is led by highly experienced auditors and incorporates practical exercises that enable participants to apply theoretical concepts in real-world scenarios.
+`,
+
+whyTake:
+  "Undertaking ISO 9001 Internal Auditor Training is essential for professionals who want to ensure the effectiveness and compliance of their organization's Quality Management System with ISO 9001 requirements. The course develops the skills needed to conduct internal audits, identify opportunities for improvement, recommend corrective actions, and strengthen career prospects in quality management, as many organizations prioritize professionals with ISO 9001 internal auditing knowledge.",
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "The seven Quality Management Principles and the process approach.",
+  "The structure of ISO 9001:2015 (Annex SL) and how to interpret its requirements for auditing.",
+  "Context of the organization and interested parties (Clause 4).",
+  "Leadership and the Quality Policy (Clause 5).",
+  "Planning — quality objectives and risk-based thinking (Clause 6).",
+  "Support and Operation — resources, competence, documented information, and operational control (Clauses 7–8).",
+  "Performance Evaluation — monitoring, internal audit, and management review (Clause 9).",
+  "Improvement — nonconformity, corrective action, and continual improvement (Clause 10).",
+  "The internal audit process in accordance with ISO 19011 — planning, conducting audits, collecting objective evidence, recording nonconformities, audit reporting, and follow-up."
+],
+
+faqTitle: "ISO 9001 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 9001 Internal Auditor course?",
+    answer:
+      "A training course that equips participants with the skills to plan and conduct internal (first-party) audits of an ISO 9001 Quality Management System within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 9001:2015 requirements and clause structure (Context, Leadership, Planning, Support, Operation, Performance Evaluation, and Improvement), the seven Quality Management Principles, the process approach, risk-based thinking, and how to plan, conduct, report, and follow up an internal audit."
+  },
+  {
+    question: "How is this different from the Lead Auditor course?",
+    answer:
+      "The Internal Auditor course focuses on auditing your own organisation's Quality Management System (first-party audits), whereas the Lead Auditor course prepares participants to perform external, third-party certification audits."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Employees responsible for carrying out internal Quality Management System audits, Quality Managers, Process Owners, Quality Assurance Professionals, and anyone preparing their organisation for ISO 9001 certification."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. A basic understanding of ISO 9001 and Quality Management Systems is helpful but not required."
+  }
+]
 },
 {
   slug: "iso-22000-internal-auditor",
@@ -1810,16 +2579,49 @@ export const isoTrainingItems = [
     "ISO 22000 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 22000 Food Safety Management System requirements and auditing principles.",
-    "Learn the process approach, PDCA methodology, and HACCP principles used in Food Safety Management Systems.",
-    "Understand prerequisite programmes (PRPs), hazard analysis, Critical Control Points (CCPs), operational PRPs, traceability, and emergency preparedness.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal FSMS audits using ISO 19011 guidelines.",
-    "Gain practical knowledge of collecting objective evidence, identifying nonconformities, and recommending corrective actions.",
-    "Evaluate Food Safety Management System performance and contribute to continual improvement initiatives.",
-    "Build confidence in communicating audit findings with auditees and stakeholders while preparing your organization for external certification audits.",
-    "Strengthen your career in food safety management with internationally recognized internal auditing knowledge and practical expertise."
-  ]
+ whyTakeTitle: "ISO 22000 Internal Auditor Training – Course Aim",
+
+overview: `
+ISO 22000 Internal Auditor Training provides delegates with the skills and knowledge to perform an internal (first-party) audit of a Food Safety Management System (FSMS) against the requirements of ISO 22000 and to help prepare the organisation for external certification. The course covers the requirements of ISO 22000, the process approach, and auditing principles. Participants learn how to plan and conduct an internal audit and report on the findings.
+
+Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course is interactive, with plenty of opportunities for participants to ask questions and share experiences.
+`,
+
+whyTake:
+  "Organizations that implement ISO 22000 benefit from improved food safety, reduced food waste, and greater customer satisfaction. An effective internal audit programme is essential to ensure the Food Safety Management System functions properly. Internal auditors provide independent assurance that the system works as intended and that any nonconformities are identified and corrected. This training equips participants with the knowledge and practical skills required to perform that role.",
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "The structure of ISO 22000 and the Food Safety Management System (FSMS) framework, including the process approach and the Plan-Do-Check-Act (PDCA) cycle at two levels.",
+  "Context of the organization, interested parties, and the Food Safety Management System scope (Clause 4).",
+  "Leadership and the Food Safety Policy (Clause 5).",
+  "Planning — risks and opportunities, and Food Safety Management System objectives (Clause 6).",
+  "Support and Operation — Prerequisite Programmes (PRPs), hazard analysis, HACCP plan, Critical Control Points (CCPs), Operational PRPs, traceability, and emergency preparedness (Clauses 7–8).",
+  "HACCP principles and hazard analysis.",
+  "Performance Evaluation and Improvement — monitoring, internal audit, nonconformity, corrective action, and continual improvement (Clauses 9–10).",
+  "The internal audit process in accordance with ISO 19011 — audit planning, conducting audits, evidence collection, nonconformity reporting, audit reporting, and follow-up."
+],
+
+faqTitle: "ISO 22000 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 22000 Internal Auditor course?",
+    answer:
+      "A training course that equips participants with the skills to plan and conduct internal (first-party) audits of an ISO 22000 Food Safety Management System (FSMS) within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 22000 requirements, HACCP principles, Prerequisite Programmes (PRPs), Operational PRPs, hazard analysis, and how to plan, conduct, report, and follow up an internal Food Safety Management System audit."
+  },
+  {
+    question: "How is this different from the Lead Auditor course?",
+    answer:
+      "The Internal Auditor course focuses on auditing your own organisation's Food Safety Management System (first-party audits), whereas the Lead Auditor course prepares participants to lead external, third-party certification audits."
+  }
+]
 },
 {
   slug: "iso-22301-internal-auditor",
@@ -1867,16 +2669,55 @@ export const isoTrainingItems = [
     "Professionals responsible for Business Continuity Management"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 22301 Business Continuity Management System requirements and auditing principles.",
-    "Learn how to conduct Business Impact Analysis (BIA) and risk assessments to strengthen business continuity planning.",
-    "Understand business continuity strategies, solutions, recovery plans, testing, and continual improvement processes.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal BCMS audits using ISO 19011 guidelines.",
-    "Gain practical knowledge of preparing audit checklists, collecting objective evidence, and evaluating audit findings.",
-    "Learn to identify nonconformities, recommend corrective actions, and support continual improvement of Business Continuity Management Systems.",
-    "Build confidence in preparing your organization for successful external ISO 22301 certification audits.",
-    "Strengthen your career in Business Continuity Management and internal auditing with internationally recognized auditing knowledge."
-  ]
+ whyTakeTitle: "About ISO 22301 Internal Auditor Training",
+
+overview: `
+ISO 22301 Internal Auditor Training is a mid-level course for process owners and teams who carry out internal (first-party) audits of a Business Continuity Management System (BCMS) within their own organisation. Conducting internal audits at periodic intervals is a requirement of the ISO 22301 standard, and this course helps participants prepare their organisation for external certification. The course is designed around establishing an effective Business Continuity Management System and uses modern, practical learning techniques.
+
+Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course leads to a course-completion certificate.
+`,
+
+benefitsTitle: "Benefits of ISO 22301 Internal Auditor Training",
+
+benefits: [
+  "Provides the skills required to conduct internal audits against every requirement of ISO 22301.",
+  "Enables participants to develop and manage customized internal audit checklists, ISO documentation, and implementation activities.",
+  "Builds the confidence and competence required to successfully face external certification audits.",
+  "Equips participants to guide and train colleagues on Business Continuity Management System requirements.",
+  "Develops the capability to drive continual improvement activities within the Business Continuity Management System.",
+  "Supports professional growth and career advancement in Business Continuity Management and internal auditing.",
+  "Helps internal auditors identify risks that could affect the effectiveness of the Business Continuity Management System."
+],
+
+faqTitle: "ISO 22301 Internal Auditor Training in India — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 22301 Internal Auditor course?",
+    answer:
+      "A training course that equips participants with the skills to plan and conduct internal (first-party) audits of an ISO 22301 Business Continuity Management System (BCMS) within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 22301 requirements, Business Impact Analysis (BIA), risk assessment, business continuity strategies and plans, exercising and testing, and how to plan, conduct, report, and follow up an internal Business Continuity Management System audit."
+  },
+  {
+    question: "How is this different from the Lead Auditor course?",
+    answer:
+      "The Internal Auditor course focuses on auditing your own organisation's Business Continuity Management System (first-party audits), whereas the Lead Auditor course prepares participants to perform external, third-party certification audits."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Employees responsible for conducting internal Business Continuity Management System audits, Business Continuity Managers, Risk Managers, Internal Auditors, and teams preparing for or maintaining ISO 22301 certification."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. A basic understanding of Business Continuity Management concepts is helpful but not required."
+  }
+]
 },
 {
   slug: "iatf-16949-internal-auditor",
@@ -1924,16 +2765,62 @@ export const isoTrainingItems = [
     "Professionals working in Automotive Manufacturing"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of IATF 16949:2016 requirements and their integration with ISO 9001:2015.",
-    "Learn the automotive process approach and customer-specific quality requirements.",
-    "Gain practical knowledge of the five automotive core tools: APQP, PPAP, FMEA, MSA, and SPC.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal Automotive Quality Management System audits using ISO 19011 guidelines.",
-    "Learn to collect objective evidence, identify nonconformities, and recommend corrective actions.",
-    "Evaluate Automotive Quality Management System performance and support continual improvement initiatives.",
-    "Prepare your organization for successful IATF 16949 certification audits through effective internal auditing.",
-    "Strengthen your career in automotive quality management with internationally recognized internal auditing knowledge and practical expertise."
-  ]
+  whyTakeTitle: "What is IATF 16949 Training?",
+
+overview: `
+IATF 16949 Internal Auditor Training is an internal-audit course for the automotive sector's Quality Management Systems. It helps participants learn how to initiate an audit, develop and conduct audit activities, organise and distribute audit reports, and complete follow-up activities in accordance with the International Automotive Task Force (IATF) requirements. The course enables participants to conduct internal (first-party) audits within their own organisation and prepare it for external certification.
+
+Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course leads to a course-completion certificate.
+`,
+
+courseCoversTitle: "What Will You Learn in the IATF 16949 Training Course?",
+
+courseCovers: [
+  "The IATF 16949:2016 structure and automotive-sector requirements built on ISO 9001:2015.",
+  "The five automotive core tools — Advanced Product Quality Planning (APQP), Production Part Approval Process (PPAP), Failure Mode and Effects Analysis (FMEA), Measurement Systems Analysis (MSA), and Statistical Process Control (SPC).",
+  "Customer-specific requirements and the automotive process approach.",
+  "Management System auditing guidelines in accordance with ISO 19011.",
+  "How to plan, conduct, and manage internal audits in compliance with ISO 19011 and the requirements of IATF 16949."
+],
+
+benefitsTitle: "Benefits of IATF 16949 Training",
+
+benefits: [
+  "Helps you prepare, conduct, and manage IATF 16949:2016 internal audit activities.",
+  "Teaches you how to evaluate an organisation's capability to manage its Automotive Quality Management System.",
+  "Develops the skills to prepare accurate audit reports and support corrective action activities.",
+  "Helps you understand and apply the benefits and requirements of an IATF 16949:2016 internal audit."
+],
+
+faqTitle: "IATF 16949 Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the IATF 16949 Internal Auditor course?",
+    answer:
+      "A training course that equips participants with the skills to plan and conduct internal (first-party) audits of an IATF 16949 Automotive Quality Management System within their own organisation, in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers IATF 16949 requirements built on ISO 9001, the automotive core tools — APQP, PPAP, FMEA, MSA, and SPC — together with planning, conducting, reporting, and following up internal Automotive Quality Management System audits."
+  },
+  {
+    question: "How does IATF 16949 relate to ISO 9001?",
+    answer:
+      "IATF 16949 is the automotive industry's Quality Management System standard built upon ISO 9001, with additional automotive-specific requirements focused on defect prevention, continual improvement, and supply chain consistency."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Employees responsible for conducting internal audits within automotive suppliers (Tier 1, Tier 2, or Tier 3), Quality Engineers, Quality Managers, Internal Auditors, and teams preparing for or maintaining IATF 16949 certification."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. A basic understanding of ISO 9001 or automotive quality management concepts is helpful but not required."
+  }
+]
 },
 {
   slug: "iso-17025-internal-auditor",
@@ -1983,16 +2870,63 @@ export const isoTrainingItems = [
     "ISO/IEC 17025 Implementation Teams"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO/IEC 17025:2017 requirements for testing and calibration laboratories.",
-    "Learn laboratory quality management principles, including competence, impartiality, confidentiality, and consistent laboratory operations.",
-    "Understand laboratory resource management, personnel competence, equipment calibration, metrological traceability, and environmental requirements.",
-    "Gain practical knowledge of method validation, sampling, measurement uncertainty, and ensuring the validity of laboratory results.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal laboratory audits using ISO 19011 guidelines.",
-    "Learn to identify nonconformities, recommend corrective actions, and support continual improvement of laboratory management systems.",
-    "Prepare your laboratory for successful external assessments through effective internal auditing.",
-    "Strengthen your career in laboratory quality management with internationally recognized internal auditing knowledge and practical expertise."
-  ]
+whyTakeTitle: "Introduction to the ISO 17025 Internal Auditor Course",
+
+overview: `
+The ISO/IEC 17025 Internal Auditor Course equips participants with the skills and knowledge to perform internal (first-party) audits of a Testing and Calibration Laboratory Management System in accordance with ISO/IEC 17025 within their own organisation, and to help prepare it for external assessment. Delivered by seasoned experts in quality management and auditing through Empowering Assurance Systems (EAS), IAS's sister organisation, the course combines interactive activities, case studies, and practical examples, and leads to a course-completion certificate.
+`,
+
+courseCoversTitle: "Course Content",
+
+courseCovers: [
+  "The structure of ISO/IEC 17025:2017 — competence, impartiality, and consistent operation of laboratories.",
+  "General requirements — impartiality and confidentiality.",
+  "Structural requirements — laboratory organisation and management.",
+  "Resource requirements — personnel, facilities and environmental conditions, equipment, and metrological traceability.",
+  "Process requirements — method selection, verification and validation, sampling, handling of items, evaluation of measurement uncertainty, ensuring the validity of results, and reporting.",
+  "Management System requirements — documents and records, actions to address risks and opportunities, corrective action, and internal audit.",
+  "The internal audit process in accordance with ISO 19011 — planning, conducting audits, gathering evidence, recording nonconformities, audit reporting, and follow-up."
+],
+
+assessmentTitle: "Assessment and Certification",
+
+assessmentContent:
+  "Upon completion, participants take an examination provided by Integrated Assessment Services (IAS). A minimum passing score of 70% is required to receive the ISO/IEC 17025 Internal Auditor course-completion certificate.",
+
+faqTitle: "ISO 17025 Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 17025 Internal Auditor course?",
+    answer:
+      "A training course that equips participants with the skills to plan and conduct internal (first-party) audits of a Testing or Calibration Laboratory Management System against ISO/IEC 17025:2017 in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO/IEC 17025:2017 requirements, including impartiality and confidentiality, structural and resource requirements, process requirements, measurement traceability, the management system, and how to plan, conduct, report, and follow up an internal laboratory audit."
+  },
+  {
+    question: "Is ISO 17025 accreditation or certification?",
+    answer:
+      "Laboratory competence to ISO/IEC 17025 is recognised through accreditation by an accreditation body. This Internal Auditor course helps laboratories establish and maintain an effective internal audit programme to prepare for and sustain accreditation."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Laboratory professionals responsible for internal audits, Technical Managers, Quality Managers, Testing and Calibration Laboratory personnel, and teams preparing laboratories for ISO/IEC 17025 accreditation."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. A basic understanding of laboratory quality management is helpful but not required."
+  },
+  {
+    question: "How is the course assessed, and what certificate do I get?",
+    answer:
+      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, Empowering Assurance Systems (EAS), IAS's sister organisation, issues a course-completion certificate."
+  }
+]
 },
 {
   slug: "iso-15189-internal-auditor",
@@ -2043,16 +2977,67 @@ export const isoTrainingItems = [
     "Laboratory Consultants"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 15189:2022 requirements for quality and competence in medical laboratories.",
-    "Learn laboratory quality management principles including impartiality, confidentiality, governance, and resource management.",
-    "Understand the complete laboratory testing process, including pre-examination, examination, post-examination, and Point-of-Care Testing (POCT).",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal audits using ISO 19011 auditing guidelines.",
-    "Gain practical knowledge of risk management, internal audits, management reviews, and continual improvement.",
-    "Build confidence in identifying nonconformities, communicating audit findings, and preparing laboratories for external assessments.",
-    "Improve communication, audit reporting, and leadership skills required for successful internal auditing.",
-    "Enhance your career opportunities in medical laboratory quality management with internationally recognized internal auditing knowledge."
-  ]
+ whyTakeTitle: "Course Objective",
+
+overview: `
+The ISO 15189 Internal Auditor Training course enables participants to plan, conduct, and manage internal (first-party) audits of a Medical (Clinical) Laboratory Quality and Competence Management System within their own organisation, in accordance with ISO 19011, and to help prepare it for external assessment. Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, by experienced real-time auditors using practical examples, the course leads to a course-completion certificate.
+`,
+
+benefitsTitle: "Benefits of Learning ISO 15189 Internal Auditor Training",
+
+benefits: [
+  "Improve your knowledge and understanding of the requirements of ISO 15189.",
+  "Understand how to apply the requirements of ISO 15189 within your organisation.",
+  "Carry out effective internal audits of your laboratory's Quality Management System.",
+  "Gain the skills and confidence to challenge management on key quality issues.",
+  "Understand the importance of continual improvement and how to implement it in your laboratory.",
+  "Improve your communication and audit report-writing skills.",
+  "Enhance your career prospects and professional earning potential."
+],
+
+trainingMethodsTitle: "Training Formats",
+
+trainingMethods: [
+  "In-House Training — A 2-day (16-hour) programme delivered at your facility and customised to your organisational requirements.",
+  "Classroom Training — A 2-day (16-hour) programme conducted at our training facility for classroom-based learning and interaction.",
+  "Tutor-Led Virtual Sessions — A 2-day (16-hour) live online programme delivered through Zoom with an expert instructor.",
+  "Self-Paced eLearning — 30 days of online access to the ISO 15189 Internal Auditor Course for self-paced learning."
+],
+
+assessmentTitle: "Certification",
+
+assessmentContent:
+  "Integrated Assessment Services (IAS) provides a course-completion certificate for delegates who successfully complete the course and a participation certificate for all attendees. For online participants, the certificate is issued electronically and sent to the registered email address. The course is delivered by experienced real-time auditors with extensive industry expertise.",
+
+faqTitle: "ISO 15189 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 15189 Internal Auditor course?",
+    answer:
+      "A training course that equips participants to plan and conduct internal (first-party) audits of a Medical (Clinical) Laboratory against ISO 15189:2022 in accordance with ISO 19011."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers ISO 15189:2022 requirements for quality and competence in medical laboratories, pre-examination, examination and post-examination processes, risk management, and how to plan, conduct, report, and follow up an internal medical laboratory audit."
+  },
+  {
+    question: "What's the difference between ISO 15189 and ISO 17025 auditing?",
+    answer:
+      "Both standards address laboratory competence. ISO 15189 is specifically designed for medical and clinical laboratories with a focus on patient care, while ISO/IEC 17025 applies to general testing and calibration laboratories."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Medical laboratory professionals responsible for internal audits, Quality Managers, Pathologists, Laboratory Technologists, and teams preparing medical laboratories for ISO 15189 accreditation."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. Previous experience in the medical laboratory sector is helpful but not mandatory."
+  }
+]
 },
 {
   slug: "iso-31000-internal-auditor",
@@ -2101,16 +3086,57 @@ export const isoTrainingItems = [
     "Professionals Responsible for Audit Programs"
   ],
 
-  description: [
-    "Develop a comprehensive understanding of ISO 31000 risk management principles, framework, and processes.",
-    "Learn how to identify, analyze, evaluate, treat, monitor, and communicate organizational risks effectively.",
-    "Understand how ISO 31000 principles can be applied to risk-based internal auditing using ISO 19011 guidelines.",
-    "Develop the skills to effectively plan, conduct, report, and follow up internal audits based on risk management practices.",
-    "Gain practical knowledge of preparing audit checklists, collecting objective evidence, and documenting audit findings.",
-    "Build confidence in identifying improvement opportunities and recommending corrective actions to strengthen organizational risk management.",
-    "Improve your auditing, communication, and report-writing skills through practical audit exercises and real-world case studies.",
-    "Enhance your professional career with practical expertise in risk-based internal auditing and enterprise risk management."
-  ]
+  whyTakeTitle: "About ISO 31000 Internal Auditor Training",
+
+overview: `
+The ISO 31000 Internal Auditor Training course helps participants apply ISO 31000 risk management principles and conduct risk-based internal (first-party) audits within their own organisation in accordance with ISO 19011. The course develops the auditing expertise required to evaluate how an organisation manages risk.
+
+Please note that ISO 31000 provides guidance on risk management. It is not a certifiable or auditable management system standard, and organisations cannot be certified to ISO 31000. This course focuses on developing practical risk-based internal auditing skills and the application of ISO 31000 principles rather than certification. Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course leads to a course-completion certificate.
+`,
+
+benefitsTitle: "Benefits of the ISO 31000 Internal Auditor Training Course",
+
+benefits: [
+  "Understand the fundamentals of the internal auditing process.",
+  "Learn how to initiate, conduct, manage, and report internal audits with effective recommendations for improvement.",
+  "Improve your auditing knowledge and practical auditing skills.",
+  "Understand ISO 31000 risk management principles and how to apply them within a risk-based internal audit programme."
+],
+
+faqTitle: "ISO 31000 Internal Auditor Training — Frequently Asked Questions",
+
+faq: [
+  {
+    question: "What is the ISO 31000 Internal Auditor course?",
+    answer:
+      "A training course that helps participants apply ISO 31000 risk management principles and perform risk-based internal (first-party) audits within their organisation in accordance with ISO 19011."
+  },
+  {
+    question: "Can an organisation be certified to ISO 31000?",
+    answer:
+      "No. ISO 31000 is a guidance standard for risk management and is not a certifiable or auditable management system standard. The course focuses on applying the ISO 31000 framework and principles rather than certification."
+  },
+  {
+    question: "What does the course cover?",
+    answer:
+      "The course covers the ISO 31000 framework, principles, and risk management process, including risk identification, analysis, evaluation, and treatment, along with integrating risk-based thinking into an organisation's internal audit programme."
+  },
+  {
+    question: "Who should attend?",
+    answer:
+      "Risk Managers, Internal Auditors, Compliance and Governance Professionals, Business Managers, and anyone responsible for managing, reviewing, or auditing organisational risk."
+  },
+  {
+    question: "Are there prerequisites?",
+    answer:
+      "There are no formal prerequisites. A basic understanding of organisational risk management or management systems is helpful but not required."
+  },
+  {
+    question: "How is the course assessed, and what certificate do I get?",
+    answer:
+      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, Empowering Assurance Systems (EAS), IAS's sister organisation, issues a course-completion certificate."
+  }
+]
 },
 
 
@@ -2159,16 +3185,44 @@ export const isoTrainingItems = [
     "Anyone interested in Quality Management Systems"
   ],
 
-  description: [
-    "Understand the purpose and benefits of ISO 9001:2015 Quality Management Systems.",
-    "Learn the seven Quality Management Principles and their practical application.",
-    "Gain knowledge of the ISO 9001:2015 clause structure and requirements.",
-    "Understand the process approach and risk-based thinking in quality management.",
-    "Learn the fundamentals of documented information and QMS implementation.",
-    "Develop the ability to support ISO 9001 implementation within an organization.",
-    "Build a strong foundation for advanced ISO 9001 Internal Auditor and Lead Auditor training.",
-    "Enhance your career with internationally recognized Quality Management knowledge."
-  ]
+ whyTakeTitle: "About ISO Foundation Training",
+
+overview: `
+ISO Foundation Training is an entry-level training programme designed to help participants understand the fundamentals of the International Organization for Standardization (ISO). The course introduces the history of ISO, the benefits of ISO standards, and how organisations can implement them effectively. By the end of the programme, participants will have a solid understanding of ISO standards and how they can support business improvement.
+`,
+
+courseCoversTitle: "Foundation Courses",
+
+courseCovers: [
+  "ISO 9001:2015 — Quality Management Systems",
+  "ISO 14001:2015 — Environmental Management Systems",
+  "ISO 27001 — Information Security Management Systems",
+  "ISO 22000:2018 — Food Safety Management Systems",
+  "ISO 45001:2018 — Occupational Health & Safety Management Systems",
+  "ISO 20000 — IT Service Management System",
+  "ISO 22301:2019 — Business Continuity Management Systems"
+],
+
+benefitsTitle: "What You Will Learn",
+
+benefits: [
+  "The history of ISO and its role in the global economy.",
+  "The benefits of implementing ISO standards.",
+  "How to get involved with ISO.",
+  "The different types of ISO standards.",
+  "How to apply ISO standards within your business.",
+  "Develop a solid understanding of ISO standards and how to begin implementing them within your organisation."
+],
+
+trainingMethodsTitle: "Delivery — Self-Learning Format",
+
+trainingMethods: [
+  "Available as a self-learning programme with 30 days of online access.",
+  "Choose your preferred ISO Foundation course and purchase it online.",
+  "Access learning materials anytime and study at your own pace.",
+  "Interactive exercises and quizzes reinforce key concepts throughout the course.",
+  "Course schedules and fees are provided according to the published training calendar."
+]
 },
 {
   slug: "iso-27001-foundation",
@@ -2228,16 +3282,113 @@ export const isoTrainingItems = [
   duration: "16 Hours",
   level: "Intermediate",
 
-  description: [
-    "Gain a comprehensive understanding of the ISO 31000 Risk Management Framework and its principles.",
-    "Learn how to identify, analyze, evaluate, and treat organizational risks effectively.",
-    "Understand how risk management supports strategic planning, governance, compliance, and business objectives.",
-    "Develop practical skills to establish a risk management framework aligned with international best practices.",
-    "Learn to perform qualitative and quantitative risk assessments using structured methodologies.",
-    "Understand risk communication, consultation, monitoring, and continual improvement processes.",
-    "Apply ISO 31000 principles to improve organizational resilience and business continuity.",
-    "Build the confidence to implement effective risk management practices across projects and business operations."
-  ],
+ whyTakeTitle: "About ISO 31000 Certification",
+
+overview: `
+The Integrated Assessment Services (IAS) has launched new services to guide organizations to implement ISO 31000:2018, the first international standard for risk management. It intends to help companies identify and minimize risks in order to better protect physical assets, personnel, and financial performance. ISO 31000 is a risk management standard that applies to all organizations regardless of size, location, or activity.
+`,
+
+courseCoversTitle: "Is ISO 31000 Certification Possible?",
+
+courseCovers: `
+ISO 31000 provides guidelines, not requirements, and is therefore not intended for certification purposes. Hence, Third party ISO 31000 Certification is not possible. ISO 31000 Risk management is used only for implementation purposes.
+`,
+
+benefitsTitle: "ISO 31000 Risk Mgt Training Courses",
+
+benefits: `
+The Integrated Assessment Services (IAS) offers courses for people who want to get a better understanding of how ISO 31000 can be used. In order to get the most out of ISO 31000 certification courses, it is recommended that the participants have an understanding of risk based assessment methods and have some prior experience with ISO 31000 or any other Risk Management framework.
+`,
+
+trainingMethodsTitle: "ISO 31000 Certification Course",
+
+trainingMethods: `
+Integrated Assessment Services (IAS) offers the full ISO 31000 certification course that includes a comprehensive introduction to risk management and the new standard. Participants also study the Auditor Training Course which explains how to conduct an audit based on ISO 31000:2018. Both courses include courses for management and staff, as well as exercises and case studies.
+`,
+
+assessmentTitle: "Implementation Approach of ISO 31000 Risk Management",
+
+assessmentContent: `
+Be aware of your organization’s key objectives – this will help you understand the goals and scope of your risk management system.
+
+Assess your current governance structure – This will ensure you allocate the right people and procedures for your organization to properly deal with risk.
+
+Define your level of commitment – How much time and money will you need to take responsibility for your risk management system?
+`,
+
+aboutUpdateTitle: "How Your Organization Uses ISO 31000 Risk Management",
+
+aboutUpdate: `
+ISO 31000 provides a comprehensive approach that helps organizations define, assess, manage and communicate their risks. It also encourages companies to focus on opportunities as well as threats.
+
+ISO 31000 sets up a risk management system that is aligned with ISO’s fundamental principles of risk management, which emphasizes the following five steps in this process:
+
+• Risk identification – understanding the opportunities and threats.
+
+• Risk assessment – identifying the likelihood and impact of these opportunities or threats.
+
+• Risk response planning – developing policies for each type of risk identified.
+
+• Implementation.
+
+• Monitoring and review.
+
+ISO 31000 is also an important part of ISO’s integrated management approach, which helps organizations create a sound environmental, social, and governance structure. ISO 31000 can be implemented in conjunction with ISO’s other management standards, which can help create better leadership and decision-making processes.
+`,
+
+updateBenefitsTitle: "ISO 31000 – Risk Identification",
+
+updateBenefits: `
+Risk identification is the process of determining risks that could potentially prevent a program, enterprise, or investment from achieving its objectives. It includes documenting and communicating the concern.
+
+Examples include:
+
+• Legal risks
+
+• Environmental risks
+
+• Market risks
+
+• Regulatory risks
+
+• IT security threats such as malware and ransomware
+
+• Accidents
+
+• Natural disasters
+
+• Other potentially harmful events that could disrupt business operations
+
+The process to identify the risk:
+
+• SWOT Analysis (Strengths, Weaknesses, Opportunities and Threats)
+
+• ISO 31000 Policy
+
+• ISO 31000 Business Case
+
+• ISO 31000 System Documentation
+
+• Implement ISO 31000
+
+• ISO 31000 Policy Audit
+
+• ISO 31000 Business Case Audit
+
+• ISO 31000 Internal Audit
+
+• ISO 31000 System Documentation Audit
+`,
+
+faqTitle: "What are the Benefits of ISO 31000 Risk Management?",
+
+faq: [
+  {
+    question: "Benefits of ISO 31000 Risk Management",
+    answer:
+      "Implementing ISO 31000 helps organizations identify both opportunities and threats, enabling more informed and effective decision-making, better allocation of resources, stronger governance, improved organizational performance, and enhanced leadership through a structured risk management framework."
+  }
+],
 
   modules: [
     "Introduction to ISO 31000",
@@ -2268,41 +3419,138 @@ export const isoTrainingItems = [
   ]
 },
 
+// {
+//   slug: "online-iso-training",
+//   code: "Online ISO",
+//   title: "Online ISO Training",
+//   image: onlineTrainingImg,
+//   heroImage: onlineTrainingImg,
+//    short:
+//     "Learn ISO standards from anywhere through interactive online training delivered by certified industry experts.",
+
+//   duration: "Flexible",
+//   level: "All Levels",
+
+//   description: [
+//     "Access high-quality ISO training from anywhere with flexible online learning options.",
+//     "Learn directly from experienced and certified ISO trainers through live instructor-led sessions.",
+//     "Understand international ISO standards using practical examples, real-world case studies, and interactive discussions.",
+//     "Participate in hands-on exercises, assignments, and assessments designed to strengthen your practical knowledge.",
+//     "Develop implementation, auditing, and compliance skills across various ISO management system standards.",
+//     "Interact with trainers and fellow professionals through live Q&A sessions and collaborative learning activities.",
+//     "Receive course completion or certification based on the selected ISO training program.",
+//     "Advance your career with globally recognized ISO knowledge and practical industry skills."
+//   ],
+
+//   modules: [
+//     "Live Instructor-Led Classes",
+//     "Interactive Learning Sessions",
+//     "Case Studies & Practical Exercises",
+//     "Assignments & Quizzes",
+//     "Real-World Audit Scenarios",
+//     "Doubt Clarification Sessions",
+//     "Online Assessments",
+//     "Downloadable Study Materials",
+//     "Certification Guidance",
+//     "Course Completion Certificate"
+//   ],
+
+//   audience: [
+//     "Students",
+//     "Working Professionals",
+//     "Quality Managers",
+//     "Internal Auditors",
+//     "Lead Auditors",
+//     "Compliance Officers",
+//     "Business Owners",
+//     "Anyone interested in ISO standards"
+//   ]
+// },
+
 {
   slug: "online-iso-training",
   code: "Online ISO",
   title: "Online ISO Training",
   image: onlineTrainingImg,
   heroImage: onlineTrainingImg,
-   short:
+
+  short:
     "Learn ISO standards from anywhere through interactive online training delivered by certified industry experts.",
 
   duration: "Flexible",
   level: "All Levels",
 
-  description: [
-    "Access high-quality ISO training from anywhere with flexible online learning options.",
-    "Learn directly from experienced and certified ISO trainers through live instructor-led sessions.",
-    "Understand international ISO standards using practical examples, real-world case studies, and interactive discussions.",
-    "Participate in hands-on exercises, assignments, and assessments designed to strengthen your practical knowledge.",
-    "Develop implementation, auditing, and compliance skills across various ISO management system standards.",
-    "Interact with trainers and fellow professionals through live Q&A sessions and collaborative learning activities.",
-    "Receive course completion or certification based on the selected ISO training program.",
-    "Advance your career with globally recognized ISO knowledge and practical industry skills."
-  ],
+  whyTakeTitle: "About ISO Training Online",
 
-  modules: [
-    "Live Instructor-Led Classes",
-    "Interactive Learning Sessions",
-    "Case Studies & Practical Exercises",
-    "Assignments & Quizzes",
-    "Real-World Audit Scenarios",
-    "Doubt Clarification Sessions",
-    "Online Assessments",
-    "Downloadable Study Materials",
-    "Certification Guidance",
-    "Course Completion Certificate"
-  ],
+  overview: `
+ISO Training is a professional training program that aims to teach people how to set up and maintain an efficient management system in accordance with ISO standards. Integrated Assessment Services Pvt. Ltd. (IAS) offers ISO Training online, which helps students develop the skills and knowledge they need to establish and manage an ISO-compliant management system.
+`,
+
+  courseCoversTitle: "ISO Training Programs Available Online",
+
+  courseCovers: `
+IAS, in association with its sister organization, EAS, now provides ISO training online for the following:
+
+• IRCA Accredited ISO Lead Auditor Training
+
+• ISO Internal Auditor Training – Self Learning
+
+• ISO Internal Auditor Training – Virtual
+
+• ISO Foundation/Awareness Training
+
+Participants who successfully finish the ISO training online course will receive a certificate of completion from IAS, one of the most well-known ISO certification bodies.
+`,
+
+  benefitsTitle: "Features of Our ISO Training Online",
+
+  benefits: `
+• 24/7 Accessibility – IAS’s online training is accessible from any internet-connected laptop or desktop system and can be learned anytime, anywhere.
+
+• Expert Instructors – All trainers have years of practical experience implementing a wide range of ISO standards.
+
+• Flexible Study Options – Choose from Self-Learning, Virtual, and E-Learning modes based on your convenience.
+
+• Access to PowerPoint Presentations and Self-Study Material – Comprehensive learning resources are included with every course.
+
+• Affordable Course Fees – Cost-effective compared with traditional classroom training.
+
+• Online Examination – Complete the final online assessment and receive a certificate of completion upon successfully passing.
+`,
+
+  trainingMethodsTitle: "ISO Training Online – Course Delivery Modes",
+
+  trainingMethods: `
+IRCA Lead Auditor Training (Tutor Led Virtual Mode)
+
+The ISO Lead Auditor Training is delivered completely online over 5 days (40 hours) through Zoom. Expert instructors conduct live sessions and prepare participants for the Lead Auditor examination.
+
+ISO Internal Auditor Training (Self Learning Mode)
+
+Participants receive 30 days of access to course materials and can learn at their own pace before completing the Internal Auditor examination.
+
+ISO Internal Auditor Training (Virtual Mode)
+
+A two-day (16-hour) instructor-led virtual program delivered through Zoom with interactive lectures and an examination conducted on the final day.
+
+ISO Foundation/Awareness Training (Self-Learning)
+
+A self-paced learning program providing the fundamentals of ISO standards with 30 days of online course access.
+`,
+
+  assessmentTitle: "Why Choose IAS for ISO Training Online?",
+
+  assessmentContent: `
+IAS is one of the leading providers of ISO training online with over 20 years of industry experience.
+
+We offer Lead Auditor, Internal Auditor, and Foundation/Awareness courses across a wide range of ISO standards.
+
+Training programs can be customized to meet the specific requirements of organizations.
+
+Our online learning platform is user-friendly, interactive, and supported by experienced trainers who provide guidance throughout the course.
+
+Competitive pricing makes our ISO training programs affordable while maintaining high-quality learning standards.
+`,
 
   audience: [
     "Students",

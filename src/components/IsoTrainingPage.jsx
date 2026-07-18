@@ -41,54 +41,35 @@ export default function IsoTrainingPage({ training }) {
       </section>
 
       {/* Intro section with image + copy */}
-      <section className="bg-background py-20">
-        {/* <div className="container-x grid items-center gap-12 lg:grid-cols-2"> */}
-        <div className="container-x">
-          {/* <div className="reveal overflow-hidden rounded-xl shadow-elegant">
-            <img
-              // src={training.image}
-              src={training.image}
-              // alt={`${training.code} training`}
-              alt={`${training.code} training`}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          </div> */}
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-display text-3xl uppercase tracking-wide text-foreground md:text-4xl">
-              Training Courses
-            </h2>
-            <div className="mt-4 gold-divider" />
-            {/* <p className="mt-6 text-muted-foreground">{training.intro}</p> */}
-            <p className="mt-6 text-muted-foreground">{training.short}</p>
-            {/* <p className="mt-4 text-muted-foreground">
-              {training.detail.split("ISO training").map((part, i, arr) =>
-                i < arr.length - 1 ? (
-                  <span key={i}>
-                    {part}
-                    <span className="font-semibold text-gold">ISO training</span>
-                  </span>
-                ) : (
-                  <span key={i}>{part}</span>
-                )
-              )}
-            </p> */}
-            <div className="mt-6 space-y-4">
-  {training.description?.map((item, index) => (
-    <p
-      key={index}
-      className="text-muted-foreground leading-8"
-    >
-      {item}
-    </p>
-  ))}
-</div>
-            {/* <Link to="/contact" className="btn-primary mt-8 inline-block">
-              Get Free Evaluation & Get Started Today!
-            </Link> */}
-          </div>
-        </div>
-      </section>
+     <section className="bg-background py-20">
+  <div className="container-x">
+    <div className="max-w-6xl mx-auto">
+      {/* <h2 className="font-display text-3xl uppercase tracking-wide text-foreground md:text-4xl">
+        Course Overview
+      </h2>
+
+      <div className="mt-4 gold-divider" />
+
+      <p className="mt-8 text-muted-foreground leading-9 whitespace-pre-line text-justify">
+        {training.overview}
+      </p> */}
+      {training.slug !== "iso-31000-risk-management" &&
+ training.slug !== "online-iso-training" && (
+  <>
+    <h2 className="font-display text-3xl uppercase tracking-wide text-foreground md:text-4xl">
+      Course Overview
+    </h2>
+
+    <div className="mt-4 gold-divider" />
+  </>
+)}
+
+<p className="mt-8 text-muted-foreground leading-9 whitespace-pre-line text-justify">
+  {training.overview}
+</p>
+    </div>
+  </div>
+</section>
 
       {/* Modules + Audience + Enquiry */}
       <section className="bg-muted/40 py-20">
@@ -126,7 +107,7 @@ export default function IsoTrainingPage({ training }) {
     </div>
   </div>
 )}
-            <div>
+            {/* <div>
               <h2 className="font-display text-3xl">Modules covered</h2>
               <div className="mt-3 gold-divider" />
               <ol className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -142,23 +123,35 @@ export default function IsoTrainingPage({ training }) {
                   </li>
                 ))}
               </ol>
-            </div>
-
-            {/* <div>
-              <h2 className="font-display text-3xl">Who should attend</h2>
-              <div className="mt-3 gold-divider" />
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {training.audience.map((a) => (
-                  <li
-                    key={a}
-                    className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground"
-                  >
-                    <span className="mr-2 text-gold">◆</span>
-                    {a}
-                  </li>
-                ))}
-              </ul>
             </div> */}
+            {training.slug !== "iso-31000-risk-management" &&
+ training.slug !== "online-iso-training" && (
+  <div>
+    <h2 className="font-display text-3xl">
+      Modules covered
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <ol className="mt-6 grid gap-3 sm:grid-cols-2">
+      {training.modules.map((m, i) => (
+        <li
+          key={m}
+          className="flex items-start gap-4 rounded-lg border border-border bg-card p-4"
+        >
+          <span className="font-display text-2xl text-gold">
+            {String(i + 1).padStart(2, "0")}
+          </span>
+
+          <span className="pt-1 text-foreground">
+            {m}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </div>
+)}
+
             <div>
   <h2 className="font-display text-3xl">
     Course Details
@@ -176,6 +169,240 @@ export default function IsoTrainingPage({ training }) {
     </p>
   </div>
 </div>
+
+
+{/* {training.overview && (
+  <div>
+    <h2 className="font-display text-3xl">
+      Course Overview
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <p className="mt-6 leading-8 text-muted-foreground">
+      {training.overview}
+    </p>
+  </div>
+)} */}
+
+{training.whyTake && (
+  <div>
+    {/* <h2 className="font-display text-3xl">
+      Why Take the ISO 9001 Lead Auditor Course?
+    </h2> */}
+    <h2 className="font-display text-3xl">
+  {training.whyTakeTitle}
+</h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <p className="mt-6 leading-8 text-muted-foreground">
+      {training.whyTake}
+    </p>
+  </div>
+)}
+{/* 
+{training.courseCovers && (
+  <div>
+   
+    <h2 className="font-display text-3xl">
+  {training.courseCoversTitle}
+</h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <ul className="mt-6 space-y-4">
+      {training.courseCovers.map((item, i) => (
+        <li key={i} className="flex gap-3">
+          <span className="text-gold">✓</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)} */}
+{training.courseCovers && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.courseCoversTitle}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    {Array.isArray(training.courseCovers) ? (
+      <ul className="mt-6 space-y-4">
+        {training.courseCovers.map((item, i) => (
+          <li key={i} className="flex gap-3">
+            <span className="text-gold">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <div className="mt-6 whitespace-pre-line leading-8 text-muted-foreground text-justify">
+        {training.courseCovers}
+      </div>
+    )}
+  </div>
+)}
+{/* 
+{training.benefits && (
+  <div>
+    <h2 className="font-display text-3xl">
+  {training.benefitsTitle || "Benefits of the Course"}
+</h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <ul className="mt-6 space-y-4">
+      {training.benefits.map((item, i) => (
+        <li key={i} className="flex gap-3">
+          <span className="text-gold">✓</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)} */}
+
+{training.benefits && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.benefitsTitle || "Benefits of the Course"}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    {Array.isArray(training.benefits) ? (
+      <ul className="mt-6 space-y-4">
+        {training.benefits.map((item, i) => (
+          <li key={i} className="flex gap-3">
+            <span className="text-gold">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <div className="mt-6 whitespace-pre-line leading-8 text-muted-foreground text-justify">
+        {training.benefits}
+      </div>
+    )}
+  </div>
+)}
+
+{training.trainingMethods && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.trainingMethodsTitle}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-6 whitespace-pre-line leading-8 text-muted-foreground text-justify">
+      {training.trainingMethods}
+    </div>
+  </div>
+)}
+
+{training.assessmentContent && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.assessmentTitle}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-6 whitespace-pre-line leading-8 text-muted-foreground text-justify">
+      {training.assessmentContent}
+    </div>
+  </div>
+)}
+
+{training.aboutUpdate && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.aboutUpdateTitle}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-6 whitespace-pre-line leading-8 text-muted-foreground text-justify">
+      {training.aboutUpdate}
+    </div>
+  </div>
+)}
+
+{training.updateBenefits && (
+  <div>
+    <h2 className="font-display text-3xl">
+      {training.updateBenefitsTitle}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-6 whitespace-pre-line leading-8 text-muted-foreground text-justify">
+      {training.updateBenefits}
+    </div>
+  </div>
+)}
+{training.audience && (
+  <div>
+    <h2 className="font-display text-3xl">
+      Who Should Attend
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <ul className="mt-6 space-y-4">
+      {training.audience.map((item, i) => (
+        <li key={i} className="flex gap-3">
+          <span className="text-gold">✓</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{training.prerequisites && (
+  <div>
+    <h2 className="font-display text-3xl">
+      Prerequisites
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <ul className="mt-6 space-y-4">
+      {training.prerequisites.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{training.faq && (
+  <div>
+    <h2 className="font-display text-3xl">
+      Frequently Asked Questions
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    <div className="mt-6 space-y-4">
+      {training.faq.map((item, i) => (
+        <details key={i} className="rounded-xl border p-5">
+          <summary className="cursor-pointer font-semibold">
+            {item.question}
+          </summary>
+
+          <p className="mt-4">
+            {item.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+)}
           </div>
 
           <aside className="lg:sticky lg:top-28 self-start">
