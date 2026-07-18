@@ -857,7 +857,7 @@ courseCoversTitle: "What the ISO 9001 Lead Auditor Course Covers",
   overview: `
 The ISO 9001 Lead Auditor course intends to provide participants with the necessary expertise to perform first-, second- and third-party audits of a Quality Management System and report on the compliance and effectiveness of the system. The course covers ISO 9001 Quality Management Systems requirements and provides guidance on how to plan and conduct an audit in accordance with ISO 19011 Guidelines for Auditing Management Systems.
 
-EAS is a sister organization of IAS, which provides the IRCA Certified ISO 9001 Lead Auditor Course online. The course is led by experienced tutors who are experts in the field of quality management and includes a mix of classroom lectures, case studies, and group exercises.
+Hawksberg International provides professional ISO 9001 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, real-world case studies, practical audit exercises, and interactive discussions to help participants develop the knowledge and confidence required to perform first-, second-, and third-party Quality Management System (QMS) audits in accordance with ISO 9001:2015 and ISO 19011 guidelines.
 `,
 whyTake:
   "The most important reason is that it will allow you to effectively audit an organization's Quality Management System (QMS). This is beneficial for businesses, as it helps ensure their QMS meets all of the requirements necessary for ISO 9001 certification. In addition, the course helps you develop a better understanding of how to effectively manage and monitor a QMS, and how to assess an organization's compliance with ISO 9001 requirements.",
@@ -872,16 +872,6 @@ courseCovers: [
   "Performance evaluation — monitoring, measurement, internal audit, and management review (Clause 9).",
   "Improvement — nonconformity, corrective action, and continual improvement (Clause 10).",
   "Audit principles, audit types (first-, second-, third-party), and the full audit lifecycle: planning, preparing checklists, conducting the audit, gathering objective evidence, grading nonconformities, reporting, and follow-up."
-],
-
-benefits: [
-  "Helps you develop an in-depth understanding of the ISO 9001 Quality Management Standard and its requirements.",
-  "Enables you to conduct effective audits of Quality Management Systems (QMS) against the ISO 9001 standard.",
-  "Provides you with the skills and knowledge required to lead a team of auditors.",
-  "Teaches you how to plan and prepare for an audit, as well as how to report on the findings.",
-  "Helps you understand the principles of auditing and how to apply them in a variety of situations.",
-  "Gives you the confidence to communicate effectively with senior management and other stakeholders.",
-  "Provides you with an internationally recognized qualification that can boost your career prospects."
 ],
 
   benefits: [
@@ -980,7 +970,7 @@ courseCoversTitle: "What the ISO 27001 Lead Auditor Course Covers",
   overview: `
 The ISO 27001 Lead Auditor Course is designed to provide a robust foundation in the knowledge and skills required for conducting first-, second-, and third-party audits of Information Security Management Systems (ISMS) as per ISO/IEC 27001:2022 requirements. This course develops the competencies necessary to effectively lead an audit team and provides an in-depth understanding of ISO/IEC 27001 standards, auditing principles, and best practices.
 
-As a sister organization of IAS, Empowering Assurance Systems (EAS) offers this IRCA-certified ISO 27001 Lead Auditor Course through tutor-led online training. Combining theoretical knowledge with practical exercises, the course enables participants to confidently apply auditing skills in real-world Information Security Management System audits.
+Hawksberg International provides professional ISO 27001 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, real-world case studies, and interactive discussions to help participants develop the knowledge and confidence required to plan, conduct, report, and follow up first-, second-, and third-party Information Security Management System (ISMS) audits in accordance with ISO/IEC 27001:2022 and ISO 19011 guidelines.
 `,
 
 whyTake:
@@ -1057,7 +1047,7 @@ courseCoversTitle: "What the ISO 45001 Lead Auditor Course Covers",
 overview: `
 The ISO 45001 Lead Auditor Course is designed to equip participants with the essential skills and knowledge needed to conduct first-, second-, and third-party audits of Occupational Health and Safety Management Systems (OHSMS) against ISO 45001. This comprehensive program covers the intricacies of ISO 45001 requirements, principles, and auditing practices, encompassing the role of auditors, audit planning, and effective audit execution.
 
-Empowering Assurance Systems (EAS), an esteemed sister organization of IAS, proudly offers IRCA Certified ISO 45001 Lead Auditor Training. Led by experienced trainers, the course blends lectures, workshops, and group exercises for a well-rounded learning experience.
+Hawksberg International provides professional ISO 45001 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical workshops, real-world case studies, and interactive group exercises to help participants develop the knowledge and confidence required to plan, conduct, report, and follow up first-, second-, and third-party Occupational Health & Safety Management System (OHSMS) audits in accordance with ISO 45001 and ISO 19011 guidelines.
 `,
 
 whyTake:
@@ -1160,7 +1150,7 @@ courseCoversTitle: "What the ISO 22301 Lead Auditor Course Covers",
 overview: `
 ISO 22301 Lead Auditor Training is aimed at providing delegates with the necessary expertise to perform first-, second-, and third-party audits of a Business Continuity Management System (BCMS) based on ISO 22301, to determine whether it is suitable for certification and/or registration purposes. The course covers the requirements of ISO 22301 and provides guidance on how to conduct audits to assess compliance with the standard.
 
-Empowering Assurance Systems (EAS), a sister organization of IAS, offers this IRCA Certified ISO 22301 Lead Auditor Course through experienced tutors. The course enables participants to understand the complete Business Continuity Management System audit lifecycle, from planning and execution to reporting and continual improvement.
+Hawksberg International provides professional ISO 22301 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, real-world business continuity scenarios, case studies, and interactive discussions to help participants develop the knowledge and confidence required to plan, conduct, report, and follow up first-, second-, and third-party Business Continuity Management System (BCMS) audits in accordance with ISO 22301 and ISO 19011 guidelines.
 `,
 
 whyTake:
@@ -1277,7 +1267,7 @@ courseCoversTitle: "What the ISO 22000 Lead Auditor Course Covers",
 overview: `
 The ISO 22000 Lead Auditor Training is designed to provide participants with the expertise required to conduct first-, second-, and third-party Food Safety Management System (FSMS) audits in accordance with ISO 22000:2018 requirements. The course establishes a strong foundation for planning, conducting, reporting, and managing FSMS audit programmes while assessing compliance with international food safety standards.
 
-Empowering Assurance Systems (EAS), a sister organization of IAS, offers this IRCA Certified ISO 22000 Lead Auditor Course through experienced auditors. The programme combines theoretical learning with practical auditing exercises, enabling participants to confidently lead Food Safety Management System audits from planning through reporting.
+Hawksberg International provides professional ISO 22000 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, HACCP-based case studies, real-world food safety scenarios, and interactive discussions to help participants develop the knowledge and confidence required to plan, conduct, report, and follow up first-, second-, and third-party Food Safety Management System (FSMS) audits in accordance with ISO 22000:2018 and ISO 19011 guidelines.
 `,
 
 whyTake:
@@ -1385,7 +1375,7 @@ The ISO 14001:2026 Lead Auditor Training is designed to equip participants with 
 
 Participants gain practical exposure to real-world audit scenarios, enabling them to assess system effectiveness and identify opportunities for continual improvement.
 
-Empowering Assurance Systems (EAS), a sister organization of IAS, delivers this IRCA Certified ISO 14001 Lead Auditor Training through experienced instructors who guide participants through the complete Environmental Management System audit lifecycle.
+Hawksberg International provides professional ISO 14001 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, real-world environmental case studies, and interactive discussions to help participants develop the knowledge and confidence required to plan, conduct, report, and follow up first-, second-, and third-party Environmental Management System (EMS) audits in accordance with ISO 14001:2026 and ISO 19011 guidelines.
 `,
 
 whyTake:
@@ -1512,7 +1502,7 @@ courseCoversTitle: "What the ISO 13485 Lead Auditor Course Covers",
 overview: `
 ISO 13485 Lead Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up Medical Device Quality Management System (MDQMS) audits in accordance with ISO 13485:2016 requirements. The course prepares participants to confidently perform first-, second-, and third-party audits while understanding regulatory expectations for the medical device industry.
 
-Empowering Assurance Systems (EAS), a sister organization of IAS, delivers this CQI-IRCA Certified ISO 13485 Lead Auditor Training through experienced instructors. The programme combines theoretical knowledge with practical audit exercises to prepare participants for real-world Medical Device Quality Management System audits.
+Hawksberg International provides professional ISO 13485 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, real-world medical device case studies, and interactive discussions to help participants develop the knowledge and confidence required to plan, conduct, report, and follow up first-, second-, and third-party Medical Device Quality Management System (MDQMS) audits in accordance with ISO 13485:2016 and ISO 19011 guidelines.
 `,
 
 whyTake:
@@ -1626,7 +1616,9 @@ enrollment: []
 courseCoversTitle: "What the ISO 50001 Lead Auditor Course Covers",
 
 overview: `
-ISO 50001 Lead Auditor Training empowers individuals with the skills and knowledge necessary to lead and conduct successful audits aligned with the international standard for Energy Management Systems. In collaboration with our sister organization, Empowering Assurance Systems (EAS), IAS provides this ISO 50001 Lead Auditor Training for professionals keen on auditing Energy Management Systems.
+ISO 50001 Lead Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up first-, second-, and third-party Energy Management System (EnMS) audits in accordance with ISO 50001:2018 and ISO 19011 guidelines.
+
+Hawksberg International provides professional ISO 50001 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, real-world energy management case studies, and interactive discussions to help participants develop the confidence to evaluate Energy Management Systems, improve organizational energy performance, and successfully lead EnMS audit teams.
 `,
 
 courseCovers: [
@@ -1643,16 +1635,19 @@ courseCovers: [
 
 assessmentTitle: "Assessment & Certification",
 
-assessmentContent: {
-  continuousAssessment:
-    "Candidates are evaluated throughout the course on attendance, active participation, completion of individual and group exercises, and professional engagement during class discussions.",
+assessmentContent: `
+Continuous Assessment
 
-  finalExamination:
-    "At the end of the course, participants complete a comprehensive examination. Passing the examination demonstrates auditing competence.",
+Candidates are evaluated throughout the course on attendance, active participation, completion of individual and group exercises, and professional engagement during class discussions.
 
-  certification:
-    "Participants who successfully complete the training and pass the examination receive a globally recognised certificate of successful course completion. Candidates who do not meet the threshold will be issued a certificate of attendance."
-},
+Final Examination
+
+At the end of the course, participants complete a comprehensive examination. Passing the examination demonstrates auditing competence.
+
+Certification
+
+Participants who successfully complete the training and pass the examination receive a Hawksberg International ISO 50001 Lead Auditor course-completion certificate. Participants who do not achieve the required passing score will receive a certificate of attendance.
+`,
 
 enrollment: [],
   benefits: [
@@ -1719,7 +1714,9 @@ enrollment: [],
 whyTakeTitle: "About the Course",
 
 overview: `
-ISO 17025 Lead Auditor Training is designed to equip individuals with the skills and knowledge necessary to lead and conduct successful audits in accordance with the international standard for testing and calibration laboratories. In association with our sister organization, Empowering Assurance Systems (EAS), IAS provides this CQI-IRCA Certified ISO 17025 Lead Auditor Training for candidates interested in auditing laboratory quality management systems.
+ISO/IEC 17025 Lead Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up first-, second-, and third-party audits of Testing and Calibration Laboratories in accordance with ISO/IEC 17025:2017 and ISO 19011 guidelines.
+
+Hawksberg International provides professional ISO/IEC 17025 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical laboratory audit exercises, real-world case studies, and interactive discussions to help participants develop the confidence to evaluate laboratory competence, ensure compliance with ISO/IEC 17025 requirements, and successfully lead laboratory audit teams.
 `,
 
 courseCoversTitle: "What the ISO 17025 Lead Auditor Course Covers",
@@ -1815,7 +1812,9 @@ trainingMethods: [
 whyTakeTitle: "About the Course",
 
 overview: `
-ISO 15189 Lead Auditor Training is designed to empower individuals with the skills and knowledge necessary to lead and conduct successful audits in accordance with the ISO 15189 international standard for medical laboratories. In association with our sister organization, Empowering Assurance Systems (EAS), IAS provides this ISO 15189 Lead Auditor Training for candidates interested in auditing Medical Laboratory Quality Management Systems.
+ISO 15189 Lead Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up first-, second-, and third-party audits of Medical Laboratory Quality Management Systems in accordance with ISO 15189:2022 and ISO 19011 guidelines.
+
+Hawksberg International provides professional ISO 15189 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical laboratory audit exercises, real-world medical laboratory case studies, and interactive discussions to help participants develop the confidence to evaluate laboratory quality systems, ensure compliance with ISO 15189:2022 requirements, and successfully lead medical laboratory audit teams.
 `,
 
 courseCoversTitle: "What the ISO 15189 Lead Auditor Course Covers",
@@ -1836,7 +1835,7 @@ faq: [
   {
     question: "What is the ISO 15189 Lead Auditor course?",
     answer:
-      "A Lead Auditor course, delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, that qualifies participants to lead audits of medical (clinical) laboratories against ISO 15189:2022 in line with ISO 19011."
+      "A professional Lead Auditor course delivered by Hawksberg International that equips participants with the knowledge and practical skills to plan, conduct, report, and lead audits of medical (clinical) laboratories against ISO 15189:2022 in accordance with ISO 19011 guidelines."
   },
   {
     question: "What does the course cover?",
@@ -1911,7 +1910,9 @@ faq: [
   whyTakeTitle: "About the Course",
 
 overview: `
-FSSC 22000 Lead Auditor Training equips professionals with the skills and knowledge necessary to lead and conduct successful audits in accordance with the FSSC 22000 scheme for Food Safety Management Systems. Integrated Assessment Services (IAS), in collaboration with our sister organization Empowering Assurance Systems (EAS), provides this CQI-IRCA Certified FSSC 22000 Lead Auditor Training for individuals aspiring to audit Food Safety Management Systems.
+FSSC 22000 Lead Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up first-, second-, and third-party audits of Food Safety Management Systems (FSMS) in accordance with the FSSC 22000 certification scheme, ISO 22000, and ISO 19011 guidelines.
+
+Hawksberg International provides professional FSSC 22000 Lead Auditor Training delivered by experienced industry experts. The course combines instructor-led sessions, practical audit exercises, HACCP-based case studies, real-world food safety scenarios, and interactive discussions to help participants develop the confidence to evaluate Food Safety Management Systems, ensure compliance with FSSC 22000 requirements, and successfully lead food safety audit teams.
 `,
 
 courseCoversTitle: "What the FSSC 22000 Lead Auditor Course Covers",
@@ -1941,11 +1942,7 @@ faq: [
     answer:
       "The course covers the three components of FSSC 22000, HACCP principles, prerequisite programmes, hazard analysis, food safety culture, additional FSSC requirements, and auditing the certification scheme across the complete audit lifecycle."
   },
-  {
-    question: "Is the course IRCA certified?",
-    answer:
-      "Yes. It is an IRCA-certified Lead Auditor course delivered through Empowering Assurance Systems (EAS), the sister organisation of IAS."
-  },
+ 
   {
     question: "What are the prerequisites?",
     answer:
@@ -2001,7 +1998,9 @@ faq: [
 whyTakeTitle: "Introduction to the ISO 13485 Internal Auditor Course",
 
 overview: `
-The ISO 13485 Internal Auditor Course equips participants with the skills and knowledge to conduct internal (first-party) audits of a Medical Device Quality Management System in accordance with ISO 13485 within their own organisation, and to help prepare it for external certification. Delivered by seasoned experts in quality management and auditing through Empowering Assurance Systems (EAS), IAS's sister organisation, the course integrates interactive activities, case studies, and practical examples, and leads to a course-completion certificate.
+The ISO 13485 Internal Auditor Course equips participants with the knowledge and practical skills required to conduct internal (first-party) audits of a Medical Device Quality Management System (MDQMS) in accordance with ISO 13485 and ISO 19011 guidelines. The course helps organizations evaluate compliance, identify opportunities for improvement, and prepare for external certification audits.
+
+Hawksberg International provides professional ISO 13485 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world medical device case studies, and interactive discussions to help participants develop the confidence to effectively plan, conduct, report, and follow up internal Medical Device Quality Management System audits.
 `,
 
 courseCoversTitle: "Course Content",
@@ -2047,7 +2046,7 @@ faq: [
   {
     question: "How is the course assessed, and what certificate do I get?",
     answer:
-      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, Empowering Assurance Systems (EAS), IAS's sister organisation, issues a course-completion certificate."
+      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, participants receive a Hawksberg International course-completion certificate."
   }
 ]
 },
@@ -2100,9 +2099,11 @@ faq: [
  whyTakeTitle: "About ISO 14001 Internal Auditor Training",
 
 overview: `
-Auditing is a key component of any Environmental Management System (EMS), ensuring processes are implemented effectively and aligned with ISO requirements. ISO 14001 Internal Auditor Training is designed to help professionals plan, conduct, and manage internal (first-party) audits with confidence — assessing EMS performance, identifying non-conformities, and helping prepare the organisation for external certification.
+ISO 14001 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Environmental Management System (EMS) audits in accordance with ISO 14001:2026 and ISO 19011 guidelines. The course helps organizations evaluate EMS performance, identify nonconformities, drive continual improvement, and prepare for external certification audits.
 
-Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course provides a structured approach to evaluating EMS effectiveness and supporting continual improvement. It also introduces participants to the latest ISO 14001:2026 updates so auditing techniques remain current.
+Hawksberg International provides professional ISO 14001 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world environmental case studies, and interactive discussions to help participants develop the confidence to effectively assess Environmental Management Systems and contribute to sustainable environmental performance.
+
+Hawksberg International follows a practical, hands-on training approach that enables participants to confidently evaluate Environmental Management Systems, identify opportunities for continual improvement, and apply effective internal auditing techniques in real-world environmental management scenarios. The course also introduces participants to the latest ISO 14001:2026 updates, ensuring their auditing knowledge and skills remain current and aligned with industry best practices.
 `,
 
 courseCoversTitle: "Course Structure and Topics Covered",
@@ -2194,9 +2195,9 @@ faq: [
  whyTakeTitle: "ISO 27001 Internal Auditor Training – Aim",
 
 overview: `
-ISO 27001 Internal Auditor Training gives delegates the skills and knowledge to carry out internal (first-party) audits of an ISO/IEC 27001-compliant Information Security Management System (ISMS) to assess its effectiveness and help prepare the organisation for external certification. The course covers the requirements of ISO/IEC 27001 and the process approach to auditing, including how to plan and conduct an audit, report findings, and recommend improvements.
+ISO 27001 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Information Security Management System (ISMS) audits in accordance with ISO/IEC 27001 and ISO 19011 guidelines. The course helps organizations evaluate the effectiveness of their Information Security Management System, identify risks and nonconformities, support continual improvement, and prepare for external certification audits.
 
-Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the training is interactive and led by experienced auditors, combining lectures, discussions, and practical exercises.
+Hawksberg International provides professional ISO 27001 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world information security case studies, and interactive discussions to help participants develop the confidence to effectively assess Information Security Management Systems and successfully perform internal ISMS audits.
 `,
 
 whyTake:
@@ -2298,7 +2299,9 @@ faq: [
  whyTakeTitle: "About the ISO 50001 Internal Auditor Course",
 
 overview: `
-The ISO 50001 Internal Auditor Course equips participants with the skills and knowledge to conduct internal (first-party) audits of an Energy Management System (EnMS) aligned with ISO 50001 within their own organisation, and to help prepare it for external certification. Delivered by seasoned experts in energy management and auditing through Empowering Assurance Systems (EAS), IAS's sister organisation, the course uses interactive activities, case studies, and practical examples, and leads to a course-completion certificate.
+The ISO 50001 Internal Auditor Course equips participants with the knowledge and practical skills required to conduct internal (first-party) audits of an Energy Management System (EnMS) in accordance with ISO 50001 and ISO 19011 guidelines. The course enables organizations to evaluate energy performance, identify opportunities for improvement, ensure compliance with energy management requirements, and prepare for external certification audits.
+
+Hawksberg International provides professional ISO 50001 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world energy management case studies, and interactive discussions to help participants develop the confidence to effectively plan, conduct, report, and follow up internal Energy Management System audits while driving continual improvement in energy performance.
 `,
 
 courseCoversTitle: "Course Content",
@@ -2395,9 +2398,9 @@ faq: [
   whyTakeTitle: "About ISO 45001 Internal Auditor Training",
 
 overview: `
-ISO 45001 Internal Auditor Training provides the knowledge and skills to perform an internal (first-party) audit against the ISO 45001 Occupational Health & Safety (OH&S) Management System standard. The course gives delegates the confidence to report on the effective implementation and maintenance of the management system and helps prepare the organisation for an external OH&S audit, with auditing methodologies in accordance with ISO 19011.
+ISO 45001 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Occupational Health & Safety Management System (OH&SMS) audits in accordance with ISO 45001:2018 and ISO 19011 guidelines. The course enables organizations to evaluate the effectiveness of their OH&SMS, identify workplace hazards and nonconformities, support continual improvement, and prepare for external certification audits.
 
-Integrated Assessment Services (IAS) delivers this course in association with its sister organisation, Empowering Assurance Systems (EAS). Tutors are practising auditors who guide participants with practical examples for a better understanding of the standard's requirements and the auditing process.
+Hawksberg International provides professional ISO 45001 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world occupational health and safety case studies, and interactive discussions to help participants develop the confidence to effectively assess Occupational Health & Safety Management Systems and successfully perform internal OH&SMS audits.
 `,
 
 courseCoversTitle: "Course Content",
@@ -2480,9 +2483,9 @@ faq: [
   whyTakeTitle: "Ensuring Quality Management Excellence",
 
 overview: `
-The ISO 9001 Internal Auditor Training is a comprehensive program designed to equip delegates with the skills and knowledge required to perform internal (first-party) audits of a Quality Management System (QMS) based on ISO 9001, verifying that the Quality Management System aligns with the standard and helping prepare the organisation for external certification. By focusing on the principles and process approach to quality management, participants gain valuable insights into ensuring organizational excellence.
+ISO 9001 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Quality Management System (QMS) audits in accordance with ISO 9001:2015 and ISO 19011 guidelines. The course enables organizations to evaluate the effectiveness of their Quality Management System, identify nonconformities, support continual improvement, and prepare for external certification audits.
 
-Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the ISO 9001 Internal Auditor Training is led by highly experienced auditors and incorporates practical exercises that enable participants to apply theoretical concepts in real-world scenarios.
+Hawksberg International provides professional ISO 9001 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world quality management case studies, and interactive discussions to help participants develop the confidence to effectively assess Quality Management Systems and successfully perform internal QMS audits.
 `,
 
 whyTake:
@@ -2582,9 +2585,9 @@ faq: [
  whyTakeTitle: "ISO 22000 Internal Auditor Training – Course Aim",
 
 overview: `
-ISO 22000 Internal Auditor Training provides delegates with the skills and knowledge to perform an internal (first-party) audit of a Food Safety Management System (FSMS) against the requirements of ISO 22000 and to help prepare the organisation for external certification. The course covers the requirements of ISO 22000, the process approach, and auditing principles. Participants learn how to plan and conduct an internal audit and report on the findings.
+ISO 22000 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Food Safety Management System (FSMS) audits in accordance with ISO 22000 and ISO 19011 guidelines. The course enables organizations to evaluate the effectiveness of their Food Safety Management System, identify food safety risks and nonconformities, support continual improvement, and prepare for external certification audits.
 
-Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course is interactive, with plenty of opportunities for participants to ask questions and share experiences.
+Hawksberg International provides professional ISO 22000 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, HACCP-based case studies, real-world food safety scenarios, and interactive discussions to help participants develop the confidence to effectively assess Food Safety Management Systems and successfully perform internal FSMS audits.
 `,
 
 whyTake:
@@ -2672,9 +2675,9 @@ faq: [
  whyTakeTitle: "About ISO 22301 Internal Auditor Training",
 
 overview: `
-ISO 22301 Internal Auditor Training is a mid-level course for process owners and teams who carry out internal (first-party) audits of a Business Continuity Management System (BCMS) within their own organisation. Conducting internal audits at periodic intervals is a requirement of the ISO 22301 standard, and this course helps participants prepare their organisation for external certification. The course is designed around establishing an effective Business Continuity Management System and uses modern, practical learning techniques.
+ISO 22301 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Business Continuity Management System (BCMS) audits in accordance with ISO 22301 and ISO 19011 guidelines. The course enables organizations to evaluate the effectiveness of their Business Continuity Management System, identify risks and nonconformities, strengthen organizational resilience, and prepare for external certification audits.
 
-Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course leads to a course-completion certificate.
+Hawksberg International provides professional ISO 22301 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world business continuity case studies, and interactive discussions to help participants develop the confidence to effectively assess Business Continuity Management Systems and successfully perform internal BCMS audits.
 `,
 
 benefitsTitle: "Benefits of ISO 22301 Internal Auditor Training",
@@ -2768,9 +2771,9 @@ faq: [
   whyTakeTitle: "What is IATF 16949 Training?",
 
 overview: `
-IATF 16949 Internal Auditor Training is an internal-audit course for the automotive sector's Quality Management Systems. It helps participants learn how to initiate an audit, develop and conduct audit activities, organise and distribute audit reports, and complete follow-up activities in accordance with the International Automotive Task Force (IATF) requirements. The course enables participants to conduct internal (first-party) audits within their own organisation and prepare it for external certification.
+IATF 16949 Internal Auditor Training equips professionals with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) Automotive Quality Management System (AQMS) audits in accordance with IATF 16949:2016, ISO 9001:2015, and ISO 19011 guidelines. The course enables organizations to evaluate the effectiveness of their Automotive Quality Management System, identify nonconformities, support continual improvement, and prepare for external certification audits.
 
-Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course leads to a course-completion certificate.
+Hawksberg International provides professional IATF 16949 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical audit exercises, real-world automotive manufacturing case studies, and interactive discussions to help participants develop the confidence to effectively assess Automotive Quality Management Systems and successfully perform internal AQMS audits.
 `,
 
 courseCoversTitle: "What Will You Learn in the IATF 16949 Training Course?",
@@ -2873,7 +2876,9 @@ faq: [
 whyTakeTitle: "Introduction to the ISO 17025 Internal Auditor Course",
 
 overview: `
-The ISO/IEC 17025 Internal Auditor Course equips participants with the skills and knowledge to perform internal (first-party) audits of a Testing and Calibration Laboratory Management System in accordance with ISO/IEC 17025 within their own organisation, and to help prepare it for external assessment. Delivered by seasoned experts in quality management and auditing through Empowering Assurance Systems (EAS), IAS's sister organisation, the course combines interactive activities, case studies, and practical examples, and leads to a course-completion certificate.
+The ISO/IEC 17025 Internal Auditor Course equips participants with the knowledge and practical skills required to conduct internal (first-party) audits of Testing and Calibration Laboratory Management Systems in accordance with ISO/IEC 17025:2017 and ISO 19011 guidelines. The course enables laboratories to evaluate competence, identify nonconformities, support continual improvement, and prepare for external accreditation assessments.
+
+Hawksberg International provides professional ISO/IEC 17025 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical laboratory audit exercises, real-world testing and calibration case studies, and interactive discussions to help participants develop the confidence to effectively plan, conduct, report, and follow up internal laboratory audits.
 `,
 
 courseCoversTitle: "Course Content",
@@ -2891,7 +2896,7 @@ courseCovers: [
 assessmentTitle: "Assessment and Certification",
 
 assessmentContent:
-  "Upon completion, participants take an examination provided by Integrated Assessment Services (IAS). A minimum passing score of 70% is required to receive the ISO/IEC 17025 Internal Auditor course-completion certificate.",
+  "Upon completion, participants take a comprehensive assessment to evaluate their understanding of ISO/IEC 17025:2017 requirements and internal auditing principles. A minimum passing score of 70% is required to successfully complete the course and receive a Hawksberg International ISO/IEC 17025 Internal Auditor course-completion certificate.",
 
 faqTitle: "ISO 17025 Training — Frequently Asked Questions",
 
@@ -2924,7 +2929,7 @@ faq: [
   {
     question: "How is the course assessed, and what certificate do I get?",
     answer:
-      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, Empowering Assurance Systems (EAS), IAS's sister organisation, issues a course-completion certificate."
+      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, participants receive a Hawksberg International ISO/IEC 17025 Internal Auditor course-completion certificate."
   }
 ]
 },
@@ -2980,7 +2985,9 @@ faq: [
  whyTakeTitle: "Course Objective",
 
 overview: `
-The ISO 15189 Internal Auditor Training course enables participants to plan, conduct, and manage internal (first-party) audits of a Medical (Clinical) Laboratory Quality and Competence Management System within their own organisation, in accordance with ISO 19011, and to help prepare it for external assessment. Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, by experienced real-time auditors using practical examples, the course leads to a course-completion certificate.
+The ISO 15189 Internal Auditor Training course equips participants with the knowledge and practical skills required to plan, conduct, report, and follow up internal (first-party) audits of Medical Laboratory Quality Management Systems in accordance with ISO 15189:2022 and ISO 19011 guidelines. The course helps laboratories evaluate quality and competence, identify opportunities for improvement, ensure compliance with international laboratory requirements, and prepare for external accreditation assessments.
+
+Hawksberg International provides professional ISO 15189 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical laboratory audit exercises, real-world medical laboratory case studies, and interactive discussions to help participants develop the confidence to effectively assess Medical Laboratory Quality Management Systems and successfully perform internal laboratory audits.
 `,
 
 benefitsTitle: "Benefits of Learning ISO 15189 Internal Auditor Training",
@@ -3007,7 +3014,7 @@ trainingMethods: [
 assessmentTitle: "Certification",
 
 assessmentContent:
-  "Integrated Assessment Services (IAS) provides a course-completion certificate for delegates who successfully complete the course and a participation certificate for all attendees. For online participants, the certificate is issued electronically and sent to the registered email address. The course is delivered by experienced real-time auditors with extensive industry expertise.",
+  "Participants who successfully complete the course and assessment will receive a Hawksberg International course-completion certificate. A participation certificate is provided to all attendees. For online participants, certificates are issued electronically and sent to the registered email address. The training is delivered by experienced industry experts with extensive practical auditing experience.",
 
 faqTitle: "ISO 15189 Internal Auditor Training — Frequently Asked Questions",
 
@@ -3089,9 +3096,11 @@ faq: [
   whyTakeTitle: "About ISO 31000 Internal Auditor Training",
 
 overview: `
-The ISO 31000 Internal Auditor Training course helps participants apply ISO 31000 risk management principles and conduct risk-based internal (first-party) audits within their own organisation in accordance with ISO 19011. The course develops the auditing expertise required to evaluate how an organisation manages risk.
+The ISO 31000 Internal Auditor Training course equips participants with the knowledge and practical skills required to apply ISO 31000 risk management principles and conduct risk-based internal (first-party) audits in accordance with ISO 19011 guidelines. The course helps organizations evaluate the effectiveness of their risk management processes, identify areas for improvement, strengthen governance, and enhance overall organizational resilience.
 
-Please note that ISO 31000 provides guidance on risk management. It is not a certifiable or auditable management system standard, and organisations cannot be certified to ISO 31000. This course focuses on developing practical risk-based internal auditing skills and the application of ISO 31000 principles rather than certification. Delivered through Empowering Assurance Systems (EAS), IAS's sister organisation, the course leads to a course-completion certificate.
+Please note that ISO 31000 is a guidance standard for risk management and is not intended for certification. This course focuses on developing practical risk-based internal auditing skills and applying ISO 31000 principles to strengthen organizational risk management rather than preparing participants for certification.
+
+Hawksberg International provides professional ISO 31000 Internal Auditor Training delivered by experienced industry experts. The programme combines instructor-led sessions, practical risk assessment exercises, real-world case studies, and interactive discussions to help participants develop the confidence to effectively conduct risk-based internal audits and support continual improvement across their organizations.
 `,
 
 benefitsTitle: "Benefits of the ISO 31000 Internal Auditor Training Course",
@@ -3134,7 +3143,7 @@ faq: [
   {
     question: "How is the course assessed, and what certificate do I get?",
     answer:
-      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, Empowering Assurance Systems (EAS), IAS's sister organisation, issues a course-completion certificate."
+      "Assessment is based on participation, course exercises, and a short assessment where applicable. Upon successful completion, participants receive a Hawksberg International ISO 31000 Internal Auditor course-completion certificate."
   }
 ]
 },
@@ -3285,7 +3294,9 @@ trainingMethods: [
  whyTakeTitle: "About ISO 31000 Certification",
 
 overview: `
-The Integrated Assessment Services (IAS) has launched new services to guide organizations to implement ISO 31000:2018, the first international standard for risk management. It intends to help companies identify and minimize risks in order to better protect physical assets, personnel, and financial performance. ISO 31000 is a risk management standard that applies to all organizations regardless of size, location, or activity.
+ISO 31000:2018 is the internationally recognized guideline for risk management that helps organizations establish a structured approach to identifying, assessing, treating, monitoring, and reviewing risks. The framework supports organizations of all sizes and industries in protecting assets, improving decision-making, enhancing business resilience, and achieving strategic objectives through effective risk management.
+
+Hawksberg International provides expert guidance and professional training to help organizations implement ISO 31000 principles effectively. Our experienced consultants support businesses in integrating risk management practices into daily operations, strengthening governance, and building a proactive risk-aware culture.
 `,
 
 courseCoversTitle: "Is ISO 31000 Certification Possible?",
@@ -3297,13 +3308,13 @@ ISO 31000 provides guidelines, not requirements, and is therefore not intended f
 benefitsTitle: "ISO 31000 Risk Mgt Training Courses",
 
 benefits: `
-The Integrated Assessment Services (IAS) offers courses for people who want to get a better understanding of how ISO 31000 can be used. In order to get the most out of ISO 31000 certification courses, it is recommended that the participants have an understanding of risk based assessment methods and have some prior experience with ISO 31000 or any other Risk Management framework.
+Hawksberg International offers comprehensive ISO 31000 Risk Management training for professionals who want to develop practical knowledge of risk management principles and their application across different industries. The course is ideal for managers, auditors, compliance professionals, and risk practitioners seeking to strengthen organizational resilience. While prior knowledge of risk assessment methods or management systems is beneficial, it is not mandatory.
 `,
 
 trainingMethodsTitle: "ISO 31000 Certification Course",
 
 trainingMethods: `
-Integrated Assessment Services (IAS) offers the full ISO 31000 certification course that includes a comprehensive introduction to risk management and the new standard. Participants also study the Auditor Training Course which explains how to conduct an audit based on ISO 31000:2018. Both courses include courses for management and staff, as well as exercises and case studies.
+Hawksberg International offers comprehensive ISO 31000 Risk Management training covering the principles, framework, and practical application of ISO 31000:2018. Participants gain a thorough understanding of risk management processes, risk-based decision-making, and internal auditing practices through instructor-led sessions, practical exercises, real-world case studies, and interactive discussions. The programme is suitable for managers, auditors, and professionals responsible for organizational risk management.
 `,
 
 assessmentTitle: "Implementation Approach of ISO 31000 Risk Management",
@@ -3483,39 +3494,39 @@ faq: [
   whyTakeTitle: "About ISO Training Online",
 
   overview: `
-ISO Training is a professional training program that aims to teach people how to set up and maintain an efficient management system in accordance with ISO standards. Integrated Assessment Services Pvt. Ltd. (IAS) offers ISO Training online, which helps students develop the skills and knowledge they need to establish and manage an ISO-compliant management system.
+ISO Training Online is a professional learning programme designed to help individuals and organizations understand, implement, and maintain management systems in accordance with internationally recognized ISO standards. Hawksberg International provides comprehensive online ISO training that equips participants with the knowledge and practical skills required to establish, manage, audit, and continually improve ISO-compliant management systems across a wide range of industries.
 `,
 
   courseCoversTitle: "ISO Training Programs Available Online",
 
   courseCovers: `
-IAS, in association with its sister organization, EAS, now provides ISO training online for the following:
+IHawksberg International offers a wide range of professional online ISO training programmes, including:
 
-• IRCA Accredited ISO Lead Auditor Training
+• IRCA-Accredited ISO Lead Auditor Training
 
-• ISO Internal Auditor Training – Self Learning
+• ISO Internal Auditor Training – Self-Paced Learning
 
-• ISO Internal Auditor Training – Virtual
+• ISO Internal Auditor Training – Live Virtual Sessions
 
-• ISO Foundation/Awareness Training
+• ISO Foundation & Awareness Training
 
-Participants who successfully finish the ISO training online course will receive a certificate of completion from IAS, one of the most well-known ISO certification bodies.
+Participants who successfully complete their chosen online training programme and assessment will receive a Hawksberg International course-completion certificate.
 `,
 
   benefitsTitle: "Features of Our ISO Training Online",
 
   benefits: `
-• 24/7 Accessibility – IAS’s online training is accessible from any internet-connected laptop or desktop system and can be learned anytime, anywhere.
+• 24/7 Accessibility – Access your training anytime, anywhere using any internet-connected computer or device.
 
-• Expert Instructors – All trainers have years of practical experience implementing a wide range of ISO standards.
+• Expert Instructors – Learn from experienced industry professionals with extensive practical knowledge of ISO standards and auditing.
 
-• Flexible Study Options – Choose from Self-Learning, Virtual, and E-Learning modes based on your convenience.
+• Flexible Learning Options – Choose from Self-Paced Learning, Live Virtual Sessions, and Instructor-Led Online Training.
 
-• Access to PowerPoint Presentations and Self-Study Material – Comprehensive learning resources are included with every course.
+• Comprehensive Learning Resources – Receive presentation materials, reference documents, case studies, and self-study resources.
 
-• Affordable Course Fees – Cost-effective compared with traditional classroom training.
+• Affordable Training – Cost-effective programmes that provide high-quality learning without the expense of classroom travel.
 
-• Online Examination – Complete the final online assessment and receive a certificate of completion upon successfully passing.
+• Online Assessment & Certification – Complete the course assessment online and receive a Hawksberg International course-completion certificate upon successful completion.
 `,
 
   trainingMethodsTitle: "ISO Training Online – Course Delivery Modes",
@@ -3538,18 +3549,18 @@ ISO Foundation/Awareness Training (Self-Learning)
 A self-paced learning program providing the fundamentals of ISO standards with 30 days of online course access.
 `,
 
-  assessmentTitle: "Why Choose IAS for ISO Training Online?",
+ assessmentTitle: "Why Choose Hawksberg International for Online ISO Training?",
 
   assessmentContent: `
-IAS is one of the leading providers of ISO training online with over 20 years of industry experience.
+Hawksberg International delivers high-quality online ISO training programmes designed to meet the learning needs of individuals and organizations across various industries.
 
-We offer Lead Auditor, Internal Auditor, and Foundation/Awareness courses across a wide range of ISO standards.
+We offer Lead Auditor, Internal Auditor, Foundation, and Awareness courses covering a wide range of internationally recognized ISO standards.
 
-Training programs can be customized to meet the specific requirements of organizations.
+Training programmes can be customized to suit organizational requirements, helping teams build competence and achieve compliance objectives.
 
-Our online learning platform is user-friendly, interactive, and supported by experienced trainers who provide guidance throughout the course.
+Our interactive online learning platform, experienced instructors, practical case studies, and continuous learner support ensure an engaging and effective training experience.
 
-Competitive pricing makes our ISO training programs affordable while maintaining high-quality learning standards.
+Affordable pricing and flexible learning schedules make our online ISO training accessible without compromising on quality.
 `,
 
   audience: [
