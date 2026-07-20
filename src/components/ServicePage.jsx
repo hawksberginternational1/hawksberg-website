@@ -9,6 +9,7 @@ import iatf16949Bg from "@/assets/16949.webp";
 import iso50001Bg from "@/assets/50001.webp";
 // import soc2Bg from "@/assets/Soc2.webp";
 import dpdpBg from "@/assets/soc consulting.webp";
+import TisaxSections from "./TisaxSections";
 
 export default function ServicePage({ service }) {
   return (
@@ -332,12 +333,29 @@ export default function ServicePage({ service }) {
     </ol>
   </div>
 )}
+{/* {service.slug === "tisax" && (
+    <TisaxSections service={service} />
+)} */}
         </div>
 
-        <aside className="lg:sticky lg:top-28 self-start">
+        {/* <aside className="lg:sticky lg:top-28 self-start">
           <EnquiryForm compact />
-        </aside>
+        </aside> */}
+        <aside className="hidden lg:block lg:sticky lg:top-28 self-start">
+  <EnquiryForm compact />
+</aside>
       </section>
+   {service.slug === "tisax" && (
+  <>
+    <section className="container-x py-20">
+      <TisaxSections />
+    </section>
+
+    <section className="container-x pb-20 lg:hidden">
+      <EnquiryForm compact />
+    </section>
+  </>
+)}
     </>
   );
 }

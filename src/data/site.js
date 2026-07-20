@@ -13,6 +13,7 @@ export const company = {
     whatsapp: "https://wa.me/919080583283",
   },
 };
+import TisaxSections from "@/components/TisaxSections";
 import iso9001Img1 from "@/assets/Training.webp";
 import iso27001Img1 from "@/assets/services/iso-27001.webp";
 import iso45001Img1 from "@/assets/45001.webp";
@@ -317,6 +318,8 @@ export const isoServices = [
       "Assessment preparation",
       "Label maintenance support",
     ],
+  
+
   },
   // {
   //   slug: "soc-2",
