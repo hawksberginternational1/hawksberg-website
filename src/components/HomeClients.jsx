@@ -35,6 +35,13 @@ import search from "@/assets/clients/search.webp";
 import space from "@/assets/clients/space.webp";
 import steam from "@/assets/clients/steam.webp";
 import vit from "@/assets/clients/vit.webp";
+import qikink from "@/assets/clients/qikink.webp";
+import rabwin from "@/assets/clients/rabwin.webp";
+import westin from "@/assets/clients/westin.webp";
+import aloft from "@/assets/clients/aloft.webp";
+import kurinji from "@/assets/clients/kurinji.webp";
+import state from "@/assets/clients/state.webp";
+import revx from "@/assets/clients/revx.webp";
 
 // =====================
 // Layout grid (design-time coordinates) — UNCHANGED
@@ -55,6 +62,7 @@ const DEFAULT_LOGO_SIZE = { width: 120, height: 40 };
 const LARGE_LOGO_SIZE = { width: 150, height: 52 };
 
 const LOGO_LAYOUT = [
+  // { src: state, ...pos(5, -2)  ,...LARGE_LOGO_SIZE},
   { src: space, ...pos(5, 0) },
   { src: janatics, ...pos(4, 1) },
   { src: kalyani, ...pos(3, 2) },
@@ -74,15 +82,23 @@ const LOGO_LAYOUT = [
   { src: courtyard, ...pos(4, 7), ...LARGE_LOGO_SIZE },
   { src: royal, ...pos(3, 8) },
   { src: rikun, ...pos(5, 8) },
+  { src: qikink, ...pos(1, 9), y: 9 * ROW - 40 },
+  { src: revx, ...pos(1, 10) },
   { src: search, ...pos(2, 9) },
   { src: asiaeo, ...pos(4, 9), ...LARGE_LOGO_SIZE },
+   { src: rabwin, ...pos(2, 11) },
+   { src: state, ...pos(2, 13) ,...LARGE_LOGO_SIZE},
   { src: indo, ...pos(3, 10) },
   { src: mobility, ...pos(5, 10), ...LARGE_LOGO_SIZE },
   { src: resolute, ...pos(4, 11) },
   { src: messer, ...pos(3, 12) },
+  { src: kurinji, ...pos(3, 14) },
   { src: logicvalley, ...pos(5, 12) },
   { src: barani, ...pos(4, 13), ...LARGE_LOGO_SIZE },
+  { src: aloft, ...pos(4, 15), ...LARGE_LOGO_SIZE },
   { src: jwmarriott, ...pos(5, 14), ...LARGE_LOGO_SIZE },
+   { src: westin, ...pos(5, 16), ...LARGE_LOGO_SIZE },
+   
 ];
 
 // Native (unscaled) footprint of the diagonal grid — UNCHANGED
