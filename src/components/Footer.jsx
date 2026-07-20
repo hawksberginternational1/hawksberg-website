@@ -80,7 +80,7 @@ export default function Footer() {
           <address className="mt-5 space-y-3 text-sm not-italic text-brand-foreground/80">
             <p>{company.address}</p>
             <p>
-              <span className="text-gold">Phone:</span>{" "}
+              <span className="text-gold">Phone: +91 90805 83283</span>{" "}
               <a href={`tel:${company.altPhone}`} className="hover:text-gold">
                 {company.altPhone}
               </a>
