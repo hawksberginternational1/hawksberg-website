@@ -7,30 +7,30 @@ import hero3 from "@/assets/hero3.webp";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 // import homepagedot from "@/assets/homepagedot.webp";
-import heros from "@/assets/heros.webp";
+// import heros from "@/assets/heros.webp";
 
 const slides = [
-//   {
-//     type: "video",
-//     src: "/video/homepagevideo.mp4",
+  {
+    type: "video",
+    src: "/video/homepagevideo.mp4",
 
-//     eyebrow: "ISO Consultancy & Training",
-//     title: "Delivering Excellence in Compliance & Cyber Security",
-//     sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
-//     button: "Explore Services",
-// link: "/services/iso-27001",
-//   },
+    eyebrow: "ISO Consultancy & Training",
+    title: "Delivering Excellence in Compliance & Cyber Security",
+    sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
+    button: "Explore Services",
+link: "/services/iso-27001",
+  },
 
-{
-  type: "image",
-  src: heros,
+// {
+//   type: "image",
+//   src: heros,
 
-  eyebrow: "ISO Consultancy & Training",
-  title: "Delivering Excellence in Compliance & Cyber Security",
-  sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
-  button: "Explore Services",
-  link: "/services/iso-27001",
-},
+//   eyebrow: "ISO Consultancy & Training",
+//   title: "Delivering Excellence in Compliance & Cyber Security",
+//   sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
+//   button: "Explore Services",
+//   link: "/services/iso-27001",
+// },
 
   {
     type: "image",
@@ -86,8 +86,7 @@ export default function HeroCarousel() {
 }, [isMobile]);
 
   return (
-    // <section className="relative h-screen w-full overflow-hidden">
-    <section className="relative h-screen w-full overflow-x-hidden overflow-y-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
       {/* {slides.map((slide, index) => ( */}
       {orderedSlides.map((slide, index) => (
        
@@ -111,20 +110,13 @@ export default function HeroCarousel() {
               <source src={slide.src} type="video/mp4" />
             </video>
           ) : (
-            // <img
-            //   src={slide.src}
-            //   alt=""
-            //   className={`h-full w-full object-cover ${
-            //     current === index ? "animate-zoom" : ""
-            //   }`}
-            // />
             <img
-  src={slide.src}
-  alt=""
-  className={`absolute inset-0 h-full w-full object-cover object-center ${
-    current === index ? "animate-zoom" : ""
-  }`}
-/>
+              src={slide.src}
+              alt=""
+              className={`h-full w-full object-cover ${
+                current === index ? "animate-zoom" : ""
+              }`}
+            />
           )}
 
           {/* Dark Overlay */}
