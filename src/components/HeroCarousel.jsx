@@ -7,30 +7,30 @@ import hero3 from "@/assets/hero3.webp";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 // import homepagedot from "@/assets/homepagedot.webp";
-// import heros from "@/assets/heros.webp";
+import heros from "@/assets/heros.webp";
 
 const slides = [
-  {
-    type: "video",
-    src: "/video/homepagevideo.mp4",
+//   {
+//     type: "video",
+//     src: "/video/homepagevideo.mp4",
 
-    eyebrow: "ISO Consultancy & Training",
-    title: "Delivering Excellence in Compliance & Cyber Security",
-    sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
-    button: "Explore Services",
-link: "/services/iso-27001",
-  },
+//     eyebrow: "ISO Consultancy & Training",
+//     title: "Delivering Excellence in Compliance & Cyber Security",
+//     sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
+//     button: "Explore Services",
+// link: "/services/iso-27001",
+//   },
 
-// {
-//   type: "image",
-//   src: heros,
+{
+  type: "image",
+  src: heros,
 
-//   eyebrow: "ISO Consultancy & Training",
-//   title: "Delivering Excellence in Compliance & Cyber Security",
-//   sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
-//   button: "Explore Services",
-//   link: "/services/iso-27001",
-// },
+  eyebrow: "ISO Consultancy & Training",
+  title: "Delivering Excellence in Compliance & Cyber Security",
+  sub: "From ISO certification to cyber security training — Hawksberg International delivers measurable, audit-ready outcomes for enterprises across the globe.",
+  button: "Explore Services",
+  link: "/services/iso-27001",
+},
 
   {
     type: "image",
