@@ -86,7 +86,8 @@ export default function HeroCarousel() {
 }, [isMobile]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    // <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-x-hidden overflow-y-hidden">
       {/* {slides.map((slide, index) => ( */}
       {orderedSlides.map((slide, index) => (
        
@@ -110,13 +111,20 @@ export default function HeroCarousel() {
               <source src={slide.src} type="video/mp4" />
             </video>
           ) : (
+            // <img
+            //   src={slide.src}
+            //   alt=""
+            //   className={`h-full w-full object-cover ${
+            //     current === index ? "animate-zoom" : ""
+            //   }`}
+            // />
             <img
-              src={slide.src}
-              alt=""
-              className={`h-full w-full object-cover ${
-                current === index ? "animate-zoom" : ""
-              }`}
-            />
+  src={slide.src}
+  alt=""
+  className={`absolute inset-0 h-full w-full object-cover object-center ${
+    current === index ? "animate-zoom" : ""
+  }`}
+/>
           )}
 
           {/* Dark Overlay */}
