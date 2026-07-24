@@ -37,14 +37,23 @@ import mercedes from "@/assets/clients/mercedes.webp";
 import iit from "@/assets/clients/iit.webp";
 import vit from "@/assets/clients/vit.webp";
 import amritha from "@/assets/clients/amritha.webp";
+import qikink from "@/assets/clients/qikink.webp";
+import rabwin from "@/assets/clients/rabwin.webp";
+import westin from "@/assets/clients/westin.webp";
+import alofts from "@/assets/clients/aloft.webp";
+import kurinji from "@/assets/clients/kurinji.webp";
+import state from "@/assets/clients/state.webp";
+import revx from "@/assets/clients/revx.webp";
 
 const firstRow = [
   iit,
   vit,
   amritha,
-  // apptivo,
+  qikink,
   avon,
-  // marriott,
+  rabwin,
+  westin,
+  alofts,
   isid,
   eprominent,
   northstar,
@@ -60,7 +69,7 @@ const firstRow = [
 ];
 
 const secondRow = [
-  // shakara,
+  state,
   jmi,
   gighz,
   logicvalley,
@@ -70,13 +79,14 @@ const secondRow = [
   mobility,
   salzer,
   courtyard,
-  // wentin,
+  kurinji,
   aloft,
   steam,
   resolute,
   messer,
   barani,
   ppts,
+  revx,
 ];
 
 const LogoRow = ({ logos, reverse = false }) => {
@@ -113,19 +123,27 @@ const LogoRow = ({ logos, reverse = false }) => {
         {duplicated.map((logo, index) => (
           <div
             key={index}
-            // className="flex h-28 min-w-[220px] items-center justify-center rounded-xl border border-border bg-white px-6 shadow-sm"
-            className="flex h-24 min-w-[190px] items-center justify-center rounded-xl border border-border bg-white px-4 shadow-sm"
+            
+            // className="flex h-24 min-w-[190px] items-center justify-center rounded-xl border border-border bg-white px-4 shadow-sm"
+            className="flex h-20 min-w-[160px] items-center justify-center rounded-xl border border-border bg-white px-3 shadow-sm"
           >
             <img
               src={logo}
               alt={`Client ${index}`}
-              className={`object-contain transition-transform duration-300 hover:scale-110 ${
-                [aloft, epc, asiaeo, mobility, janatics].includes(logo)
-                  // ? "max-h-24 w-auto"
-                  // : "max-h-16 w-auto"
-                  ? "max-h-20 w-auto"
-: "max-h-14 w-auto"
-              }`}
+//               className={`object-contain transition-transform duration-300 hover:scale-110 ${
+//                 [aloft, epc, asiaeo, mobility, janatics].includes(logo)
+//                   // ? "max-h-24 w-auto"
+//                   // : "max-h-16 w-auto"
+//                   ? "max-h-20 w-auto"
+// : "max-h-14 w-auto"
+//               }`}
+className={`object-contain transition-transform duration-300 hover:scale-110 ${
+  [accumed, steam, cygnus, salzer, isid, innovex].includes(logo)
+  ? "max-h-10 w-auto"
+    : [aloft, epc, asiaeo, mobility, janatics, iit, vit, amritha, courtyard, barani].includes(logo)
+    ? "max-h-24 w-auto"
+    : "max-h-18 w-auto"
+}`}
               loading="lazy"
               decoding="async"
             />
