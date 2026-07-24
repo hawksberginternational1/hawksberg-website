@@ -155,7 +155,8 @@ export default function HeroCarousel() {
     duration: 0.6,
     delay: 0.2,
   }}
-  className="inline-flex items-center gap-2 rounded-full border border-[#D8A23A]/70 px-4 py-1.5 text-xs tracking-[0.28em] uppercase text-[#D8A23A]"
+  // className="inline-flex items-center gap-2 rounded-full border border-[#D8A23A]/70 px-4 py-1.5 text-xs tracking-[0.28em] uppercase text-[#D8A23A]"
+  className="inline-flex items-center gap-2 rounded-full border border-[#D8A23A]/70 bg-[#D8A23A]/10 px-5 py-2 text-xs tracking-[0.28em] uppercase text-[#D8A23A] backdrop-blur-[2px]"
 >
   ★ <span>{slide.eyebrow}</span>
 </motion.span>
