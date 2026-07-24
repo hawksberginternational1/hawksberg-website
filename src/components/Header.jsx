@@ -99,6 +99,29 @@ useEffect(() => {
       : "bg-white border-b border-border shadow-sm"
   }`}
 >
+  <div
+  className={`md:hidden transition-all duration-300 ${
+    isHome && !scrolled
+      ? "bg-transparent text-white"
+      : "bg-brand text-brand-foreground/90"
+  }`}
+>
+  <div className="flex items-center justify-between px-3 py-2 text-[10px]">
+    <a
+      href={`tel:${company.phone}`}
+      className="flex items-center gap-1 whitespace-nowrap"
+    >
+      ☎ <span>{company.phone}</span>
+    </a>
+
+    <a
+      href={`mailto:${company.email}`}
+      className="flex items-center gap-1 whitespace-nowrap"
+    >
+      ✉ <span>{company.email}</span>
+    </a>
+  </div>
+</div>
       {/* <div className="hidden bg-brand text-brand-foreground/90 md:block"> */}
       <div
   className={`hidden md:block transition-all duration-300 ${
@@ -420,12 +443,35 @@ className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
           <Link to="/contact" className="btn-primary !px-4 !py-2 !text-[11px]">
             Enquire Now
           </Link>
+{/*          
+<Link
+  to="/training-login"
+  onClick={() => setOpen(false)}
+  className={`text-[15px] font-bold tracking-wide transition-colors hover:text-gold ${
+    isHome && !scrolled
+      ? "text-white"
+      : "text-foreground/80"
+  }`}
+>
+  Training Login
+</Link> */}
+
+ {/* <Link
+  to="/training-login"
+  className={`text-sm font-bold transition-colors duration-300 ${
+    isTransparent
+      ? "text-white hover:text-gold"
+      : "text-foreground hover:text-gold"
+  }`}
+>
+  Training Login
+</Link> */}
         </nav>
 
         <button
           onClick={() => setOpen((v) => !v)}
           // className="lg:hidden"
-          className="lg:hidden flex-shrink-0 ml-6 z-50 p-6"
+          className="lg:hidden flex-shrink-0 ml-6 z-50 p-1"
           aria-label="Toggle menu"
         >
           <div className="space-y-1.5">
