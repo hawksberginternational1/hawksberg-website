@@ -94,7 +94,7 @@ const LogoRow = ({ logos, reverse = false }) => {
   const containerRef = useRef(null);
   const x = useRef(reverse ? -3400 : 0);
 
-  // const CARD_WIDTH = 220;
+
   const CARD_WIDTH = 100;
   const GAP = 24;
   const totalWidth = logos.length * (CARD_WIDTH + GAP);
@@ -119,7 +119,12 @@ const LogoRow = ({ logos, reverse = false }) => {
 
   return (
     <div className="overflow-hidden w-full">
-      <div ref={containerRef} className="flex gap-6 w-max">
+      {/* <div ref={containerRef} className="flex gap-6 w-max"> */}
+      <div
+  ref={containerRef}
+  className="flex gap-6"
+  style={{ width: `${totalWidth * 2}px` }}
+>
         {duplicated.map((logo, index) => (
           <div
             key={index}
