@@ -75,6 +75,10 @@ const PORTALS = [
     key: "risktreatment",
     title: "Risk Treatment",
   },
+  {
+    key: "soa",
+    title: "SOA",
+  },
 ];
 
 

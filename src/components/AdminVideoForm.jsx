@@ -37,6 +37,10 @@ const TRAINING_PORTALS = [
     value: "risktreatment",
     label: "Risk Treatment",
   },
+  {
+    value: "soa",
+    label: "SOA",
+  },
 ];
 
 // =====================================================

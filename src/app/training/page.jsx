@@ -43,6 +43,7 @@ const TRAINING_PORTALS = {
   riskevaluation: "Risk Evaluation",
   riskassessment: "Risk Assessment",
   risktreatment: "Risk Treatment",
+  soa: "SOA",
 };
 
 // =====================================================

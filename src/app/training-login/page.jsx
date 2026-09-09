@@ -36,6 +36,8 @@ const TRAINING_CODES = {
   RE1002: "riskevaluation",
   RA1003: "riskassessment",
   RT1004: "risktreatment",
+
+  SOA1005: "soa",
 };
   const ADMIN_CODE = "ADM9081";
 
