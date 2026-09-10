@@ -2,11 +2,11 @@ import HomePage from "@/components/HomePage";
 
 export const metadata = {
   title: {
-    absolute: "ISO Consultant & Certification Training - Hawksberg International",
+    absolute: "ISO Consultant in Chennai | ISO Certification Training - Hawksberg International",
   },
   description:
-    "Hawksberg International provides ISO consultancy, certification support and training services to help businesses meet international standards and requirements.",
-  keywords: ["ISO Consultant", "ISO Certification Training", "ISO Certification"],
+    "Hawksberg International ISO consultant Chennai Provides ISO certification support and ISO certification training services to help businesses meet international standards and requirements.",
+  keywords: ["ISO Consultant Chennai", "ISO Certification Training", "ISO Certification"],
   robots: { index: true, follow: true },
 };
 
