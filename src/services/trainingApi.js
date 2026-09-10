@@ -3,10 +3,18 @@
 // =====================================================
 // API BASE URL
 // =====================================================
+// NEXT_PUBLIC_API_URL must be set (.env.local for dev, Vercel env var for prod).
+// No localhost fallback so production never silently calls localhost.
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:8000/api";
+if (!process.env.NEXT_PUBLIC_API_URL) {
+  throw new Error(
+    "Missing required environment variable NEXT_PUBLIC_API_URL. " +
+      "Set it in .env.local for local development, or in your hosting " +
+      "platform's environment variables (e.g. Vercel) for production."
+  );
+}
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 
 // =====================================================
