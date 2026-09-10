@@ -96,18 +96,18 @@ function AboutPageSection() {
           <div className="mt-4 gold-divider" />
 
           <p className="mt-6 text-muted-foreground">
-            Hawksberg International Certification helps organizations
-            strengthen performance through expert ISO consultancy, professional
-            training, and practical management system guidance. We translate
+            Hawksberg International Certification, a global ISO Consultant We help organizations 
+            achieve ISO certification, strengthen cyber security posture, and build 
+            workplace capability through structured corporate training programs. We translate
             international standards into structured business processes that
             support compliance, certification readiness, and measurable
             operational improvement.
           </p>
 
           <p className="mt-4 text-muted-foreground">
-            Our experienced professionals work with leadership and teams to
-            build lasting awareness, accountability, and confidence in the way
-            management systems are implemented and maintained. Through clear
+            As a trusted ISO certification consultant , Our experienced professionals
+            work with leadership and teams to build lasting awareness, accountability, 
+            and confidence in the way management systems are implemented and maintained. Through clear
             methods and hands-on support, we help organizations develop a
             culture of continual improvement across their operations.
           </p>
