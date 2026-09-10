@@ -1,6 +1,6 @@
 export const metadata = {
 	title: {
-		absolute: "ISO Certification, Cyber Security, Corporate Training - Hawksberg International",
+		absolute: "ISO Certification Consultant, Cyber Security Certification, Corporate Training - Hawksberg International",
 	},
 	description:
 		"Looking ISO certification and cybersecurity support? Hawksberg ISO Consultants offers cybersecurity and corporate training to improve workplace skills.",
