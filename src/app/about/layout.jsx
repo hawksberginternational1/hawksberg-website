@@ -3,7 +3,7 @@ export const metadata = {
 		absolute: "ISO Certification Consultant, Cyber Security Certification, Corporate Training - Hawksberg International",
 	},
 	description:
-		"Looking ISO certification and cybersecurity support? Hawksberg ISO Consultants offers cybersecurity and corporate training to improve workplace skills.",
+		"Looking ISO certification Consultant and cybersecurity support? Hawksberg ISO Consultants offers cybersecurity and corporate training to improve workplace skills.",
 	keywords: ["ISO Cyber Security", "ISO Certification Training", "ISO Certification"],
 	robots: { index: true, follow: true },
 	alternates: { canonical: "/about" },
