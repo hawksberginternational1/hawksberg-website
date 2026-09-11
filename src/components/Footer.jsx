@@ -170,6 +170,15 @@ export default function Footer() {
                 → DPDP Consulting
               </Link>
             </li>
+
+            <li>
+              <Link
+                href="/services/iso-consultant-chennai"
+                className="inline-flex items-center transition-all duration-300 hover:text-gold hover:translate-x-1"
+              >
+                → ISO Consultant in Chennai
+              </Link>
+            </li>
           </ul>
         </div>
 
