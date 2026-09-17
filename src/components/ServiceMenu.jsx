@@ -24,6 +24,11 @@ export const serviceMenu = [
         to: "/services/iso-9001",
       },
       {
+        label: "ISO 9001:2026",
+        slug: "iso-9001-2026",
+        to: "/services/iso-9001-2026",
+      },
+      {
         label: "ISO 45001",
         slug: "iso-45001",
         to: "/services/iso-45001",
