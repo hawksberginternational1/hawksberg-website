@@ -65,14 +65,16 @@ const TRAINING_CODES = {
       newErrors.name = "Only alphabets are allowed";
     }
 
-    // Gmail
-    if (!formData.userId.trim()) {
-      newErrors.userId = "Email is required";
-    } else if (
-      !/^[A-Za-z0-9._%+-]+@gmail\.com$/i.test(formData.userId)
-    ) {
-      newErrors.userId = "Enter a valid Gmail address";
-    }
+    // Email
+if (!formData.userId.trim()) {
+  newErrors.userId = "Email is required";
+} else if (
+  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+    formData.userId.trim()
+  )
+) {
+  newErrors.userId = "Enter a valid email address";
+}
 
     // Code
     // if (!formData.code.trim()) {
@@ -249,13 +251,13 @@ console.log("USER ROLE", res.user.role);
               {/* User ID */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-white">
-                  User ID (Gmail)
+                  User ID (Email)
                 </label>
 
                 <input
                   type="email"
                   name="userId"
-                  placeholder="example@gmail.com"
+                  placeholder="example@company.com"
                   value={formData.userId}
                   onChange={handleChange}
                   className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
