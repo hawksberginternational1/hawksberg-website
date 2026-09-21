@@ -639,6 +639,22 @@ const trainingApi = {
           "Unable to load training videos"
         );
 
+      console.error(
+        "TRAINING API HTTP ERROR:",
+        {
+          url,
+          status: response.status,
+          statusText: response.statusText,
+          message,
+        }
+      );
+
+      if (
+        response.status >= 500
+      ) {
+        return [];
+      }
+
       throw new Error(
         message
       );

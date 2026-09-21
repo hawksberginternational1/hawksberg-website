@@ -47,6 +47,23 @@ const TRAINING_PORTALS = {
 };
 
 // =====================================================
+// CLOUDFLARE R2 VIDEO MAPPING
+// =====================================================
+// Only these four training portals use Cloudflare R2.
+// All other training portals continue using their
+// existing YouTube / database video source.
+
+const CLOUDFLARE_R2_BASE_URL =
+  "https://pub-6c4cdfacf7684bdbbd42c03d4f0743c6.r2.dev";
+
+const CLOUDFLARE_R2_VIDEOS = {
+  riskidentification: "1. Risk Identification.mp4",
+  riskevaluation: "3. Risk Evaluation.mp4",
+  riskassessment: "2. CIA - Risk Analysis.mp4",
+  soa: "SOA - Training.mp4",
+};
+
+// =====================================================
 // HELPERS
 // =====================================================
 
@@ -129,12 +146,42 @@ function isMp4Url(url) {
 // GET VIDEO SOURCE
 // =====================================================
 
-function getVideoSource(video) {
+function getVideoSource(video, trainingName) {
   if (!video) {
     return "";
   }
 
-  // New DB structure
+  const normalizedTraining =
+    normalizeTrainingName(trainingName);
+
+  const r2File =
+    CLOUDFLARE_R2_VIDEOS[normalizedTraining];
+
+  // =====================================================
+  // CLOUDFLARE R2
+  // Only the four migrated training portals use the
+  // Cloudflare R2 public video URL. All other portals
+  // keep their existing YouTube / database video source.
+  // =====================================================
+
+  if (r2File) {
+    const r2Url =
+      `${CLOUDFLARE_R2_BASE_URL}/${encodeURIComponent(
+        r2File
+      )}`;
+
+    console.log(
+      "R2 VIDEO SOURCE:",
+      r2Url
+    );
+
+    return r2Url;
+  }
+
+  // =====================================================
+  // EXISTING YOUTUBE SOURCE
+  // =====================================================
+
   if (video.youtube_url) {
     return video.youtube_url;
   }
@@ -270,6 +317,12 @@ function TrainingPortalContent() {
     useState(EMPTY_FORM);
 
   const [saving, setSaving] =
+    useState(false);
+
+  // ===================================================
+  // R2 PLAYER FALLBACK
+  // ===================================================
+  const [r2PlaybackFallback, setR2PlaybackFallback] =
     useState(false);
 
   // ===================================================
@@ -527,9 +580,19 @@ function TrainingPortalContent() {
   const currentVideoSource =
     useMemo(() => {
       return getVideoSource(
-        currentVideo
+        currentVideo,
+        trainingName
       );
-    }, [currentVideo]);
+    }, [
+      currentVideo,
+      trainingName,
+    ]);
+
+  // Reset the R2 fallback whenever the selected video
+  // or its source changes.
+  useEffect(() => {
+    setR2PlaybackFallback(false);
+  }, [currentVideo?.id, currentVideoSource]);
 
   // ===================================================
   // VIDEO TYPE
@@ -538,6 +601,21 @@ function TrainingPortalContent() {
   const currentVideoIsYoutube =
     useMemo(() => {
       if (!currentVideo) {
+        return false;
+      }
+
+      const normalizedTraining =
+        normalizeTrainingName(
+          trainingName
+        );
+
+      // The four migrated training portals must
+      // never render a YouTube iframe.
+      if (
+        CLOUDFLARE_R2_VIDEOS[
+          normalizedTraining
+        ]
+      ) {
         return false;
       }
 
@@ -551,12 +629,28 @@ function TrainingPortalContent() {
     }, [
       currentVideo,
       currentVideoSource,
+      trainingName,
     ]);
 
   const currentVideoIsMp4 =
     useMemo(() => {
       if (!currentVideo) {
         return false;
+      }
+
+      const normalizedTraining =
+        normalizeTrainingName(
+          trainingName
+        );
+
+      // The four migrated training portals always
+      // render the Cloudflare R2 MP4 player.
+      if (
+        CLOUDFLARE_R2_VIDEOS[
+          normalizedTraining
+        ]
+      ) {
+        return true;
       }
 
       if (
@@ -576,6 +670,7 @@ function TrainingPortalContent() {
       currentVideo,
       currentVideoSource,
       currentVideoIsYoutube,
+      trainingName,
     ]);
 
   // ===================================================
@@ -1475,30 +1570,88 @@ function TrainingPortalContent() {
                       )}
 
                       {/* =================================================
-                          MP4 FROM SUPABASE
+                          MP4 FROM SUPABASE / CLOUDFLARE R2
                       ================================================= */}
+{currentVideoIsMp4 && (
+  <>
+    {!r2PlaybackFallback ? (
+      <video
+        key={`mp4-video-${currentVideo.id}-${currentVideoSource}`}
+        controls
+        preload="metadata"
+        playsInline
+        className="aspect-video w-full bg-black object-contain"
+        onLoadedMetadata={(event) => {
+          const video = event.currentTarget;
 
-                      {currentVideoIsMp4 && (
-                        <video
-                          key={
-                            `mp4-${currentVideo.id}`
-                          }
-                          controls
-                          preload="metadata"
-                          playsInline
-                          className="aspect-video w-full bg-black object-contain"
-                        >
-                          <source
-                            src={
-                              currentVideo.video_url ||
-                              currentVideoSource
-                            }
-                            type="video/mp4"
-                          />
+          console.log("VIDEO LOADED:", video.currentSrc);
+          console.log("VIDEO DURATION:", video.duration);
+          console.log("VIDEO READY STATE:", video.readyState);
+          console.log(
+            "VIDEO NETWORK STATE:",
+            video.networkState
+          );
+        }}
+        onCanPlay={(event) => {
+          console.log(
+            "VIDEO CAN PLAY:",
+            event.currentTarget.currentSrc
+          );
+        }}
+        onError={(event) => {
+          const video = event.currentTarget;
+          const error = video.error;
 
-                          Your browser does not support HTML5 video.
-                        </video>
-                      )}
+          console.warn(
+            "VIDEO PLAYBACK FAILED:",
+            {
+              src: video.currentSrc,
+              readyState: video.readyState,
+              networkState: video.networkState,
+              errorCode: error?.code,
+              errorMessage: error?.message,
+            }
+          );
+
+          if (
+            CLOUDFLARE_R2_VIDEOS[
+              normalizeTrainingName(trainingName)
+            ] &&
+            error?.code === 4
+          ) {
+            setR2PlaybackFallback(true);
+          }
+        }}
+      >
+        <source
+          src={currentVideoSource}
+          type="video/mp4"
+        />
+
+        Your browser does not support HTML5 video.
+      </video>
+    ) : (
+      <div className="relative aspect-video w-full bg-black">
+        <iframe
+          key={`r2-fallback-${currentVideo.id}-${currentVideoSource}`}
+          src={currentVideoSource}
+          title={currentVideo.title || "Training Video"}
+          className="h-full w-full border-0 bg-black"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        />
+
+        <button
+          type="button"
+          onClick={() => setR2PlaybackFallback(false)}
+          className="absolute right-4 top-4 rounded-lg bg-black/70 px-3 py-2 text-xs font-semibold text-white transition hover:bg-black"
+        >
+          Retry Video Player
+        </button>
+      </div>
+    )}
+  </>
+)}
 
                       {/* =================================================
                           NO SOURCE
