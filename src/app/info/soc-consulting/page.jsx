@@ -38,12 +38,10 @@ const info = {
     },
 
     {
-      title: "Why SOC Security Operation Center?",
+      title: "Why SOC 2 Compliance?",
 
       body: [
-        "A SOC 2 Type 2 report relates to the design and documentation of controls. In SOC 2 Type 2, it also provides additional assurance on how the organisation systems process data in real terms and is managed.",
-
-        "Generally speaking, when a SOC 2 report is requested, the expectation is for a SOC 2 Type II report, covering a minimum observation period.",
+        "SOC 2 compliance helps organizations demonstrate that their controls are designed to address risks related to security, availability, processing integrity, confidentiality, and privacy. It is particularly relevant for service organizations that manage systems or data on behalf of customers and business partners.",
       ],
 
       image: socPanelImg,
