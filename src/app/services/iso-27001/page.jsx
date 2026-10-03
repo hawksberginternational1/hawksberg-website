@@ -15,7 +15,7 @@ export const service = {
     "Implement a robust ISMS framework to safeguard data, ensure confidentiality and earn customer trust.",
 
   overviewTitle:
-    "ISO 27001 Consulting Services, ISMS Implementation & Certification",
+    "ISO 27001 Consultant in Chennai – ISMS Implementation & Certification",
 
   // Service/content image
   image: iso27001Image,
@@ -40,9 +40,8 @@ export const service = {
   // ],
 
   description: [
-    "Protect your data, win customer trust and meet client security requirements. Hawksberg International is an ISO 27001 consultant in Chennai that helps IT companies, manufacturers, startups and service providers build an Information Security Management System (ISMS) and get ready for certification audits",
-  ],
-
+  "Protect your data, win customer trust and meet client security requirements. Hawksberg International is an ISO 27001 consultant in Chennai that helps IT companies, manufacturers, startups and service providers build an Information Security Management System (ISMS) and get ready for certification audits",
+],
   // New content added AFTER the existing description
   contentSections: [
     {
