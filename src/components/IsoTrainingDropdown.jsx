@@ -12,6 +12,10 @@ export default function IsoTrainingDropdown() {
       to: "/iso-training/iso-9001-lead-auditor",
     },
     {
+      label: "ISO 9001:2026 Lead Auditor Training",
+      to: "/iso-training/iso-9001-2026-lead-auditor",
+    },
+    {
       label: "ISO 27001 Lead Auditor Training",
       to: "/iso-training/iso-27001-lead-auditor",
     },
@@ -77,6 +81,10 @@ export default function IsoTrainingDropdown() {
     {
       label: "ISO 9001 Internal Auditor Training",
       to: "/iso-training/iso-9001-internal-auditor",
+    },
+    {
+      label: "ISO 9001:2026 Internal Auditor Training",
+      to: "/iso-training/iso-9001-2026-internal-auditor",
     },
     {
       label: "ISO 22000 Internal Auditor Training",
@@ -150,8 +158,7 @@ export default function IsoTrainingDropdown() {
             </button>
 
             {activeCategory === index && (
-              <div className="absolute left-full top-0 ml-1 max-h-[70vh] w-80 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-2xl"
-              >
+              <div className="absolute left-full top-0 ml-1 max-h-[70vh] w-80 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-2xl">
                 {category.items.map((item) => (
                   <Link
                     key={item.to}
