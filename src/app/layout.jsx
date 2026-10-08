@@ -1,6 +1,7 @@
 import "../styles.css";
 import logo from "@/assets/shieldlogo.jpg";
 import { company } from "@/data/site";
+import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL("https://www.hawksberginternational.com"),
@@ -76,13 +77,40 @@ export default function RootLayout({ children }) {
   <meta name="language" content="English" />
 </head>
 
-    <body> 
+    {/* <body> 
       {children} 
       <script 
         type="application/ld+json" 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} 
       /> 
-    </body> 
+    </body>  */}
+    <body>
+  {children}
+
+  {/* Google Analytics */}
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-7TMBC9XZF5"
+    strategy="afterInteractive"
+  />
+
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7TMBC9XZF5');
+    `}
+  </Script>
+
+  {/* Organization Schema */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(organization),
+    }}
+  />
+</body>
   </html> 
 );
 }
