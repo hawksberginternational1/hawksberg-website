@@ -4,8 +4,8 @@ import Layout from "@/components/Layout";
 
 export const metadata = {
   title: "ISO 9001:2026 Internal Auditor Training",
-  description:
-    "ISO 9001:2026 Internal Auditor Training to develop practical skills for planning, conducting, reporting and following up internal QMS audits.",
+ description:
+  "2-day ISO 9001:2026 Internal Auditor course covering audit planning, ISO 19011:2026, evidence, nonconformities and reporting. Enquire for dates and fees.",
   keywords:
     "ISO 9001:2026 Internal Auditor Training, ISO 9001 Internal Auditor Course, QMS Internal Audit, ISO 19011:2026",
   alternates: {

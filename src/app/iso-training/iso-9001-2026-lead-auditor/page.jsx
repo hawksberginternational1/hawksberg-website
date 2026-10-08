@@ -4,8 +4,8 @@ import Layout from "@/components/Layout";
 
 export const metadata = {
   title: "ISO 9001:2026 Lead Auditor Training",
-  description:
-    "ISO 9001:2026 Lead Auditor Training to develop the knowledge and practical skills required to plan, conduct, report and follow up Quality Management System audits.",
+ description:
+  "5-day ISO 9001:2026 Lead Auditor course: plan, lead and report QMS audits using ISO 19011:2026. Practical training in Chennai and online. Enquire now.",
   keywords:
     "ISO 9001:2026 Lead Auditor Training, ISO 9001 Lead Auditor Course, QMS Lead Auditor, ISO 19011:2026",
   alternates: {
