@@ -609,6 +609,136 @@ const trainingApi = {
     return await response.json();
   },
 
+  async getVideoProgress(email, videoId, trainingName, token) {
+    const query = new URLSearchParams({
+      email,
+      training_name: trainingName,
+    });
+    const url =
+      `${TRAINING_API_URL}/video-progress/${encodeURIComponent(videoId)}?${query}`;
+    const response = await fetchWithNetworkError(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        await getErrorMessage(response, "Unable to load video progress")
+      );
+    }
+
+    return await response.json();
+  },
+
+  async saveVideoProgress(payload, { keepalive = false, token } = {}) {
+    const url = `${TRAINING_API_URL}/video-progress`;
+    const duration = Number(payload.video_duration);
+    const safePayload = Number.isFinite(duration) && duration > 0
+      ? {
+          ...payload,
+          watched_seconds: Math.min(Math.max(Number(payload.watched_seconds) || 0, 0), duration),
+          last_position: Math.min(Math.max(Number(payload.last_position) || 0, 0), duration),
+        }
+      : payload;
+    const response = await fetchWithNetworkError(url, {
+      method: "POST",
+      headers: {
+        ...JSON_HEADERS,
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: JSON.stringify(safePayload),
+      keepalive,
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        await getErrorMessage(response, "Unable to save video progress")
+      );
+    }
+
+    return await response.json();
+  },
+
+  async startISO14001Quiz(videoId, email, token, retestRequestId = null) {
+    const response = await fetchWithNetworkError(
+      `${TRAINING_API_URL}/iso14001/videos/${encodeURIComponent(videoId)}/quiz/start`,
+      {
+        method: "POST",
+        headers: { ...JSON_HEADERS, Authorization: `Bearer ${token}` },
+        body: JSON.stringify({
+          email,
+          training_name: "iso14001",
+          ...(retestRequestId ? { retest_request_id: retestRequestId } : {}),
+        }),
+      }
+    );
+    if (!response.ok) {
+      throw new Error(
+        await getErrorMessage(response, "Unable to start the ISO 14001 quiz")
+      );
+    }
+    return await response.json();
+  },
+
+  async requestISO14001Retest(originalAttemptId, email, token) {
+    const response = await fetchWithNetworkError(
+      `${TRAINING_API_URL}/iso14001/retests`,
+      {
+        method: "POST",
+        headers: { ...JSON_HEADERS, Authorization: `Bearer ${token}` },
+        body: JSON.stringify({
+          email,
+          training_name: "iso14001",
+          original_attempt_id: originalAttemptId,
+        }),
+      }
+    );
+    if (!response.ok) {
+      throw new Error(
+        await getErrorMessage(response, "Unable to request an ISO 14001 retest")
+      );
+    }
+    return await response.json();
+  },
+
+  async getISO14001RetestStatus(email, token) {
+    const query = new URLSearchParams({ email: String(email || "") });
+    const response = await fetchWithNetworkError(
+      `${TRAINING_API_URL}/iso14001/retests/status?${query.toString()}`,
+      {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+        cache: "no-store",
+      }
+    );
+    if (!response.ok) {
+      throw new Error(
+        await getErrorMessage(response, "Unable to check ISO 14001 retest status")
+      );
+    }
+    return await response.json();
+  },
+
+  async submitISO14001Quiz(attemptId, email, answers, token) {
+    const response = await fetchWithNetworkError(
+      `${TRAINING_API_URL}/iso14001/quiz-attempts/${encodeURIComponent(attemptId)}/submit`,
+      {
+        method: "POST",
+        headers: { ...JSON_HEADERS, Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ email, training_name: "iso14001", answers }),
+      }
+    );
+    if (!response.ok) {
+      throw new Error(
+        await getErrorMessage(response, "Unable to submit the ISO 14001 quiz")
+      );
+    }
+    return await response.json();
+  },
+
 
   // ===================================================
   // GET ALL VIDEOS

@@ -27,6 +27,8 @@ class TrainingVideo(Base):
 
     youtube_url = Column(Text, nullable=False)
 
+    video_url = Column(Text, nullable=True)
+
     training_name = Column(
     String(50),
     nullable=False

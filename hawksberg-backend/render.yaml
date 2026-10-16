@@ -22,3 +22,9 @@ services:
         sync: false
       - key: SMTP_PASSWORD
         sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_WHATSAPP_SENDER_NUMBER
+        sync: false
+      - key: BREVO_WHATSAPP_TEMPLATE_ID
+        sync: false

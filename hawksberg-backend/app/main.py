@@ -26,7 +26,7 @@ from app.routes import (
     info_page,
     auth,
     training_auth,
-    # iso14001_quiz,
+    iso14001_quiz,
     certificate_verification,
 )
 
@@ -72,7 +72,7 @@ app.include_router(training.router)
 app.include_router(info_page.router)
 app.include_router(auth.router)
 app.include_router(training_auth.router)
-# app.include_router(iso14001_quiz.router)
+app.include_router(iso14001_quiz.router)
 app.include_router(certificate_verification.router)
 
 

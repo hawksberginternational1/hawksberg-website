@@ -1,12 +1,10 @@
 "use client";
 
-// import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Layout from "@/components/Layout";
 import trainingApi from "@/services/trainingApi";
-// import pageHeroBg from "@/assets/page-hero-bg.webp";
 
 export default function TrainingLogin() {
   const router = useRouter();
@@ -18,27 +16,20 @@ export default function TrainingLogin() {
   });
 
   const [errors, setErrors] = useState({});
-
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // const USER_CODE = "H5647L";
-//   const TRAINING_CODES = {
-//   H5647L: "iso9001",
-//   IS1001O: "iso14001",
-//   O0027SI: "iso27001",
-// };
-const TRAINING_CODES = {
-  H5647L: "iso9001",
-  IS1001O: "iso14001",
-  O0027SI: "iso27001",
+  const TRAINING_CODES = {
+    H5647L: "iso9001",
+    IS1001O: "iso14001",
+    O0027SI: "iso27001",
+    RI1001: "riskidentification",
+    RE1002: "riskevaluation",
+    RA1003: "riskassessment",
+    RT1004: "risktreatment",
+    SOA1005: "soa",
+  };
 
-  RI1001: "riskidentification",
-  RE1002: "riskevaluation",
-  RA1003: "riskassessment",
-  RT1004: "risktreatment",
-
-  SOA1005: "soa",
-};
   const ADMIN_CODE = "ADM9081";
 
   const handleChange = (e) => {
@@ -58,145 +49,126 @@ const TRAINING_CODES = {
   const validate = () => {
     const newErrors = {};
 
-    // Name
-    if (!formData.name.trim()) {
+    const name = formData.name.trim();
+    const email = formData.userId.trim().toLowerCase();
+    const code = formData.code.trim().toUpperCase();
+
+    // Name validation
+    if (!name) {
       newErrors.name = "Name is required";
-    } else if (!/^[A-Za-z ]+$/.test(formData.name)) {
+    } else if (!/^[A-Za-z ]+$/.test(name)) {
       newErrors.name = "Only alphabets are allowed";
     }
 
-    // Email
-if (!formData.userId.trim()) {
-  newErrors.userId = "Email is required";
-} else if (
-  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-    formData.userId.trim()
-  )
-) {
-  newErrors.userId = "Enter a valid email address";
-}
+    // Email validation
+    if (!email) {
+      newErrors.userId = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.userId = "Enter a valid email address";
+    }
 
-    // Code
-    // if (!formData.code.trim()) {
-    //   newErrors.code = "Training code is required";
-    // } else if (
-    //   formData.code !== USER_CODE &&
-    //   formData.code !== ADMIN_CODE
-    // ) {
-    //   newErrors.code = "Invalid Training Code";
-    // }
-    // Code
-if (!formData.code.trim()) {
-  newErrors.code = "Training code is required";
-} else if (
-  !TRAINING_CODES[formData.code] &&
-  formData.code !== ADMIN_CODE
-) {
-  newErrors.code = "Invalid Training Code";
-}
+    // Training code validation
+    if (!code) {
+      newErrors.code = "Training code is required";
+    } else if (!TRAINING_CODES[code] && code !== ADMIN_CODE) {
+      newErrors.code = "Invalid Training Code";
+    }
 
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0;
   };
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-//     if (!validate()) return;
+    if (!validate()) {
+      return;
+    }
 
-//     const role =
-//   formData.code === ADMIN_CODE ? "admin" : "user";
+    setIsLoading(true);
+    setErrors({});
 
-// const portal =
-//   role === "admin"
-//     ? "all"
-//     : TRAINING_CODES[formData.code];
+    const normalizedData = {
+      name: formData.name.trim(),
+      userId: formData.userId.trim().toLowerCase(),
+      code: formData.code.trim().toUpperCase(),
+    };
 
-// localStorage.setItem(
-//   "trainingUser",
-//   JSON.stringify({
-//     name: formData.name,
-//     email: formData.userId,
-//     role,
-//     portal,
-//   })
-// );
+    try {
+      const res = await trainingApi.login(normalizedData);
 
-// navigate("/training");
-//   };
-const handleSubmit = async (e) => {
-  e.preventDefault();
+      console.log("LOGIN RESPONSE:", res);
 
-  if (!validate()) return;
+      if (!res || !res.user) {
+        throw new Error("Invalid login response from server");
+      }
 
+      console.log("USER ROLE:", res.user.role);
+      console.log("TRAINING:", res.user.training_name);
 
-// try {
-//   setErrors({});
+      /*
+       * Clear any old training session first.
+       * This prevents an expired/old token from remaining in storage.
+       */
+      localStorage.removeItem("trainingUser");
 
-//   const res = await trainingApi.login(formData);
+      /*
+       * Store the NEW authenticated user + JWT.
+       */
+      const trainingUser = {
+        ...res.user,
+        ...(res.access_token
+          ? {
+              access_token: res.access_token,
+            }
+          : {}),
+      };
 
-//   localStorage.setItem(
-//   "trainingUser",
-//   JSON.stringify(res.user)
-// );
+      localStorage.setItem(
+        "trainingUser",
+        JSON.stringify(trainingUser)
+      );
 
-// if (res.user.role === "admin") {
-//   navigate("/admin-training", { replace: true });
-// } else {
-//   navigate("/training", { replace: true });
-// }
+      /*
+       * Verify that JWT exists for normal users.
+       */
+      if (res.user.role !== "admin" && !res.access_token) {
+        throw new Error(
+          "Login successful, but authentication token was not received."
+        );
+      }
 
-// } catch (err) {
-//   console.error(err);
+      /*
+       * Redirect based on role.
+       */
+      if (res.user.role === "admin") {
+        router.replace("/admin-training");
+      } else {
+        router.replace("/training");
+      }
+    } catch (err) {
+      console.error("TRAINING LOGIN ERROR:", err);
 
-//   setErrors({
-//     code: err.message || "Login Failed",
-//   });
-// }
-try {
-  setErrors({});
+      /*
+       * Do not keep a bad/expired session.
+       */
+      localStorage.removeItem("trainingUser");
 
-  const res = await trainingApi.login(formData);
-  console.log("LOGIN RESPONSE", res);
-console.log("USER ROLE", res.user.role);
-
-  localStorage.setItem(
-    "trainingUser",
-    JSON.stringify(res.user)
-  );
-
-  if (res.user.role === "admin") {
-    router.replace("/admin-training");
-  } else {
-    router.replace("/training");
-  }
-
-} catch (err) {
-  console.error(err);
-
-  setErrors({
-    code: err.message || "Login Failed",
-  });
-}
-};
+      setErrors({
+        code:
+          err?.message ||
+          "Login failed. Please check your email and training code.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
-    // <Layout>
     <Layout hideFooter>
-      {/* <section className="relative min-h-screen overflow-hidden"> */}
       <section className="relative min-h-screen overflow-hidden bg-[#081B35]">
-
         {/* Background */}
-        {/* <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${pageHeroBg})`,
-          }}
-        /> */}
-
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-[#081B35]/90" /> */}
         <div className="absolute inset-0 bg-[#081B35]" />
 
         {/* Grid */}
@@ -204,10 +176,7 @@ console.log("USER ROLE", res.user.role);
 
         {/* Content */}
         <div className="container-x relative flex min-h-screen items-center justify-center py-20">
-
-          {/* <div className="w-full max-w-lg rounded-2xl border border-white/10 bg-white/10 p-10 backdrop-blur-xl shadow-2xl"> */}
           <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
-
             <p className="text-center text-sm uppercase tracking-[0.35em] text-gold">
               Hawksberg International
             </p>
@@ -220,13 +189,11 @@ console.log("USER ROLE", res.user.role);
               Login to access your professional training portal.
             </p>
 
-            {/* FORM STARTS HERE */}
             <form
-  onSubmit={handleSubmit}
-  className="mt-10 space-y-6"
->
-
-                          {/* Name */}
+              onSubmit={handleSubmit}
+              className="mt-10 space-y-6"
+            >
+              {/* Full Name */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-white">
                   Full Name
@@ -238,6 +205,7 @@ console.log("USER ROLE", res.user.role);
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={handleChange}
+                  autoComplete="name"
                   className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
                 />
 
@@ -260,6 +228,7 @@ console.log("USER ROLE", res.user.role);
                   placeholder="example@company.com"
                   value={formData.userId}
                   onChange={handleChange}
+                  autoComplete="email"
                   className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
                 />
 
@@ -276,46 +245,37 @@ console.log("USER ROLE", res.user.role);
                   Training Code
                 </label>
 
-                {/* <input
-                  type="password"
-                  name="code"
-                  placeholder="Enter training code"
-                  value={formData.code}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
-                /> */}
-
                 <div className="relative">
-  {/* <input
-    type={showPassword ? "text" : "password"}
-    name="code"
-    placeholder="Enter training code"
-    value={formData.code}
-    onChange={handleChange}
-    className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 pr-12 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
-  /> */}
-  <input
-  type={showPassword ? "text" : "password"}
-  name="code"
-  autoComplete="off"
-  spellCheck={false}
-  value={formData.code}
-  onChange={handleChange}
-  className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 pr-12 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
-/>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="code"
+                    autoComplete="off"
+                    spellCheck={false}
+                    placeholder="Enter training code"
+                    value={formData.code}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 pr-12 text-white placeholder:text-white/40 outline-none transition focus:border-gold"
+                  />
 
-  <button
-    type="button"
-    onClick={() => setShowPassword(!showPassword)}
-    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-gold"
-  >
-    {showPassword ? (
-      <EyeOff size={20} />
-    ) : (
-      <Eye size={20} />
-    )}
-  </button>
-</div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setShowPassword((prev) => !prev)
+                    }
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-gold"
+                    aria-label={
+                      showPassword
+                        ? "Hide training code"
+                        : "Show training code"
+                    }
+                  >
+                    {showPassword ? (
+                      <EyeOff size={20} />
+                    ) : (
+                      <Eye size={20} />
+                    )}
+                  </button>
+                </div>
 
                 {errors.code && (
                   <p className="mt-2 text-sm text-red-400">
@@ -327,16 +287,16 @@ console.log("USER ROLE", res.user.role);
               {/* Login Button */}
               <button
                 type="submit"
-                className="w-full rounded-xl bg-gold py-3 text-base font-semibold text-black transition duration-300 hover:scale-[1.02] hover:bg-[#f1bc47]"
+                disabled={isLoading}
+                className="w-full rounded-xl bg-gold py-3 text-base font-semibold text-black transition duration-300 hover:scale-[1.02] hover:bg-[#f1bc47] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
               >
-                Login
+                {isLoading ? "Logging in..." : "Login"}
               </button>
 
               <p className="text-center text-sm text-white/60">
                 Access is restricted to authorised training participants.
               </p>
-
-                        </form>
+            </form>
           </div>
         </div>
       </section>
