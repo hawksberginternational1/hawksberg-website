@@ -22,7 +22,8 @@ from app.routes import (
     training,
     info_page,
     auth,
-    training_auth
+    training_auth,
+    certificate_verification,
 )
 
 Base.metadata.create_all(bind=engine)
@@ -30,6 +31,7 @@ Base.metadata.create_all(bind=engine)
 from app.models.training import Training
 from app.models.training_user import TrainingUser
 from app.models.training_video import TrainingVideo
+from app.models.certificate_verification import Certificate, CertificateVerificationLog
 
 app = FastAPI(title="Hawksberg API")
 
@@ -67,6 +69,7 @@ app.include_router(training.router)
 app.include_router(info_page.router)
 app.include_router(auth.router)
 app.include_router(training_auth.router)
+app.include_router(certificate_verification.router)
 # app.include_router(consultant.router)
 
 @app.get("/")
