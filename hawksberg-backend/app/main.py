@@ -2,9 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 from app.core.database import Base, engine
+from app.models.iso14001_access import ISO14001Access
+from app.models.training_video_progress import TrainingVideoProgress
 # from app.routes import enquiry, service, training, info_page, auth
 # from app.routes import (
 #     enquiry,
@@ -14,7 +17,7 @@ from app.core.database import Base, engine
 #     auth,
 #     consultant
 # )
-from app.routes import training_auth
+# from app.routes import training_auth
 
 from app.routes import (
     enquiry,
@@ -22,7 +25,9 @@ from app.routes import (
     training,
     info_page,
     auth,
-    training_auth
+    training_auth,
+    # iso14001_quiz,
+    certificate_verification,
 )
 
 Base.metadata.create_all(bind=engine)
@@ -67,8 +72,11 @@ app.include_router(training.router)
 app.include_router(info_page.router)
 app.include_router(auth.router)
 app.include_router(training_auth.router)
-# app.include_router(consultant.router)
+# app.include_router(iso14001_quiz.router)
+app.include_router(certificate_verification.router)
+
 
 @app.get("/")
 def root():
+    
     return {"message": "Hawksberg FastAPI Backend Running"}

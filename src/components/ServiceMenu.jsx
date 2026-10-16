@@ -50,6 +50,7 @@ export const serviceMenu = [
       },
     ],
   },
+  
 
   {
     key: "compliance",
@@ -93,5 +94,11 @@ export const serviceMenu = [
         to: "/info/network-pentest",
       },
     ],
+  },
+    {
+    key: "certificate-verification",
+    label: "Certificate Verification",
+    items: [],
+    to: "/info/certificate-verification",
   },
 ];

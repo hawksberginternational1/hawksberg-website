@@ -37,6 +37,7 @@ const isoTrainingMenu = [
     title: "ISO Lead Auditor Training",
     items: [
       { label: "ISO 9001 Lead Auditor Training", slug: "iso-9001-lead-auditor" },
+      { label: "ISO 9001:2026 Lead Auditor Training", slug: "iso-9001-2026-lead-auditor" },
       { label: "ISO 27001 Lead Auditor Training", slug: "iso-27001-lead-auditor" },
       { label: "ISO 45001 Lead Auditor Training", slug: "iso-45001-lead-auditor" },
       { label: "ISO 22301 Lead Auditor Training", slug: "iso-22301-lead-auditor" },
@@ -58,6 +59,7 @@ const isoTrainingMenu = [
       { label: "ISO 50001 Internal Auditor Training", slug: "iso-50001-internal-auditor" },
       { label: "ISO 45001 Internal Auditor Training", slug: "iso-45001-internal-auditor" },
       { label: "ISO 9001 Internal Auditor Training", slug: "iso-9001-internal-auditor" },
+      { label: "ISO 9001:2026 Internal Auditor Training", slug: "iso-9001-2026-internal-auditor" },
       { label: "ISO 22000 Internal Auditor Training", slug: "iso-22000-internal-auditor" },
       { label: "ISO 22301 Internal Auditor Training", slug: "iso-22301-internal-auditor" },
       { label: "ISO 17025 Internal Auditor Training", slug: "iso-17025-internal-auditor" },
@@ -409,7 +411,7 @@ className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
                       </li>
                     ))} */}
 
-                    {serviceMenu.map((cat) => (
+                    {/* {serviceMenu.map((cat) => (
   <li key={cat.key}>
     {cat.key === "iso" ? (
       <Link
@@ -423,6 +425,49 @@ className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
       >
         <span>ISO-Certification</span>
         <span className="text-black/40">›</span>
+      </Link>
+    ) : (
+      <button
+        onMouseEnter={() => setActiveCat(cat.key)}
+        onClick={() => setActiveCat(cat.key)}
+        className={`flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold transition-colors ${
+          activeCat === cat.key
+            ? "bg-black/5 text-black"
+            : "text-black/80 hover:bg-black/5"
+        }`}
+      >
+        <span>{cat.label}</span>
+        <span className="text-black/40">›</span>
+      </button>
+    )}
+  </li>
+))} */}
+{serviceMenu.map((cat) => (
+  <li key={cat.key}>
+    {cat.key === "iso" ? (
+      <Link
+        href="/iso-certification"
+        onMouseEnter={() => setActiveCat(cat.key)}
+        className={`flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold transition-colors ${
+          activeCat === cat.key
+            ? "bg-black/5 text-black"
+            : "text-black/80 hover:bg-black/5"
+        }`}
+      >
+        <span>ISO-Certification</span>
+        <span className="text-black/40">›</span>
+      </Link>
+    ) : cat.key === "certificate-verification" ? (
+      <Link
+        href="/info/certificate-verification"
+        onMouseEnter={() => setActiveCat(null)}
+        className={`flex w-full items-center px-4 py-3 text-left text-sm font-semibold transition-colors ${
+          activeCat === cat.key
+            ? "bg-black/5 text-black"
+            : "text-black/80 hover:bg-black/5"
+        }`}
+      >
+        <span>Certificate Verification</span>
       </Link>
     ) : (
       <button
@@ -634,7 +679,17 @@ className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
   <div className="mt-2 space-y-2 pl-3">
 
     {serviceMenu.map((category) => (
-      <details key={category.key} className="group">
+      category.to ? (
+        <Link
+          key={category.key}
+          href={category.to}
+          onClick={() => setOpen(false)}
+          className="text-sm font-semibold text-foreground"
+        >
+          {category.label}
+        </Link>
+      ) : (
+        <details key={category.key} className="group">
 
         <summary className="cursor-pointer text-sm font-semibold text-foreground">
           {category.label}
@@ -655,7 +710,8 @@ className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
 
         </div>
 
-      </details>
+        </details>
+      )
     ))}
 
   </div>
