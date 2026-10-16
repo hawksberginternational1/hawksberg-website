@@ -7,13 +7,14 @@ class Settings(BaseSettings):
     ALGORITHM: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int
 
-    SMTP_HOST: str
-    SMTP_PORT: int
-    SMTP_EMAIL: str
-    SMTP_PASSWORD: str
+    BREVO_API_KEY: str | None = None
+    BREVO_WHATSAPP_SENDER_NUMBER: str | None = None
+    BREVO_WHATSAPP_RESPONSIBLE_NUMBER: str | None = None
+    BREVO_WHATSAPP_TEMPLATE_ID: int | None = None
 
     class Config:
         env_file = ".env"
+        extra = "ignore"
 
 
 settings = Settings()
