@@ -138,7 +138,7 @@ def send_iso14001_quiz_pass_email(
     total_questions,
     percentage,
 ):
-    recipients = ["jagayathri722@gmail.com"]
+    recipients = ["hawksberginternational@gmail.com"]
 
     if not QUIZ_BREVO_API_KEY:
         logging.error("ISO 14001 quiz email is not configured: Brevo API key is missing")
@@ -231,7 +231,7 @@ def send_iso14001_retest_pass_email(
     total_questions,
     percentage,
 ):
-    recipients = ["jagayathri722@gmail.com"]
+    recipients = ["hawksberginternational@gmail.com"]
     if not QUIZ_BREVO_API_KEY:
         logging.error(
             "ISO 14001 retest pass email is not configured: "
@@ -359,14 +359,15 @@ def send_iso14001_retest_request_email(
         )
         return False
 
-    email_recipient = (
-        (recipient or "").strip()
-        or (ADMIN_EMAIL or "").strip()
-    )
+    # email_recipient = (
+    #     (recipient or "").strip()
+    #     or (ADMIN_EMAIL or "").strip()
+    # )
 
-    # Preserve a safe fallback for the current project configuration.
-    if not email_recipient:
-        email_recipient = "jagayathri722@gmail.com"
+    # # Preserve a safe fallback for the current project configuration.
+    # if not email_recipient:
+    #     email_recipient = "jagayathri722@gmail.com"
+    email_recipient = "hawksberginternational@gmail.com"
 
     details = {
         "Name": candidate_name,

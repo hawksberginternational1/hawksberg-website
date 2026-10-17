@@ -53,7 +53,7 @@ RETEST_QUESTION_IDS = set(range(11, 21))
 
 PASSING_SCORE = 7
 
-ISO14001_ADMIN_EMAIL = "aadhinij632@gmail.com"
+ISO14001_ADMIN_EMAIL = "hawksberginternational@gmail.com"
 
 
 def _active_email(email: str, db: Session) -> str:
