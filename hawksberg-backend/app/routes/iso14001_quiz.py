@@ -712,28 +712,37 @@ def create_iso14001_retest_request(
     try:
         db.flush()
 
+        # base_url = os.getenv(
+        #     "PUBLIC_BACKEND_URL",
+        #     "",
+        # ).strip()
+
+        # if base_url.startswith(
+        #     "PUBLIC_BACKEND_URL="
+        # ):
+        #     base_url = base_url.split(
+        #         "=",
+        #         1,
+        #     )[1].strip()
+
+        # base_url = base_url.rstrip("/")
+
+        # if not base_url:
+        #     db.rollback()
+
+        #     raise HTTPException(
+        #         status_code=500,
+        #         detail="PUBLIC_BACKEND_URL is not configured",
+        #     )
         base_url = os.getenv(
             "PUBLIC_BACKEND_URL",
-            "",
-        ).strip()
+            "https://hawksberg-backend-production.up.railway.app",
+            ).strip()
 
-        if base_url.startswith(
-            "PUBLIC_BACKEND_URL="
-        ):
-            base_url = base_url.split(
-                "=",
-                1,
-            )[1].strip()
+        if base_url.startswith("PUBLIC_BACKEND_URL="):
+            base_url = base_url.split("=", 1)[1].strip()
 
-        base_url = base_url.rstrip("/")
-
-        if not base_url:
-            db.rollback()
-
-            raise HTTPException(
-                status_code=500,
-                detail="PUBLIC_BACKEND_URL is not configured",
-            )
+            base_url = base_url.rstrip("/")
 
         action_path = (
             "/api/training/iso14001/retests/actions/"
