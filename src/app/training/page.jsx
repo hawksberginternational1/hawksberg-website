@@ -2552,26 +2552,26 @@ useEffect(() => {
           tracker.lastMediaPosition = position;
           tracker.lastSampleAt = now;
         }}
-        // onSeeking={(event) => {
-        //   const tracker = iso14001TrackerRef.current;
-        //   if (!iso14001Mp4Tracking || tracker?.videoId !== currentVideo.id) return;
-        //   tracker.seeking = true;
-        //   const video = event.currentTarget;
-        //   if (
-        //     Math.abs(video.currentTime - tracker.lastLegitimatePosition) > 0.25
-        //   ) {
-        //     video.currentTime = tracker.lastLegitimatePosition;
-        //   }
-        //   tracker.lastMediaPosition = tracker.lastLegitimatePosition;
-        //   tracker.lastSampleAt = performance.now();
-        // }}
-        // onSeeked={(event) => {
-        //   const tracker = iso14001TrackerRef.current;
-        //   if (!iso14001Mp4Tracking || tracker?.videoId !== currentVideo.id) return;
-        //   tracker.seeking = false;
-        //   tracker.lastMediaPosition = tracker.lastLegitimatePosition;
-        //   tracker.lastSampleAt = performance.now();
-        // }}
+        onSeeking={(event) => {
+          const tracker = iso14001TrackerRef.current;
+          if (!iso14001Mp4Tracking || tracker?.videoId !== currentVideo.id) return;
+          tracker.seeking = true;
+          const video = event.currentTarget;
+          if (
+            Math.abs(video.currentTime - tracker.lastLegitimatePosition) > 0.25
+          ) {
+            video.currentTime = tracker.lastLegitimatePosition;
+          }
+          tracker.lastMediaPosition = tracker.lastLegitimatePosition;
+          tracker.lastSampleAt = performance.now();
+        }}
+        onSeeked={(event) => {
+          const tracker = iso14001TrackerRef.current;
+          if (!iso14001Mp4Tracking || tracker?.videoId !== currentVideo.id) return;
+          tracker.seeking = false;
+          tracker.lastMediaPosition = tracker.lastLegitimatePosition;
+          tracker.lastSampleAt = performance.now();
+        }}
         onPause={(event) => {
           const tracker = iso14001TrackerRef.current;
           if (!iso14001Mp4Tracking || tracker?.videoId !== currentVideo.id) return;
