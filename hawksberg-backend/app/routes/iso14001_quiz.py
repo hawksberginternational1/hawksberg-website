@@ -25,6 +25,7 @@ from app.models.iso14001_quiz import (
 
 from app.services.email_service import (
     send_iso14001_quiz_pass_email,
+    send_iso14001_retest_pass_email,
     send_iso14001_retest_request_email,
 )
 
@@ -561,16 +562,38 @@ def submit_iso14001_quiz(
 
         else:
             try:
-                email_sent = send_iso14001_quiz_pass_email(
-                    candidate_name=candidate.name,
-                    candidate_email=email,
-                    training_code=candidate.login_code,
-                    score=score,
-                    total_questions=len(QUESTION_IDS),
-                    percentage=round(
-                        score * 100 / len(QUESTION_IDS)
-                    ),
-                )
+                # email_sent = send_iso14001_quiz_pass_email(
+                #     candidate_name=candidate.name,
+                #     candidate_email=email,
+                #     training_code=candidate.login_code,
+                #     score=score,
+                #     total_questions=len(QUESTION_IDS),
+                #     percentage=round(
+                #         score * 100 / len(QUESTION_IDS)
+                #     ),
+                # )
+                if quiz.set_number == 1:
+                    email_sent = send_iso14001_quiz_pass_email(
+                        candidate_name=candidate.name,
+                        candidate_email=email,
+                        training_code=candidate.login_code,
+                        score=score,
+                        total_questions=len(QUESTION_IDS),
+                        percentage=round(
+                            score * 100 / len(QUESTION_IDS)
+                        ),
+                    )
+                else:
+                    email_sent = send_iso14001_retest_pass_email(
+                        candidate_name=candidate.name,
+                        candidate_email=email,
+                        training_code=candidate.login_code,
+                        score=score,
+                        total_questions=len(QUESTION_IDS),
+                        percentage=round(
+                            score * 100 / len(QUESTION_IDS)
+                        ),
+                    )
 
                 if not email_sent:
                     logger.error(

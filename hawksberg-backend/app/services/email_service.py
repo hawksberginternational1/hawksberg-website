@@ -219,6 +219,107 @@ def send_iso14001_quiz_pass_email(
         return False
 
 
+    # ---------------------------------------------------------------------------
+# ISO 14001 RETEST quiz pass email
+# ---------------------------------------------------------------------------
+
+def send_iso14001_retest_pass_email(
+    candidate_name,
+    candidate_email,
+    training_code,
+    score,
+    total_questions,
+    percentage,
+):
+    recipients = ["jagayathri722@gmail.com"]
+    if not QUIZ_BREVO_API_KEY:
+        logging.error(
+            "ISO 14001 retest pass email is not configured: "
+            "QUIZ_BREVO_API_KEY is missing"
+        )
+        return False
+    if not FROM_EMAIL:
+        logging.error(
+            "ISO 14001 retest pass email is not configured: "
+            "FROM_EMAIL is missing"
+        )
+        return False
+
+    details = {
+        "Candidate Name": candidate_name,
+        "Candidate Email": candidate_email,
+        "Standard": "ISO 14001",
+        "User ID": training_code,
+        "Score": f"{score} / {total_questions}",
+        "Total Questions": total_questions,
+        "Pass Percentage": f"{percentage}%",
+        "Result": "PASS",
+    }
+
+    rows = "".join(
+        f"<tr>"
+        f"<td><b>{escape(str(label))}</b></td>"
+        f"<td>{escape(str(value))}</td>"
+        f"</tr>"
+        for label, value in details.items()
+    )
+
+    payload = {
+        "sender": {
+            "name": FROM_NAME,
+            "email": FROM_EMAIL,
+        },
+        "to": [
+            {"email": email}
+            for email in recipients
+        ],
+        "subject": "ISO 14001 Training Quiz Result",
+        "htmlContent": (
+            "<h2>ISO 14001 Training Quiz Result</h2>"
+            "<table cellpadding='8' cellspacing='0' border='1' "
+            "style='border-collapse:collapse'>"
+            f"{rows}"
+            "</table>"
+        ),
+    }
+
+    headers = {
+        "accept": "application/json",
+        "api-key": QUIZ_BREVO_API_KEY,
+        "content-type": "application/json",
+    }
+
+    try:
+        response = requests.post(
+            BREVO_URL,
+            headers=headers,
+            json=payload,
+            timeout=30,
+        )
+
+        logging.info("ISO 14001 retest pass email status: %s", response.status_code)
+        logging.info("ISO 14001 retest pass email response: %s", response.text)
+
+        response.raise_for_status()
+        return True
+
+    except requests.RequestException:
+        logging.exception("Unable to send ISO 14001 retest pass email")
+        return False
+
+    except Exception:
+        logging.exception("Unexpected error while sending ISO 14001 retest pass email")
+        return False
+
+
+        
+
+
+    """
+    Send the ISO 14001 retest pass email to the admin.
+    """
+
+
 # ---------------------------------------------------------------------------
 # ISO 14001 retest request email
 # ---------------------------------------------------------------------------
