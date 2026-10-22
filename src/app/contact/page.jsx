@@ -77,12 +77,19 @@ export default function Contact() {
                     Dubai
                   </h3>
 
-                  <p className="mt-2 text-sm leading-7 text-foreground">
+                  {/* <p className="mt-2 text-sm leading-7 text-foreground">
                     IFZA Business Park — Building A1, DDP,
                     <br />
                     Dubai Silicon Oasis, PO Box 342001,
                     <br />
                     Dubai, United Arab Emirates
+                  </p> */}
+                  <p className="mt-2 text-sm leading-7 text-foreground">
+                    IFZA Business Park — Building A2, Nadd Hessa,
+                    <br />
+                    Dubai Silicon Oasis,Dubai,United Arab Emirates
+                    <br />
+                    
                   </p>
                 </div>
               </>,
