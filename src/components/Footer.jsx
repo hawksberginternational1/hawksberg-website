@@ -191,14 +191,29 @@ export default function Footer() {
           {/* <address className="mt-6 space-y-5 text-sm leading-7 not-italic text-brand-foreground/80"> */}
           <address className="mt-5 space-y-4 text-sm leading-5 not-italic text-brand-foreground/80">
             {/* <p className="max-w-xs">{company.address}</p> */}
-            <div className="max-w-xs text-xs leading-6">
+            {/* <div className="max-w-xs text-xs leading-6">
   <p className="font-semibold text-gold">Chennai</p>
   <p>{company.address.Chennai}</p>
 
   <p className="mt-4 font-semibold text-gold">Dubai</p>
   <p>{company.address.Dubai}</p>
-</div>
+</div> */}
+<div className="max-w-xs text-xs leading-4">
+  <p className="font-semibold text-gold">Chennai</p>
 
+  <p>
+    Hawksberg International certification,{" "}
+    Plot&nbsp;No.143, Door&nbsp;No.87, 1st Floor, 4th Cross Street,
+    Thirumalai Nagar, Perungudi, Tamil Nadu, Chennai, 600096
+  </p>
+
+  <p className="mt-4 font-semibold text-gold">Dubai</p>
+
+  <p>
+    IFZA Business Park — Building A2, Nadd Hessa, Dubai Silicon Oasis, Dubai,
+    United Arab Emirates
+  </p>
+</div>
             <p>
               <span className="font-semibold text-gold">Phone:</span>{" "}
               <a

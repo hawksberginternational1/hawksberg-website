@@ -1074,6 +1074,9 @@ className={`block uppercase tracking-[0.22em] transition-all duration-300 ${
             >
               Enquire Now
             </Link> */}
+            <NavLink href="/contact">
+  Contact
+</NavLink>
           </div>
         </div>
       )}
