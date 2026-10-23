@@ -64,11 +64,18 @@ export default function Contact() {
                     Chennai
                   </h3>
 
-                  <p className="mt-2 text-sm leading-7 text-foreground">
+                  {/* <p className="mt-2 text-sm leading-7 text-foreground">
                     No 58, Gandhi Street, Rajaji Nagar, Tiruvottiyur,
                     <br />
                     Chennai, Tamil Nadu 600019
-                  </p>
+                  </p> */}
+                   <p className="mt-2 text-sm leading-7 text-foreground">
+     Disruptors of Tomorrow Hub Spaces and Suites LLP.
+    <br />
+    Plot No. 143, Door No. 87, 1st Floor, 4th Cross Street,
+    <br />
+    Thirumalai Nagar, Perungudi,Tamil Nadu,Chennai, 600096
+  </p>
                 </div>
 
                 {/* Dubai Office */}
@@ -77,7 +84,13 @@ export default function Contact() {
                     Dubai
                   </h3>
 
-                 
+                  {/* <p className="mt-2 text-sm leading-7 text-foreground">
+                    IFZA Business Park — Building A1, DDP,
+                    <br />
+                    Dubai Silicon Oasis, PO Box 342001,
+                    <br />
+                    Dubai, United Arab Emirates
+                  </p> */}
                   <p className="mt-2 text-sm leading-7 text-foreground">
                     IFZA Business Park — Building A2, Nadd Hessa,
                     <br />
@@ -119,17 +132,29 @@ export default function Contact() {
       {/* =========================================================
           MAP
       ========================================================== */}
-      <section className="container-x pb-24">
+      {/* <section className="container-x pb-24">
         <div className="overflow-hidden rounded-2xl border border-border shadow-soft">
           <iframe
             title="Hawksberg International location"
-            src="https://www.google.com/maps?q=Tiruvottiyur,Chennai&output=embed"
+            // src="https://www.google.com/maps?q=Tiruvottiyur,Chennai&output=embed"
+            src="https://www.google.com/maps?q=12.961042,80.2420039&output=embed"
             className="h-[420px] w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-      </section>
+      </section> */}
+      <section className="container-x pb-24">
+  <div className="overflow-hidden rounded-2xl border border-border shadow-soft">
+    <iframe
+      title="Hawksberg International location"
+      src="https://www.google.com/maps?q=dot+cowork+-+Perungudi&output=embed"
+      className="h-[420px] w-full"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+</section>
     </Layout>
   );
 }

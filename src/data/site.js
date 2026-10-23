@@ -4,8 +4,15 @@ export const company = {
   phone: "+91 90805 83283",
   altPhone: "+91 90805 83283",
   email: "sebastian@hawksberginternational.com",
-  address:
-    "No 58, Gandhi Street, Rajaji Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",
+  // address:
+  //   // "No 58, Gandhi Street, Rajaji Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",
+  //   "Disruptors of Tomorrow Hub Spaces and Suites LLP., Plot No.143, Door No.87, 1st Floor, 4th Cross Street, Thirumalai Nagar, Perungudi, Tamil Nadu, Chennai, 600096",
+  address: {
+    Chennai:
+      "Disruptors of Tomorrow Hub Spaces and Suites LLP., Plot No.143, Door No.87, 1st Floor, 4th Cross Street, Thirumalai Nagar, Perungudi, Tamil Nadu, Chennai, 600096",
+    Dubai:
+      "IFZA Business Park — Building A2, Nadd Hessa, Dubai Silicon Oasis, Dubai, United Arab Emirates",
+  },
   social: {
     facebook: "#",
     instagram: "https://www.instagram.com/international_audit_training?igsh=a2NoaW85Y3Ntam5t",

@@ -188,8 +188,16 @@ export default function Footer() {
 
           <div className="mt-3 gold-divider" />
 
-          <address className="mt-6 space-y-5 text-sm leading-7 not-italic text-brand-foreground/80">
-            <p className="max-w-xs">{company.address}</p>
+          {/* <address className="mt-6 space-y-5 text-sm leading-7 not-italic text-brand-foreground/80"> */}
+          <address className="mt-5 space-y-4 text-sm leading-5 not-italic text-brand-foreground/80">
+            {/* <p className="max-w-xs">{company.address}</p> */}
+            <div className="max-w-xs text-xs leading-6">
+  <p className="font-semibold text-gold">Chennai</p>
+  <p>{company.address.Chennai}</p>
+
+  <p className="mt-4 font-semibold text-gold">Dubai</p>
+  <p>{company.address.Dubai}</p>
+</div>
 
             <p>
               <span className="font-semibold text-gold">Phone:</span>{" "}
