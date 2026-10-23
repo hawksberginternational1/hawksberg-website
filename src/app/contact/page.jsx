@@ -70,7 +70,7 @@ export default function Contact() {
                     Chennai, Tamil Nadu 600019
                   </p> */}
                    <p className="mt-2 text-sm leading-7 text-foreground">
-     Disruptors of Tomorrow Hub Spaces and Suites LLP.
+    Hawksberg International certification
     <br />
     Plot No. 143, Door No. 87, 1st Floor, 4th Cross Street,
     <br />

@@ -9,7 +9,7 @@ export const company = {
   //   "Disruptors of Tomorrow Hub Spaces and Suites LLP., Plot No.143, Door No.87, 1st Floor, 4th Cross Street, Thirumalai Nagar, Perungudi, Tamil Nadu, Chennai, 600096",
   address: {
     Chennai:
-      "Disruptors of Tomorrow Hub Spaces and Suites LLP., Plot No.143, Door No.87, 1st Floor, 4th Cross Street, Thirumalai Nagar, Perungudi, Tamil Nadu, Chennai, 600096",
+      "Hawksberg International certification, Plot No.143, Door No.87, 1st Floor, 4th Cross Street, Thirumalai Nagar, Perungudi, Tamil Nadu, Chennai, 600096",
     Dubai:
       "IFZA Business Park — Building A2, Nadd Hessa, Dubai Silicon Oasis, Dubai, United Arab Emirates",
   },
