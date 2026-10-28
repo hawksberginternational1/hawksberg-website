@@ -277,7 +277,8 @@ export default function ISO9001_2026() {
               ISO 9001:2026 Certification & Consulting
             </p>
 
-            <h1 className="mt-3 text-5xl md:text-6xl">
+            {/* <h1 className="mt-3 text-5xl md:text-6xl"> */}
+            <h1 className="mt-3 text-3xl leading-tight sm:text-4xl md:text-6xl">
               <span
                 style={{
                   fontFamily: "'Poppins', sans-serif",
@@ -294,11 +295,11 @@ export default function ISO9001_2026() {
                   fontWeight: 400,
                 }}
               >
-                — Quality Management System
+                Quality Management System
               </span>
             </h1>
 
-            <div className="mt-4 gold-divider" />
+            {/* <div className="mt-4 gold-divider" /> */}
 
             <p className="mt-6 max-w-3xl text-brand-foreground/80">
               Understand the new ISO 9001:2026 requirements, prepare your
