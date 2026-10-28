@@ -30,7 +30,7 @@ export default function InfoPage({ page }) {
       {page.hero}
     </h1>
 
-    <div className="mx-auto mt-5 gold-divider" />
+    {/* <div className="mx-auto mt-5 gold-divider" /> */}
   </div>
 </section>
 
