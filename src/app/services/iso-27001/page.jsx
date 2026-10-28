@@ -10,7 +10,7 @@ export const service = {
   code: "ISO 27001",
 
   // title: "Consulting — Auditing — Training",
-  title: "Consulting Auditing Training",
+  title: "Consulting,Auditing,Training",
 
   short:
     "Implement a robust ISMS framework to safeguard data, ensure confidentiality and earn customer trust.",

@@ -69,7 +69,8 @@ export default function ServicePage({ service }) {
             {service.heroLabel || "ISO Consulting Services"}
           </p>
 
-          <h1 className="mt-3 text-5xl md:text-6xl">
+          {/* <h1 className="mt-3 text-5xl md:text-6xl"> */}
+          {/* <h1 className="mt-3 text-3xl leading-tight sm:text-4xl md:text-6xl">
             {isDpdp ? (
               <span
                 style={{
@@ -97,13 +98,48 @@ export default function ServicePage({ service }) {
                     fontFamily: "'Cormorant Garamond', serif",
                     fontWeight: 400,
                   }}
-                >
+                > */}
                   {/* — {service.title} */}
-                  {service.title}
+                  {/* {service.title}
                 </span>
               </>
             )}
-          </h1>
+          </h1> */}
+          <h1 className="mt-3 max-w-full text-2xl leading-tight sm:text-4xl md:text-6xl">
+  {isDpdp ? (
+    <span
+      style={{
+        fontFamily: "'Cormorant Garamond', serif",
+        fontWeight: 400,
+        letterSpacing: "-1px",
+      }}
+    >
+      {service.heroTitle}
+    </span>
+  ) : (
+    <>
+      <span
+        className="block md:inline"
+        style={{
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: 400,
+          letterSpacing: "-1px",
+        }}
+      >
+        {service.code}
+      </span>{" "}
+      <span
+        className="block text-gold md:inline"
+        style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontWeight: 400,
+        }}
+      >
+        {service.title}
+      </span>
+    </>
+  )}
+</h1>
 
           {/* <div className="mt-4 gold-divider" /> */}
 
