@@ -14,9 +14,12 @@ export default function ServicePage({ service }) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    // name:
+    //   service.heroTitle ||
+    //   `${service.code} — ${service.title}`,
     name:
-      service.heroTitle ||
-      `${service.code} — ${service.title}`,
+  service.heroTitle ||
+  `${service.code} ${service.title}`,
     description: service.short,
     provider: {
       "@type": "Organization",
@@ -95,13 +98,14 @@ export default function ServicePage({ service }) {
                     fontWeight: 400,
                   }}
                 >
-                  — {service.title}
+                  {/* — {service.title} */}
+                  {service.title}
                 </span>
               </>
             )}
           </h1>
 
-          <div className="mt-4 gold-divider" />
+          {/* <div className="mt-4 gold-divider" /> */}
 
           <p className="mt-6 max-w-2xl text-brand-foreground/80">
             {service.short}
