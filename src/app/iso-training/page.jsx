@@ -18,13 +18,13 @@ const trainingPrograms = [
     title: "ISO Lead Auditor Training",
     description:
       "Build practical auditing skills for assessing management systems against international standards.",
-    href: "/iso-training/iso-lead-auditor",
+    href: "/iso-training/iso-lead-auditor-Training-Chennai",
   },
   {
     title: "ISO Internal Auditor Training",
     description:
       "Learn to plan, conduct, report and follow up internal audits within your organization.",
-   href: "/iso-training/iso-internal-auditor",
+   href: "/iso-training/iso-internal-auditor-Training-Chennai",
   },
   {
     title: "ISO Foundation Training",

@@ -157,11 +157,11 @@ export default function IsoTrainingDropdown() {
               </span>
             </button> */}
             <Link
-  href={
-    index === 0
-      ? "/iso-training/iso-lead-auditor"
-      : "/iso-training/iso-internal-auditor"
-  }
+ href={
+  index === 0
+    ? "/iso-training/iso-lead-auditor-Training-Chennai"
+    : "/iso-training/iso-internal-auditor-Training-Chennai"
+}
   className={`flex w-full items-center justify-between px-6 py-4 text-left text-sm transition ${
     activeCategory === index
       ? "bg-[#D8A43C] text-white"

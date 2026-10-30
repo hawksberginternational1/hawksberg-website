@@ -8,7 +8,7 @@ export const metadata = {
   keywords:
     "ISO Internal Auditor Training Chennai, ISO Internal Auditor Course, Internal Audit Training, ISO 9001 Internal Auditor, ISO 14001 Internal Auditor, ISO 45001 Internal Auditor, ISO 27001 Internal Auditor",
   alternates: {
-    canonical: "/iso-training/iso-internal-auditor",
+    canonical: "/iso-training/iso-internal-auditor-Training-Chennai",
   },
 };
 
