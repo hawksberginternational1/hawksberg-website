@@ -136,7 +136,7 @@ export default function IsoTrainingDropdown() {
             className="relative"
             onMouseEnter={() => setActiveCategory(index)}
           >
-            <button
+            {/* <button
               type="button"
               className={`flex w-full items-center justify-between px-6 py-4 text-left text-sm transition ${
                 activeCategory === index
@@ -155,7 +155,31 @@ export default function IsoTrainingDropdown() {
               >
                 ›
               </span>
-            </button>
+            </button> */}
+            <Link
+  href={
+    index === 0
+      ? "/iso-training/iso-lead-auditor"
+      : "/iso-training/iso-internal-auditor"
+  }
+  className={`flex w-full items-center justify-between px-6 py-4 text-left text-sm transition ${
+    activeCategory === index
+      ? "bg-[#D8A43C] text-white"
+      : "bg-white text-gray-900 hover:bg-gray-100"
+  }`}
+>
+  <span>{category.title}</span>
+
+  <span
+    className={`ml-3 text-lg ${
+      activeCategory === index
+        ? "text-white"
+        : "text-gray-400"
+    }`}
+  >
+    ›
+  </span>
+</Link>
 
             {activeCategory === index && (
               <div className="absolute left-full top-0 ml-1 max-h-[70vh] w-80 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-2xl">
