@@ -142,11 +142,18 @@ export default function TrainingLogin() {
       /*
        * Redirect based on role.
        */
+      // if (res.user.role === "admin") {
+      //   router.replace("/admin-training");
+      // } else {
+      //   router.replace("/training");
+      // }
       if (res.user.role === "admin") {
-        router.replace("/admin-training");
-      } else {
-        router.replace("/training");
-      }
+  router.replace("/admin-training");
+} else if (res.user.training_name === "iso14001") {
+  router.replace("/iso14001-instructions");
+} else {
+  router.replace("/training");
+}
     } catch (err) {
       console.error("TRAINING LOGIN ERROR:", err);
 

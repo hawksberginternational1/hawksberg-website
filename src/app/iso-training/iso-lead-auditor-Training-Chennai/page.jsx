@@ -9,7 +9,7 @@ export const metadata = {
   keywords:
     "ISO Lead Auditor Training Chennai, ISO Lead Auditor Course, ISO 9001 Lead Auditor, ISO 14001 Lead Auditor, ISO 45001 Lead Auditor, ISO 27001 Lead Auditor",
   alternates: {
-    canonical: "/iso-training/iso-lead-auditor",
+    canonical: "/iso-training/iso-lead-auditor-Training-Chennai",
   },
 };
 

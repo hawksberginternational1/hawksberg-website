@@ -356,9 +356,31 @@ function sampleISO14001Playback(tracker, mediaPosition, now, playbackRate = 1) {
 // COMPONENT
 // =====================================================
 
-function TrainingPortalContent() {
+// function TrainingPortalContent() {
+export function TrainingPortalContent({ instructionMode = false }) {
+  const [showISO14001Instructions, setShowISO14001Instructions] =
+  useState(instructionMode);
+
+const handleISO14001StartVideo = async () => {
+  const video = iso14001VideoRef.current;
+
+  if (!video) {
+    console.error("ISO 14001 video element not found");
+    return;
+  }
+
+  try {
+    await video.requestFullscreen();
+    await video.play();
+    setShowISO14001Instructions(false);
+  } catch (error) {
+    console.error("ISO 14001 fullscreen/play failed:", error);
+  }
+};
   const router = useRouter();
   const searchParams = useSearchParams();
+    // const [showISO14001Instructions, setShowISO14001Instructions] =
+    // useState(instructionMode);
 
   // ===================================================
   // AUTH
@@ -405,6 +427,14 @@ function TrainingPortalContent() {
 
   const [saving, setSaving] =
     useState(false);
+const iso14001VideoRef = useRef(null);
+//     const {
+//   videoRef: iso14001VideoRef,
+//   setVideoSource: setISO14001ProviderVideoSource,
+//   setVideoHandlers: setISO14001ProviderVideoHandlers,
+// } = useISO14001Training();
+
+const iso14001TrackerRef = useRef(null);
 
   // ===================================================
   // R2 PLAYER FALLBACK
@@ -412,8 +442,8 @@ function TrainingPortalContent() {
   const [r2PlaybackFallback, setR2PlaybackFallback] =
     useState(false);
 
-  const iso14001VideoRef = useRef(null);
-  const iso14001TrackerRef = useRef(null);
+  // const iso14001VideoRef = useRef(null);
+  // const iso14001TrackerRef = useRef(null);
   const iso14001YoutubeIframeRef = useRef(null);
   const iso14001YoutubePlayerRef = useRef(null);
   const iso14001QuizSubmittingRef = useRef(false);
@@ -2172,6 +2202,40 @@ useEffect(() => {
   return (
     <Layout>
       <section className="relative min-h-screen overflow-hidden bg-[#071A33]">
+        {showISO14001Instructions && (
+  // <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#071A33] px-6">
+  <div className="relative flex min-h-screen items-center justify-center bg-[#071A33] px-6 py-16">
+    <div className="w-full max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-xl md:p-12">
+      <p className="text-sm uppercase tracking-[0.35em] text-gold">
+        Hawksberg International
+      </p>
+
+      <h1 className="mt-4 font-display text-4xl font-bold text-white md:text-5xl">
+        Training Instructions
+      </h1>
+
+      <div className="mt-8 space-y-5 text-lg leading-relaxed text-white/80">
+        <p>• Sit in a quiet room with minimal noise and distractions.</p>
+        <p>• Use headphones or earbuds, or ensure you have a working speaker.</p>
+        <p>• Set aside 30 uninterrupted minutes to complete the training.</p>
+        <p>• Choose a location with an internet speed of at least 5 Mbps.</p>
+        <p>• Take notes using a notepad as you go.</p>
+        <p>• Complete the quiz immediately after the training.</p>
+        <p>• Complete the quiz independently. Do not use Google, AI tools, or other outside assistance.</p>
+      </div>
+
+      <div className="mt-10 flex justify-center">
+        <button
+          type="button"
+          onClick={handleISO14001StartVideo}
+          className="rounded-full bg-gold px-8 py-4 font-bold text-black transition hover:scale-105"
+        >
+          Start Video
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
         {/* =================================================
             BACKGROUND
@@ -2465,6 +2529,8 @@ useEffect(() => {
             : undefined
         }
         controls
+        controlsList="nodownload"
+        // controlsList="nodownload nofullscreen"
         preload="metadata"
         playsInline
         // onKeyDown={(event) => {
@@ -2476,7 +2542,22 @@ useEffect(() => {
         //     event.stopPropagation();
         //   }
         // }}
-        className="aspect-video w-full bg-black object-contain"
+        // className="aspect-video w-full bg-black object-contain"
+//         className={`aspect-video w-full bg-black object-contain ${
+//   iso14001QuizReady &&
+//   iso14001Progress?.video_id === currentVideo.id &&
+//   iso14001Progress?.completed
+//     ? "hidden"
+//     : ""
+// }`}
+className={`aspect-video w-full bg-black object-contain ${
+  !instructionMode &&
+  iso14001QuizReady &&
+  iso14001Progress?.video_id === currentVideo.id &&
+  iso14001Progress?.completed
+    ? "hidden"
+    : ""
+}`}
         onLoadedMetadata={(event) => {
           const video = event.currentTarget;
           const tracker = iso14001TrackerRef.current;
@@ -2624,13 +2705,29 @@ useEffect(() => {
     );
   }
 
-  await saveISO14001VideoProgress(
-    tracker,
-    video,
-    {
-      completed: true,
-    }
+  // await saveISO14001VideoProgress(
+  //   tracker,
+  //   video,
+  //   {
+  //     completed: true,
+  //   }
+  // );
+  // Wait for backend confirmation that the video is completed.
+const response = await saveISO14001VideoProgress(
+  tracker,
+  video,
+  {
+    completed: true,
+  }
+);
+
+// Only after backend confirms completed = true,
+// tell the instruction page to exit fullscreen and navigate.
+if (response?.completed) {
+  window.dispatchEvent(
+    new CustomEvent("iso14001-video-completed")
   );
+}
 
 }}
 
