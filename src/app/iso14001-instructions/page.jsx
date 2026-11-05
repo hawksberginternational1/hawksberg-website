@@ -1,7 +1,8 @@
 
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import Layout from "@/components/Layout";
 import { TrainingPortalContent } from "@/app/training/page";
 
@@ -214,12 +215,22 @@ export default function ISO14001Instructions() {
           It is kept outside the visible instruction page.
           It is NOT display:none, so requestFullscreen() works.
       ========================================================== */}
-      <div
+      {/* <div
         className="fixed -left-[100vw] top-0 z-[-1] h-screen w-screen overflow-hidden"
         aria-hidden="true"
       >
         <TrainingPortalContent instructionMode={true} />
-      </div>
+      </div> */}
+      <div
+  className="fixed -left-[100vw] top-0 z-[-1] h-screen w-screen overflow-hidden"
+  aria-hidden="true"
+>
+  <Suspense
+    fallback={<div className="min-h-screen bg-[#071A33]" />}
+  >
+    <TrainingPortalContent instructionMode={true} />
+  </Suspense>
+</div>
 
       {/* =========================================================
           ISO 14001 INSTRUCTION PAGE
