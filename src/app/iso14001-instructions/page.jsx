@@ -10,6 +10,56 @@ export default function ISO14001Instructions() {
   const videoRef = useRef(null);
   const [videoReady, setVideoReady] = useState(false);
 
+  const videoCompletedRef = useRef(false);
+
+useEffect(() => {
+  // Prevent browser Back navigation during the video
+  const pushVideoHistory = () => {
+    window.history.pushState(
+      { iso14001Video: true },
+      "",
+      window.location.href
+    );
+  };
+
+  pushVideoHistory();
+
+  const handlePopState = () => {
+    if (!videoCompletedRef.current) {
+      pushVideoHistory();
+    }
+  };
+
+  const handleVisibilityChange = () => {
+    const video = videoRef.current;
+
+    if (
+      document.hidden &&
+      video &&
+      !video.ended &&
+      !video.paused
+    ) {
+      video.pause();
+    }
+  };
+
+  const handlePageHide = (event) => {
+    if (!videoCompletedRef.current) {
+      event.preventDefault();
+    }
+  };
+
+  window.addEventListener("popstate", handlePopState);
+  document.addEventListener("visibilitychange", handleVisibilityChange);
+  window.addEventListener("pagehide", handlePageHide);
+
+  return () => {
+    window.removeEventListener("popstate", handlePopState);
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
+    window.removeEventListener("pagehide", handlePageHide);
+  };
+}, []);
+
   useEffect(() => {
     const findVideo = () => {
       const video = document.querySelector("video");
