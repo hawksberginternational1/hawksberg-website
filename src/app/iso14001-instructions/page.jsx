@@ -335,7 +335,7 @@ useEffect(() => {
                 disabled={!videoReady}
                 className="rounded-full bg-gold px-8 py-4 font-bold text-black transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {videoReady ? "Start Video" : "Loading Video..."}
+                {videoReady ? "Start Training" : "Loading Video..."}
               </button>
             </div>
           </div>
