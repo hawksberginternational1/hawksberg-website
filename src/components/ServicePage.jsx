@@ -148,9 +148,14 @@ export default function ServicePage({ service }) {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/contact" className="btn-primary">
+            {/* <Link href="/contact" className="btn-primary">
               Get Free Evaluation →
-            </Link>
+            </Link> */}
+            <Link href="/contact" className="btn-primary">
+  {service.slug === "tisax"
+    ? "Get a Free TISAX Evaluation"
+    : "Get Free Evaluation"} →
+</Link>
           </div>
         </div>
       </section>
@@ -414,7 +419,7 @@ export default function ServicePage({ service }) {
                   EXISTING NON-DPDP SERVICE CONTENT
                   ================================================= */}
 
-              <div>
+              {/* <div>
                 <h2 className="font-display text-3xl">
                   {service.overviewTitle ||
                     `About ${service.code} Consulting`}
@@ -436,7 +441,81 @@ export default function ServicePage({ service }) {
                     {p}
                   </p>
                 ))}
-              </div>
+              </div> */}
+
+{service.slug === "tisax" ? (
+  <div className="space-y-10">
+    {service.contentSections?.map((section, index) => (
+      <section key={`${section.title}-${index}`}>
+        <h2 className="font-display text-3xl">
+          {section.title}
+        </h2>
+
+        <div className="mt-3 gold-divider" />
+
+        {section.paragraphs?.map((paragraph, paragraphIndex) => (
+          <p
+            key={paragraphIndex}
+            className="mt-5 text-[16px] leading-9 text-muted-foreground text-justify"
+          >
+            {paragraph}
+          </p>
+        ))}
+
+        {section.intro && (
+          <p className="mt-5 text-[16px] leading-9 text-muted-foreground text-justify">
+            {section.intro}
+          </p>
+        )}
+
+        {section.points && (
+          <ul className="mt-6 space-y-4">
+            {section.points.map((point, pointIndex) => (
+              <li
+                key={pointIndex}
+                className="flex items-start gap-3 text-[16px] leading-8 text-muted-foreground"
+              >
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-gold" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {section.note && (
+          <p className="mt-6 text-[16px] leading-9 text-muted-foreground text-justify">
+            {section.note}
+          </p>
+        )}
+      </section>
+    ))}
+  </div>
+) : (
+  <div>
+    <h2 className="font-display text-3xl">
+      {service.overviewTitle ||
+        `About ${service.code} Consulting`}
+    </h2>
+
+    <div className="mt-3 gold-divider" />
+
+    {(service.description &&
+    service.description.length > 0
+      ? service.description
+      : [
+          `Hawksberg International offers complete ${service.code} consulting — from gap analysis through certification.`,
+        ]
+    ).map((p, i) => (
+      <p
+        key={i}
+        className="mt-5 text-[16px] leading-9 text-muted-foreground text-justify"
+      >
+        {p}
+      </p>
+    ))}
+  </div>
+)}
+
 
               {/* =================================================
                   ISO 27001 ONLY - ADDITIONAL CONTENT + FAQ
@@ -556,7 +635,7 @@ export default function ServicePage({ service }) {
               NON-DPDP ONLY
               ===================================================== */}
 
-          {!isDpdp && (
+         {!isDpdp && service.slug !== "tisax" && (
             <div>
               <h2 className="font-display text-3xl">
                 What you get
@@ -588,7 +667,8 @@ export default function ServicePage({ service }) {
               NON-DPDP ONLY
               ===================================================== */}
 
-          {service.slug !== "dpdp" && (
+          {/* {service.slug !== "dpdp" && ( */}
+          {service.slug !== "dpdp" && service.slug !== "tisax" && (
             <div className="rounded-2xl border border-gold/30 bg-secondary/40 p-8">
               <h3 className="font-display text-2xl">
                 Our 6-step methodology
