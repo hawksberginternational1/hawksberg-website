@@ -720,14 +720,14 @@ export default function ServicePage({ service }) {
             <TisaxSections />
           </section>
 
-          {/* <section className="container-x pb-20 lg:hidden">
+          <section className="container-x pb-20 lg:hidden">
             <EnquiryForm compact />
-          </section> */}
-          {service.slug === "tisax" && (
+          </section>
+          {/* {service.slug === "tisax" && (
   <section className="container-x pb-20 lg:hidden">
     <EnquiryForm compact />
   </section>
-)}
+)} */}
         </>
       )}
     </>
