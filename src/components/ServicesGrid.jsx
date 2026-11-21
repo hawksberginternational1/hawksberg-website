@@ -7,7 +7,7 @@ import { serviceMeta as ISO14001 } from "@/app/services/iso-14001/page";
 import { serviceMeta as ISO45001 } from "@/app/services/iso-45001/page";
 import { serviceMeta as ISO50001 } from "@/app/services/iso-50001/page";
 import { serviceMeta as IATF16949 } from "@/app/services/iatf-16949/page";
-import { serviceMeta as TISAX } from "@/app/services/tisax/page";
+import { serviceMeta as TISAX } from "@/app/services/tisax-certification-Chennai/page";
 // import { serviceMeta as ISO27001 } from "@/app/services/iso-27001/page";
 import { serviceMeta as DPDP } from "@/app/services/dpdp/page";
 

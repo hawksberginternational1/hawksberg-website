@@ -8,11 +8,16 @@ export const serviceMenu = [
         slug: "iso-27001",
         to: "/services/iso-27001",
       },
+      // {
+      //   label: "TISAX",
+      //   slug: "tisax",
+      //   to: "/services/tisax",
+      // },
       {
-        label: "TISAX",
-        slug: "tisax",
-        to: "/services/tisax",
-      },
+  label: "TISAX",
+  slug: "tisax-certification-Chennai",
+  to: "/services/tisax-certification-Chennai",
+},
       {
         label: "ISO 14001",
         slug: "iso-14001",

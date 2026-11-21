@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   devIndicators: false,
   allowedDevOrigins: ["192.168.1.4"],
- async redirects() {
-  return [
+//  async redirects() {
+//   return [
 //     {
 //       source: "/:path*",
 //       has: [
@@ -17,6 +17,22 @@ const nextConfig = {
 //       permanent: true,
 //     },
 
+//     {
+//       source: "/services",
+//       destination: "/ISO-consulting-services",
+//       permanent: false,
+//     },
+//   ];
+// },
+
+
+async redirects() {
+  return [
+    {
+      source: "/services/tisax",
+      destination: "/services/tisax-certification-Chennai",
+      permanent: true,
+    },
     {
       source: "/services",
       destination: "/ISO-consulting-services",
@@ -24,6 +40,7 @@ const nextConfig = {
     },
   ];
 },
+
   async rewrites() {
     return [
       {
