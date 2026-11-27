@@ -76,7 +76,8 @@ def send_iso_9001_2026_registration_email(
             "name": FROM_NAME,
             "email": FROM_EMAIL,
         },
-        "to": [{"email": "jagayathri722@gmail.com"}],
+        # "to": [{"email": "jagayathri722@gmail.com"}],
+        "to": [{"email": "hawksberginternational@gmail.com"}],
         "subject": "New ISO 9001:2026 Free Training Registration",
         "htmlContent": body,
     }
