@@ -28,6 +28,7 @@ from app.routes import (
     training_auth,
     iso14001_quiz,
     certificate_verification,
+    free_training_registration,
 )
 
 Base.metadata.create_all(bind=engine)
@@ -74,6 +75,7 @@ app.include_router(auth.router)
 app.include_router(training_auth.router)
 app.include_router(iso14001_quiz.router)
 app.include_router(certificate_verification.router)
+app.include_router(free_training_registration.router)
 
 
 @app.get("/")
