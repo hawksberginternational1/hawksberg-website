@@ -42,6 +42,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import WhatsAppFloat from "./WhatsAppFloat";
+import FreeTrainingFloat from "./FreeTrainingFloat";
 import { usePathname } from "next/navigation";
 
 export default function Layout({ children, hideFooter = false }) {
@@ -60,6 +61,7 @@ export default function Layout({ children, hideFooter = false }) {
       </main>
 
       {!hideFooter && <Footer />}
+      {pathname === "/" && <FreeTrainingFloat />}
       <WhatsAppFloat />
     </div>
   );
