@@ -15,6 +15,7 @@ from app.models.iso14001_quiz import (
 	ISO14001QuizAttempt,
 	ISO14001RetestRequest,
 )
+from app.models.free_training_registration import FreeTrainingRegistration
 
 print("Creating database tables...")
 

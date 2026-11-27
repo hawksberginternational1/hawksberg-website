@@ -24,6 +24,90 @@ BREVO_URL = "https://api.brevo.com/v3/smtp/email"
 
 
 # ---------------------------------------------------------------------------
+# ISO 9001:2026 free training registration email
+# ---------------------------------------------------------------------------
+
+def send_iso_9001_2026_registration_email(
+    full_name,
+    email,
+    mobile_number,
+    company_name,
+    created_at,
+):
+    if not BREVO_API_KEY:
+        logging.error("Brevo API key is not configured")
+        return False
+
+    if not FROM_EMAIL:
+        logging.error("FROM_EMAIL is not configured")
+        return False
+
+    body = f"""
+    <div style="font-family:Arial,sans-serif;color:#22152c;max-width:680px;">
+      <h2 style="color:#25052f;">New ISO 9001:2026 Free Training Registration</h2>
+      <table cellpadding="10" cellspacing="0" width="100%"
+        style="border-collapse:collapse;border:1px solid #d8cfe1;">
+        <tr style="background:#f8f7fb;">
+          <td style="border-bottom:1px solid #d8cfe1;"><b>Full Name</b></td>
+          <td style="border-bottom:1px solid #d8cfe1;">{escape(str(full_name))}</td>
+        </tr>
+        <tr>
+          <td style="border-bottom:1px solid #d8cfe1;"><b>Email Address</b></td>
+          <td style="border-bottom:1px solid #d8cfe1;">{escape(str(email))}</td>
+        </tr>
+        <tr style="background:#f8f7fb;">
+          <td style="border-bottom:1px solid #d8cfe1;"><b>Mobile Number</b></td>
+          <td style="border-bottom:1px solid #d8cfe1;">{escape(str(mobile_number))}</td>
+        </tr>
+        <tr>
+          <td style="border-bottom:1px solid #d8cfe1;"><b>Company Name</b></td>
+          <td style="border-bottom:1px solid #d8cfe1;">{escape(str(company_name))}</td>
+        </tr>
+        <tr style="background:#f8f7fb;">
+          <td><b>Registration Date and Time</b></td>
+          <td>{escape(str(created_at))}</td>
+        </tr>
+      </table>
+    </div>
+    """
+
+    payload = {
+        "sender": {
+            "name": FROM_NAME,
+            "email": FROM_EMAIL,
+        },
+        "to": [{"email": "jagayathri722@gmail.com"}],
+        "subject": "New ISO 9001:2026 Free Training Registration",
+        "htmlContent": body,
+    }
+    headers = {
+        "accept": "application/json",
+        "api-key": BREVO_API_KEY,
+        "content-type": "application/json",
+    }
+
+    try:
+        response = requests.post(
+            BREVO_URL,
+            headers=headers,
+            json=payload,
+            timeout=30,
+        )
+        logging.info(
+            "BREVO ISO 9001:2026 registration status: %s",
+            response.status_code,
+        )
+        response.raise_for_status()
+        return True
+    except requests.RequestException:
+        logging.exception("Unable to send ISO 9001:2026 registration notification email")
+        return False
+    except Exception:
+        logging.exception("Unexpected ISO 9001:2026 registration email error")
+        return False
+
+
+# ---------------------------------------------------------------------------
 # Enquiry email
 # ---------------------------------------------------------------------------
 
@@ -367,6 +451,7 @@ def send_iso14001_retest_request_email(
     # Preserve a safe fallback for the current project configuration.
     if not email_recipient:
         email_recipient = "jagayathri722@gmail.com"
+    # email_recipient = "hawksberginternational@gmail.com"
 
     details = {
         "Name": candidate_name,
